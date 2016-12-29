@@ -13,6 +13,8 @@ class PlaySoundsViewController: UIViewController {
 
     var recordedAudioURL: URL!
     
+    var recordedAudio: AVAudioRecorder!
+    
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
@@ -25,6 +27,10 @@ class PlaySoundsViewController: UIViewController {
     var audioEngine:AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
+    
+    var selectedButton:Int!
+    
+    let audioType = ["Slow", "fast", "chipmunk", "vader", "echo", "reverb"]
     
     enum ButtonType: Int {
         case slow = 0, fast, chipmunk, vader, echo, reverb
@@ -39,13 +45,17 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
+        
+        selectedButton = -1
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
         print("Stop")
+        stopAudio()
     }
     
     @IBAction func playSoundForButtons(_ sender: UIButton) {
+        selectedButton = (sender.tag)
         switch (ButtonType(rawValue: sender.tag)!) {
         case .slow:
             playSound(rate:0.5)
@@ -63,6 +73,31 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.playing)
     }
 
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        if(selectedButton != -1){
+            var sharingItems = [AnyObject]()
+            
+            sharingItems.append(audioType[selectedButton] as AnyObject)
+//            
+//            sharingItems.append((audioEngine) as AnyObject)
+//            sharingItems.append((audioFile) as AnyObject)
+//            sharingItems.append((audioPlayerNode) as AnyObject)
+            sharingItems.append((recordedAudio) as AnyObject)
+            
+            let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+            
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop]
+            
+            if(activityViewController.popoverPresentationController != nil) {
+                activityViewController.popoverPresentationController?.sourceView = self.view;
+                let frame = UIScreen.main.bounds
+                activityViewController.popoverPresentationController?.sourceRect = frame;
+            }
+            
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

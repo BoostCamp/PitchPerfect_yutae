@@ -37,7 +37,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     func setupAudio() {
         // initialize (recording) audio file
         do {
-            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
+//            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
+            audioFile = try AVAudioFile(forReading: recordedAudio.url as URL)
         } catch {
             showAlert(Alerts.AudioFileError, message: String(describing: error))
         }

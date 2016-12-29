@@ -29,25 +29,50 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
 
     @IBAction func recordAction(_ sender: Any) {
-        recordingLabel.text = "Recording"
-        self.stopRecordingButton.isHidden = false
-        self.recordingLabel.isHidden = false
-        stopRecordingButton.isEnabled = true
-        recordingButton.isEnabled = false
-        
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
         
         let session = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
-        
-        try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-        audioRecorder.delegate = self
-        audioRecorder.isMeteringEnabled = true
-        audioRecorder.prepareToRecord()
-        audioRecorder.record()
+        // Permission 예외 처리
+        session.requestRecordPermission({ (granted:Bool) in
+            if granted {
+                self.recordingLabel.text = "Recording"
+                self.stopRecordingButton.isHidden = false
+                self.recordingLabel.isHidden = false
+                self.stopRecordingButton.isEnabled = true
+                self.recordingButton.isEnabled = false
+                
+                try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+                
+                try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+                self.audioRecorder.delegate = self
+                self.audioRecorder.isMeteringEnabled = true
+                self.audioRecorder.prepareToRecord()
+                self.audioRecorder.record()
+
+            } else {
+                let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "설정", style: .default, handler: { (action:UIAlertAction) -> Void in
+                    let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(settingsUrl!, options: [:], completionHandler: nil)
+                    } else {
+                        UIApplication.shared.openURL(settingsUrl!)
+                    }
+                }))
+                
+                alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+//                let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "설정", style: .cancel, handler: nil))
+//                alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+            }
+        })
         
     }
     @IBAction func stopRecording(_ sender: Any) {
@@ -62,7 +87,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
-            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+//            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+            performSegue(withIdentifier: "stopRecording", sender: audioRecorder)
         } else {
             print("Recording was not successful")
         }
@@ -72,8 +98,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "stopRecording"{
             let playSoundsVC = segue.destination as! PlaySoundsViewController
-            let recordAudioURL = sender as! URL
-            playSoundsVC.recordedAudioURL = recordAudioURL
+            let recordedAudio = sender as! AVAudioRecorder
+            playSoundsVC.recordedAudio = recordedAudio
         }
         
     }
