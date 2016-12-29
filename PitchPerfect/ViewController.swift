@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var recordingButton: UIButton!
+    @IBOutlet weak var recordingLabel: UILabel!
+    @IBOutlet weak var stopRecordingButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        stopRecordingButton.isEnabled = false
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,5 +25,26 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func recordAction(_ sender: Any) {
+        recordingLabel.text = "Recording in Progress"
+        stopRecordingButton.isEnabled = true
+        recordingButton.isEnabled = false
+        
+    }
+    @IBAction func stopRecording(_ sender: Any) {
+        recordingLabel.text = "Tap to Record"
+        recordingButton.isEnabled = true
+        stopRecordingButton.isEnabled = false
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("View will appear!")
+        
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("View Did disappear!")
+    }
+    
 }
 
