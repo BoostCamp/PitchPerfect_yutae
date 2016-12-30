@@ -78,14 +78,14 @@
 			isa = PBXGroup;
 			children = (
 				965290E01E163BF600DE1D1C /* RecordSoundsViewController+EZAudio.swift */,
-				96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */,
-				9623D6A41E14C63F003588D3 /* AppDelegate.swift */,
 				9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */,
+				96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */,
+				96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */,
+				9623D6A41E14C63F003588D3 /* AppDelegate.swift */,
 				9623D6A81E14C63F003588D3 /* Main.storyboard */,
 				9623D6AB1E14C63F003588D3 /* Assets.xcassets */,
 				9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */,
 				9623D6B01E14C63F003588D3 /* Info.plist */,
-				96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */,
 				965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */,
 			);
 			path = PitchPerfect;

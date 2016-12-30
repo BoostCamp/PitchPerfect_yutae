@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewController: UIViewController {
+class PlaySoundsViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
     var recordedAudioURL: URL!
     
@@ -52,7 +52,6 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
-        print("Stop")
         stopAudio()
     }
     
@@ -78,24 +77,39 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func shareButtonPressed(_ sender: Any) {
         if(selectedButton != -1){
             var sharingItems = [AnyObject]()
-//            sharingItems.append(recordedAudio)
-//            print(recordedAudio)
-//            sharingItems.append(audioFile.fileFormat)
-//            print(audioFile.fileFormat)
-//            sharingItems.append(audioPlayerNode)
-//            print(audioPlayerNode)
-            let data = NSData(contentsOf: recordedAudio.url)
+//            print(recordedAudio.url.absoluteString)
+//            print("******************")
             
-//            sharingItems.append(data! as AnyObject)
-//            print(data)
-//            audioPlayerNode.
-            sharingItems.append(audioType[selectedButton] as AnyObject)
+//            sharingItems.append(data!)
+            sharingItems.append(recordedAudio.url as AnyObject)
             
+            let fileManager = FileManager.default
+            let data = NSData(contentsOfFile: (recordedAudio.url.absoluteString))
             
+            if fileManager.fileExists(atPath: recordedAudio.url.absoluteString){
+//                let data = NSData(contentsOfFile: (recordedAudio.url.absoluteString))
+//                print("Exist!!!")
+//                print("******************")
+//                let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [data!], applicationActivities: nil)
+//                activityViewController.popoverPresentationController?.sourceView=self.view
+//                present(activityViewController, animated: true, completion: nil)
+                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: recordedAudio.url.absoluteString ) as URL)
+                
+//                docController.presentOptionsMenuFromRect(self.button.frame, inView: self.view, animated: true)
+//                docController.presentOptionsMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
+                docController.delegate = self;
+                docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
+            }
+//            
+//            print("******************")
+//            print(recordedAudio.url)
+//            print("******************")
+//            let items = UIActivityItemProvider(placeholderItem: data)
+//            let activityViewController = UIActivityViewController(activityItems: [data!], applicationActivities: nil)
+            /*
+            let activityViewController = UIActivityViewController(activityItems: [sharingItems], applicationActivities: nil)
+//            activityViewController.excludedActivityTypes = [UIActivityType.airDrop]
             
-            let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop]
             activityViewController.accessibilityLanguage = "ko-KR"
 
             if(activityViewController.popoverPresentationController != nil) {
@@ -105,18 +119,16 @@ class PlaySoundsViewController: UIViewController {
             }
             
             self.present(activityViewController, animated: true, completion: nil)
+             */
         }
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+//    func documentInteractionControllerViewForPreview(_ controller: UIDocumentInteractionController) -> UIView? {
+//        return self.view
+//    }
+    
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        return self
     }
-    */
-
 }
