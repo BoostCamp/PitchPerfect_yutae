@@ -196,6 +196,7 @@
                         <outlet property="echoButton" destination="WYr-gh-4sf" id="GBq-F9-uvv"/>
                         <outlet property="rabbitButton" destination="AGw-lO-K9S" id="lXX-ra-4Ik"/>
                         <outlet property="reverbButton" destination="CLx-kC-2bX" id="kDA-AJ-JOE"/>
+                        <outlet property="sharingButton" destination="el4-WT-fR7" id="ZET-uY-rzP"/>
                         <outlet property="snailButton" destination="BgY-6x-mBi" id="p4E-zG-xql"/>
                         <outlet property="stopButton" destination="MKB-M8-5KS" id="sxR-bD-Z8T"/>
                         <outlet property="vaderButton" destination="slH-eb-0YI" id="1E2-PH-KPI"/>

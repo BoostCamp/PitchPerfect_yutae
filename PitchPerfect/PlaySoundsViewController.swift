@@ -29,6 +29,7 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer: Timer!
     
     var selectedButton:Int!
+    @IBOutlet weak var sharingButton: UIButton!
     
     let audioType = ["Slow", "fast", "chipmunk", "vader", "echo", "reverb"]
     
@@ -47,6 +48,7 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.notPlaying)
         
         selectedButton = -1
+        sharingButton.isEnabled = false
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
@@ -76,18 +78,26 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func shareButtonPressed(_ sender: Any) {
         if(selectedButton != -1){
             var sharingItems = [AnyObject]()
+//            sharingItems.append(recordedAudio)
+//            print(recordedAudio)
+//            sharingItems.append(audioFile.fileFormat)
+//            print(audioFile.fileFormat)
+//            sharingItems.append(audioPlayerNode)
+//            print(audioPlayerNode)
+            let data = NSData(contentsOf: recordedAudio.url)
             
+//            sharingItems.append(data! as AnyObject)
+//            print(data)
+//            audioPlayerNode.
             sharingItems.append(audioType[selectedButton] as AnyObject)
-//            
-//            sharingItems.append((audioEngine) as AnyObject)
-//            sharingItems.append((audioFile) as AnyObject)
-//            sharingItems.append((audioPlayerNode) as AnyObject)
-            sharingItems.append((recordedAudio) as AnyObject)
+            
+            
             
             let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop]
-            
+            activityViewController.accessibilityLanguage = "ko-KR"
+
             if(activityViewController.popoverPresentationController != nil) {
                 activityViewController.popoverPresentationController?.sourceView = self.view;
                 let frame = UIScreen.main.bounds

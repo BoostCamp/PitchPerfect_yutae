@@ -66,11 +66,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
                 alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
                 
                 self.present(alert, animated: true, completion: nil)
-                
-//                let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "설정", style: .cancel, handler: nil))
-//                alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
-//                self.present(alert, animated: true, completion: nil)
             }
         })
         
