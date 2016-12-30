@@ -8,17 +8,40 @@
 
 import UIKit
 import AVFoundation
+import EZAudio
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     var audioRecorder:AVAudioRecorder!
+
+    @IBOutlet weak var currentTimeLabel: UILabel!
+
     
     @IBOutlet weak var recordingButton: UIButton!
+    
+    
+    @IBOutlet weak var recordingAudioPlot: EZAudioPlotGL!
+    var microphone: EZMicrophone!
+    
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopRecordingButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false
+        
+//        self.recordingAudioPlot.backgroundColor = [UIColor colorWithRed: 1.0 green: 0.2 blue: 0.365 alpha: 1];
+//        self.recordingAudioPlot.color           = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+//        self.recordingAudioPlot.plotType        = EZPlotTypeRolling;
+//        plot?.shouldFill = true;
+//        plot?.shouldMirror = true;
+        
+        self.recordingAudioPlot.backgroundColor = UIColor(colorLiteralRed: 1.0, green: 0.2, blue: 0.365, alpha: 1.0)
+        self.recordingAudioPlot.color = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.recordingAudioPlot.shouldFill = true
+        self.recordingAudioPlot.shouldMirror = true
+        self.recordingAudioPlot.plotType = .rolling
+//
+//        self.microphone = EZMicrophone(delegate: self, startsImmediately: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -52,6 +75,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
                 self.audioRecorder.prepareToRecord()
                 self.audioRecorder.record()
 
+                self.EZAudioInit()
+                
+
             } else {
                 let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "설정", style: .default, handler: { (action:UIAlertAction) -> Void in
@@ -76,10 +102,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopRecordingButton.isEnabled = false
         
         audioRecorder.stop()
+        
+        self.microphone.stopFetchingAudio()
+        
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         
+        
     }
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
 //            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
@@ -103,7 +134,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         self.stopRecordingButton.isHidden = true
         self.recordingLabel.isHidden = true
         
-        
+        self.recordingAudioPlot.clear()
     }
     override func viewDidDisappear(_ animated: Bool) {
         print("View Did disappear!")
