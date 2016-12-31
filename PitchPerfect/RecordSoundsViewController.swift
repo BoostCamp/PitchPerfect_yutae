@@ -52,20 +52,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
 
     @IBAction func recordAction(_ sender: Any) {
-        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-        let recordingName = "recordedVoice.m4a"
-        let pathArray = [dirPath, recordingName]
-        let filePath = URL(string: pathArray.joined(separator: "/"))
-        
-        let recordSettings =
-            [AVFormatIDKey: kAudioFormatMPEG4AAC,
-             AVSampleRateKey: 16000.0,
-             AVNumberOfChannelsKey: 1] as [String : Any]
-        
         let session = AVAudioSession.sharedInstance()
         // Permission 예외 처리
         session.requestRecordPermission({ (granted:Bool) in
             if granted {
+                let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+                let recordingName = "recordedVoice.m4a"
+                let pathArray = [dirPath, recordingName]
+                let filePath = URL(string: pathArray.joined(separator: "/"))
+                
+                let recordSettings =
+                    [AVFormatIDKey: kAudioFormatMPEG4AAC,
+                     AVSampleRateKey: 16000.0,
+                     AVNumberOfChannelsKey: 1] as [String : Any]
+                
                 self.recordingLabel.text = "Recording"
                 self.stopRecordingButton.isHidden = false
                 self.recordingLabel.isHidden = false

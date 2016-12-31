@@ -28,6 +28,8 @@ class PlaySoundsViewController: UIViewController, UIDocumentInteractionControlle
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
+    var changedAudioFile:AVAudioFile!
+    
     var selectedButton:Int!
     @IBOutlet weak var sharingButton: UIButton!
     
@@ -84,17 +86,11 @@ class PlaySoundsViewController: UIViewController, UIDocumentInteractionControlle
             sharingItems.append(recordedAudio.url as AnyObject)
             
             let fileManager = FileManager.default
-            let data = NSData(contentsOfFile: (recordedAudio.url.absoluteString))
+
             
             if fileManager.fileExists(atPath: recordedAudio.url.absoluteString){
-//                let data = NSData(contentsOfFile: (recordedAudio.url.absoluteString))
-//                print("Exist!!!")
-//                print("******************")
-//                let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [data!], applicationActivities: nil)
-//                activityViewController.popoverPresentationController?.sourceView=self.view
-//                present(activityViewController, animated: true, completion: nil)
-                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: recordedAudio.url.absoluteString ) as URL)
-                
+//                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: recordedAudio.url.absoluteString ) as URL)
+                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: changedAudioFile.url.absoluteString ) as URL)
 //                docController.presentOptionsMenuFromRect(self.button.frame, inView: self.view, animated: true)
 //                docController.presentOptionsMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
                 docController.delegate = self;

@@ -74,16 +74,32 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         reverbNode.wetDryMix = 50
         audioEngine.attach(reverbNode)
         
+        // Mixer
+//        let audioMixer = AVAudioMixerNode()
+//        audioEngine.attach(audioMixer)
+        
+        
         // connect nodes
+//        if echo == true && reverb == true {
+//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
+//        } else if echo == true {
+//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
+//        } else if reverb == true {
+//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
+//        } else {
+//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
+//        }
         if echo == true && reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.mainMixerNode,audioEngine.outputNode)
         } else if echo == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.mainMixerNode,audioEngine.outputNode)
         } else if reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.mainMixerNode,audioEngine.outputNode)
         } else {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.mainMixerNode,audioEngine.outputNode)
         }
+
+        
         
         // schedule to play and start the engine!
         audioPlayerNode.stop()
@@ -112,6 +128,61 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             return
         }
         
+//        let length = 4000
+//        let buffer = AVAudioPCMBuffer(pcmFormat: audioPlayerNode.outputFormat(forBus: 0),frameCapacity:AVAudioFrameCount(length))
+//        buffer.frameLength = AVAudioFrameCount(length)
+        
+        // MARK: Changed Audio
+        do {
+            let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+            let recordingName = audioType[selectedButton]+".m4a"
+            let pathArray = [dirPath, recordingName]
+            let filePath = URL(string: pathArray.joined(separator: "/"))
+            
+            let audioSettings =
+                [AVFormatIDKey: kAudioFormatMPEG4AAC,
+                 AVSampleRateKey: 16000.0,
+                 AVNumberOfChannelsKey: 1] as [String : Any]
+            self.changedAudioFile = try! AVAudioFile(forWriting: filePath!, settings: audioSettings)
+            
+            let length = self.audioFile.length
+            /*
+            audioMixer.installTap(onBus: 0, bufferSize: 1024 , format: audioMixer.outputFormat(forBus: 0)){
+                (buffer: AVAudioPCMBuffer!, time: AVAudioTime!)  in
+                if (self.changedAudioFile.length) < (self.audioFile.length){
+                    
+                    do{
+                        //print(buffer)
+                        try self.changedAudioFile.write(from: buffer)
+                    }catch _{
+                        print("Problem Writing Buffer")
+                    }
+                }else{
+                    audioMixer.removeTap(onBus: 0)
+                }
+            }
+             */
+            
+            audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 1024, format: self.audioEngine.mainMixerNode.inputFormat(forBus: 0)) {
+                (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) -> Void in
+                if (self.changedAudioFile.length) < length {
+                    do{
+                        try self.changedAudioFile.write(from: buffer)
+                    }catch _{
+                        self.showAlert(Alerts.AudioEngineError, message: String(describing: "Error"))
+//                        return
+                    }
+                }else{
+                    self.audioEngine.mainMixerNode.removeTap(onBus: 0)
+                }
+            }
+             
+
+        } catch {
+            showAlert(Alerts.AudioEngineError, message: String(describing: "Error"))
+//            return
+        }
+ 
         // play the recording!
         audioPlayerNode.play()
     }
