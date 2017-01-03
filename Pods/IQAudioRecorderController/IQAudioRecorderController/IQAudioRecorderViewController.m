@@ -698,6 +698,7 @@
     {
         //UI Update
         {
+            NSLog(@"[Yutae] Record Success!!");
             [self setToolbarItems:@[_playButton,_flexItem, _startRecordingButton,_flexItem, _cropOrDeleteButton] animated:YES];
             [self.navigationItem setLeftBarButtonItem:_cancelButton animated:YES];
             

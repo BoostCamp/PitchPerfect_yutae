@@ -36,26 +36,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCG-mX-nbh">
-                                <rect key="frame" x="175" y="463.66666666666663" width="64" height="63.999999999999886"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="IR4-KX-UtF"/>
-                                    <constraint firstAttribute="height" constant="64" id="Jhm-KF-Kbt"/>
-                                </constraints>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdd-MZ-zUn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.022444235160946846" green="0.40852546691894531" blue="0.98780852556228638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uCG-mX-nbh" firstAttribute="top" secondItem="551-AX-cFc" secondAttribute="bottom" constant="13.5" id="5Mg-2E-NmY"/>
                             <constraint firstItem="vfm-sh-t4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eE-an-r1N"/>
                             <constraint firstItem="vfm-sh-t4f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R22-aQ-V0B"/>
                             <constraint firstItem="551-AX-cFc" firstAttribute="centerX" secondItem="vfm-sh-t4f" secondAttribute="centerX" id="W2Y-NK-aLa"/>
-                            <constraint firstItem="uCG-mX-nbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIR-Lw-GKB"/>
                             <constraint firstItem="551-AX-cFc" firstAttribute="top" secondItem="vfm-sh-t4f" secondAttribute="bottom" constant="13.5" id="vQL-q5-K3T"/>
                         </constraints>
                     </view>
@@ -63,7 +50,6 @@
                     <connections>
                         <outlet property="recordingButton" destination="vfm-sh-t4f" id="gNo-au-lL2"/>
                         <outlet property="recordingLabel" destination="551-AX-cFc" id="1NN-Pw-DEf"/>
-                        <outlet property="stopRecordingButton" destination="uCG-mX-nbh" id="eap-Eq-ThN"/>
                         <segue destination="5Go-St-8dJ" kind="show" identifier="stopRecording" id="6VD-xQ-PrC"/>
                     </connections>
                 </viewController>

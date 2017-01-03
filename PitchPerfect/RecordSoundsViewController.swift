@@ -14,20 +14,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
 
     var audioRecorder:AVAudioRecorder!
 
-    @IBOutlet weak var currentTimeLabel: UILabel!
-
-    
     @IBOutlet weak var recordingButton: UIButton!
     
     
     var controller:IQAudioRecorderViewController!
     
     @IBOutlet weak var recordingLabel: UILabel!
-    @IBOutlet weak var stopRecordingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        stopRecordingButton.isEnabled = false
-        
 //        self.recordingAudioPlot.backgroundColor = [UIColor colorWithRed: 1.0 green: 0.2 blue: 0.365 alpha: 1];
 //        self.recordingAudioPlot.color           = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
 //        self.recordingAudioPlot.plotType        = EZPlotTypeRolling;
@@ -67,10 +62,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                      AVSampleRateKey : 44100.0] as [String : Any]
                 */
                 self.recordingLabel.text = "Recording"
-                self.stopRecordingButton.isHidden = false
-                self.recordingLabel.isHidden = false
-                self.stopRecordingButton.isEnabled = true
-                self.recordingButton.isEnabled = false
+//                self.recordingLabel.isHidden = false
+//                self.recordingButton.isEnabled = false
                 
                 try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
                 try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: recordSettings)
@@ -78,7 +71,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 self.controller = IQAudioRecorderViewController.init()
                 self.controller.argAudioRecorder = self.audioRecorder
                 self.controller.delegate = self
-                self.controller.title = "RecordedAudio"
+                self.controller.title = "VOVO 음성 메모"
                 
                 self.controller.normalTintColor = UIColor.brown
                 self.controller.highlightedTintColor = UIColor.red
@@ -119,7 +112,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     @IBAction func stopRecording(_ sender: Any) {
 //        recordingLabel.text = "Tap to Record"
         recordingButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
         
         audioRecorder.stop()
         
@@ -156,7 +148,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.stopRecordingButton.isHidden = true
         self.recordingLabel.isHidden = true
         
     }

@@ -76,13 +76,10 @@ class PlaySoundsViewController: UIViewController, UIDocumentInteractionControlle
 
     @IBAction func shareButtonPressed(_ sender: Any) {
         if(selectedButton != -1){
-//            self.audioEngine.mainMixerNode.removeTap(onBus: 0)
-            
-            let fileManager = FileManager.default
 
+            let fileManager = FileManager.default
             
             if fileManager.fileExists(atPath: recordedAudioURL.absoluteString){
-//                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: recordedAudioURL.absoluteString ) as URL)
                 let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: changedAudioFile.url.absoluteString ) as URL)
                 docController.delegate = self;
                 docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)

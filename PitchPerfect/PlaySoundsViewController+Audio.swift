@@ -96,23 +96,9 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.mainMixerNode,audioEngine.outputNode)
         }
         
-        
-        // schedule to play and start the engine!
-        /*
-         do {
-         try audioEngine.start()
-         } catch {
-         showAlert(Alerts.AudioEngineError, message: String(describing: error))
-         return
-         }
-        */
-        
-        
-
-    
         // MARK: Changed Audio
             let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-            let recordingName = "PitchPerfect.aac"
+            let recordingName = "iOS_VOVO_app.aac"
             let pathArray = [dirPath, recordingName]
             let filePath = URL(string: pathArray.joined(separator: "/"))
             
@@ -132,7 +118,14 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         
             self.changedAudioFile = try! AVAudioFile(forWriting: filePath!, settings: audioSettings)
             self.audioEngine.prepare()
-            try! self.audioEngine.start()
+        
+        // schedule to play and start the engine!
+         do {
+            try self.audioEngine.start()
+         } catch {
+            showAlert(Alerts.AudioEngineError, message: String(describing: error))
+            return
+         }
         
         DispatchQueue.global(qos: .userInitiated).async {
             self.audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 8192, format: self.changedAudioFile.processingFormat, block: {
@@ -190,10 +183,16 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     func stopAudio() {
+        sharingButton.isEnabled = true
         
-        
-        if let audioPlayerNode = audioPlayerNode {
-            audioPlayerNode.stop()
+        if (self.audioPlayerNode) != nil {
+//            self.audioPlayerNode.stop()
+            self.audioPlayerNode = nil
+        }
+        if (self.audioEngine) != nil {
+//            audioEngine.stop()
+//            audioEngine.reset()
+            self.audioEngine = nil
         }
         
         if let stopTimer = stopTimer {
@@ -201,11 +200,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         }
         
         configureUI(.notPlaying)
-        
-        if let audioEngine = audioEngine {
-            audioEngine.stop()
-            audioEngine.reset()
-        }
     }
     
     // MARK: Connect List of Audio Nodes
@@ -223,7 +217,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         case .playing:
             setPlayButtonsEnabled(false)
             stopButton.isEnabled = true
-            sharingButton.isEnabled = true
             
         case .notPlaying:
             setPlayButtonsEnabled(true)
