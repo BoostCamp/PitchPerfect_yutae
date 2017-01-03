@@ -5,6 +5,6 @@
 #ifndef PitchPerfect_Bridging_Header_h
 #define PitchPerfect_Bridging_Header_h
 
-#import <EZAudio/EZAudio.h>
+#import <IQAudioRecorderController/IQAudioRecorderViewController.h>
 
 #endif

@@ -9,8 +9,9 @@
 import UIKit
 import AVFoundation
 import EZAudio
+import IQAudioRecorderController
 
-class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQAudioRecorderViewControllerDelegate {
 
     var audioRecorder:AVAudioRecorder!
 
@@ -20,8 +21,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingButton: UIButton!
     
     
-    @IBOutlet weak var recordingAudioPlot: EZAudioPlotGL!
-    var microphone: EZMicrophone!
+    var controller:IQAudioRecorderViewController!
     
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopRecordingButton: UIButton!
@@ -34,12 +34,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 //        self.recordingAudioPlot.plotType        = EZPlotTypeRolling;
 //        plot?.shouldFill = true;
 //        plot?.shouldMirror = true;
-        
-        self.recordingAudioPlot.backgroundColor = UIColor(colorLiteralRed: 1.0, green: 0.2, blue: 0.365, alpha: 1.0)
-        self.recordingAudioPlot.color = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        self.recordingAudioPlot.shouldFill = true
-        self.recordingAudioPlot.shouldMirror = true
-        self.recordingAudioPlot.plotType = .rolling
 //
 //        self.microphone = EZMicrophone(delegate: self, startsImmediately: true)
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,16 +74,30 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
                 self.recordingButton.isEnabled = false
                 
                 try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
-                
-//                try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
                 try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: recordSettings)
+                
+                self.controller = IQAudioRecorderViewController.init()
+                self.controller.argAudioRecorder = self.audioRecorder
+                self.controller.delegate = self
+                self.controller.title = "RecordedAudio"
+                
+                self.controller.normalTintColor = UIColor.brown
+                self.controller.highlightedTintColor = UIColor.red
+                
+                self.controller.allowCropping = true
+                
+                self.presentBlurredAudioRecorderViewControllerAnimated(self.controller)
+                
+                /*
+                try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+                
                 self.audioRecorder.delegate = self
                 self.audioRecorder.isMeteringEnabled = true
                 self.audioRecorder.prepareToRecord()
                 self.audioRecorder.record()
 
                 self.EZAudioInit()
-                
+                */
 
             } else {
                 let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
@@ -116,13 +124,21 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         audioRecorder.stop()
         
-        self.microphone.stopFetchingAudio()
         
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         
         
     }
+    // MARK : IQAudio
+    func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
+        self.controller.dismiss(animated: true, completion: nil)
+    }
+    func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
+        self.controller.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "stopRecording", sender: self.audioRecorder.url)
+    }
+    
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
@@ -144,7 +160,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         self.stopRecordingButton.isHidden = true
         self.recordingLabel.isHidden = true
         
-        self.recordingAudioPlot.clear()
     }
     override func viewDidDisappear(_ animated: Bool) {
         print("View Did disappear!")
@@ -152,3 +167,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
 }
 
+extension TimeInterval {
+    func stringFromTimeInterval() -> NSString {
+        
+        let ti = NSInteger(self)
+        let ms = Int((self.truncatingRemainder(dividingBy: 1.0) * 100))
+        let seconds = ti % 60
+        let minutes = (ti / 60) % 60
+        //        let hours = (ti / 3600)
+        
+        return NSString(format: "%0.2d:%0.2d.%0.2d",minutes,seconds, ms)
+    }
+}

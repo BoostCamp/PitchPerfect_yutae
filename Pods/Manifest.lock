@@ -1,19 +1,15 @@
 PODS:
-  - EZAudio (1.1.5):
-    - EZAudio/Full (= 1.1.5)
-  - EZAudio/Core (1.1.5)
-  - EZAudio/Full (1.1.5):
-    - EZAudio/Core
-    - TPCircularBuffer (= 1.1)
-  - TPCircularBuffer (1.1)
+  - IQAudioRecorderController (1.2.0):
+    - SCSiriWaveformView
+  - SCSiriWaveformView (1.0.3)
 
 DEPENDENCIES:
-  - EZAudio (~> 1.1.4)
+  - IQAudioRecorderController
 
 SPEC CHECKSUMS:
-  EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
-  TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
+  IQAudioRecorderController: 1d46d99330cb2c9381568665d123cf435460a43e
+  SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395
 
-PODFILE CHECKSUM: bec2d29f56077ebadb1b2b14d568a3955cbd2ede
+PODFILE CHECKSUM: 71cbe41e2c88d5b9ad90f918fbb8fa3bd1d63b6c
 
 COCOAPODS: 1.1.1

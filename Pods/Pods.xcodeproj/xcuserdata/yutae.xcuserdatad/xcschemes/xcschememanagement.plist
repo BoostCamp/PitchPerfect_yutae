@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EZAudio.xcscheme</key>
+		<key>IQAudioRecorderController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -14,7 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TPCircularBuffer.xcscheme</key>
+		<key>SCSiriWaveformView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>68E504159A95438F18EAACAB7BBD121C</key>
+		<key>923C199FC8844D48B6E4D0E9B013C7C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B42A1C563331D6A5A52594827651E956</key>
+		<key>B2076425E02280559FB511A6990D3850</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F80BCB0570D696DB868ECBC6D6460351</key>
+		<key>BF5E8492AD833171E67A19F798CC6361</key>
 		<dict>
 			<key>primary</key>
 			<true/>
