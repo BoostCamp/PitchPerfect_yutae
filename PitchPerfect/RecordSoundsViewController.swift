@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import EZAudio
 import IQAudioRecorderController
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQAudioRecorderViewControllerDelegate {
