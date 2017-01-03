@@ -12,9 +12,7 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
     var recordedAudioURL: URL!
-    
-    var recordedAudio: AVAudioRecorder!
-    
+
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
@@ -78,51 +76,20 @@ class PlaySoundsViewController: UIViewController, UIDocumentInteractionControlle
 
     @IBAction func shareButtonPressed(_ sender: Any) {
         if(selectedButton != -1){
-            var sharingItems = [AnyObject]()
-//            print(recordedAudio.url.absoluteString)
-//            print("******************")
-            
-//            sharingItems.append(data!)
-            sharingItems.append(recordedAudio.url as AnyObject)
+//            self.audioEngine.mainMixerNode.removeTap(onBus: 0)
             
             let fileManager = FileManager.default
 
             
-            if fileManager.fileExists(atPath: recordedAudio.url.absoluteString){
-//                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: recordedAudio.url.absoluteString ) as URL)
+            if fileManager.fileExists(atPath: recordedAudioURL.absoluteString){
+//                let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: recordedAudioURL.absoluteString ) as URL)
                 let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: changedAudioFile.url.absoluteString ) as URL)
-//                docController.presentOptionsMenuFromRect(self.button.frame, inView: self.view, animated: true)
-//                docController.presentOptionsMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
                 docController.delegate = self;
                 docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
             }
-//            
-//            print("******************")
-//            print(recordedAudio.url)
-//            print("******************")
-//            let items = UIActivityItemProvider(placeholderItem: data)
-//            let activityViewController = UIActivityViewController(activityItems: [data!], applicationActivities: nil)
-            /*
-            let activityViewController = UIActivityViewController(activityItems: [sharingItems], applicationActivities: nil)
-//            activityViewController.excludedActivityTypes = [UIActivityType.airDrop]
-            
-            activityViewController.accessibilityLanguage = "ko-KR"
-
-            if(activityViewController.popoverPresentationController != nil) {
-                activityViewController.popoverPresentationController?.sourceView = self.view;
-                let frame = UIScreen.main.bounds
-                activityViewController.popoverPresentationController?.sourceRect = frame;
-            }
-            
-            self.present(activityViewController, animated: true, completion: nil)
-             */
         }
         
     }
-    
-//    func documentInteractionControllerViewForPreview(_ controller: UIDocumentInteractionController) -> UIView? {
-//        return self.view
-//    }
     
     func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
         return self

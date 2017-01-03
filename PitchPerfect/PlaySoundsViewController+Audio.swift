@@ -37,8 +37,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     func setupAudio() {
         // initialize (recording) audio file
         do {
-//            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
-            audioFile = try AVAudioFile(forReading: recordedAudio.url as URL)
+            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
         } catch {
             showAlert(Alerts.AudioFileError, message: String(describing: error))
         }
@@ -73,39 +72,102 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         reverbNode.loadFactoryPreset(.cathedral)
         reverbNode.wetDryMix = 50
         audioEngine.attach(reverbNode)
-        
-        // Mixer
-//        let audioMixer = AVAudioMixerNode()
-//        audioEngine.attach(audioMixer)
-        
-        
-        // connect nodes
-//        if echo == true && reverb == true {
-//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
-//        } else if echo == true {
-//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
-//        } else if reverb == true {
-//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
-//        } else {
-//            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
-//        }
+   
+        // connect nodes (Original)
+        /*
         if echo == true && reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.mainMixerNode,audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
         } else if echo == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.mainMixerNode,audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
         } else if reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.mainMixerNode,audioEngine.outputNode)
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
+        } else {
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
+        }
+         */
+        
+        if echo == true && reverb == true {
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
+        } else if echo == true {
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.mainMixerNode, audioEngine.outputNode)
+        } else if reverb == true {
+            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
         } else {
             connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.mainMixerNode,audioEngine.outputNode)
         }
-
         
         
         // schedule to play and start the engine!
-        audioPlayerNode.stop()
-        audioPlayerNode.scheduleFile(audioFile, at: nil) {
+        /*
+         do {
+         try audioEngine.start()
+         } catch {
+         showAlert(Alerts.AudioEngineError, message: String(describing: error))
+         return
+         }
+        */
+        
+        
+
+    
+        // MARK: Changed Audio
+            let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+            let recordingName = "PitchPerfect.aac"
+            let pathArray = [dirPath, recordingName]
+            let filePath = URL(string: pathArray.joined(separator: "/"))
+            
+            let audioSettings =
+                [AVFormatIDKey: kAudioFormatMPEG4AAC,
+                 AVSampleRateKey: 16000.0,
+                 AVNumberOfChannelsKey: 1] as [String : Any]
+        
+        /* High Quality
+            let audioSettings =
+                [AVFormatIDKey: NSNumber(value:kAudioFormatAppleLossless),
+                 AVEncoderAudioQualityKey : AVAudioQuality.low.rawValue,
+                 AVEncoderBitRateKey : 320000,
+                 AVNumberOfChannelsKey: 2,
+                 AVSampleRateKey : 44100.0, ] as [String : Any]
+            */
+        
+            self.changedAudioFile = try! AVAudioFile(forWriting: filePath!, settings: audioSettings)
+            self.audioEngine.prepare()
+            try! self.audioEngine.start()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 8192, format: self.changedAudioFile.processingFormat, block: {
+                (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) in
+                do {
+                    try self.changedAudioFile.write(from:buffer)
+                    print("Copy...")
+                    print("new Audio : \(self.changedAudioFile.length)")
+                } catch {
+                    print(error)
+                }
+                /*
+                let dataptrptr = buffer.floatChannelData!
+                let dataptr = dataptrptr.pointee
+                let datum = dataptr[Int(buffer.frameLength) - 1]
+                
+                if (done && abs(datum) < 0.000001 ){
+                    print("-----------------")
+                    print("Copy Completion")
+                    print("-----------------")
+                    self.stopAudio()
+                    self.audioEngine.mainMixerNode.removeTap(onBus: 0)
+                    return
+                }
+                 */
+                
+            })
+        }
+        
+        self.audioPlayerNode.stop()
+        
+        self.audioPlayerNode.scheduleFile(self.audioFile, at: nil) {
             
             var delayInSeconds: Double = 0
+            
             
             if let lastRenderTime = self.audioPlayerNode.lastRenderTime, let playerTime = self.audioPlayerNode.playerTime(forNodeTime: lastRenderTime) {
                 
@@ -121,73 +183,14 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             RunLoop.main.add(self.stopTimer!, forMode: RunLoopMode.defaultRunLoopMode)
         }
         
-        do {
-            try audioEngine.start()
-        } catch {
-            showAlert(Alerts.AudioEngineError, message: String(describing: error))
-            return
-        }
         
-//        let length = 4000
-//        let buffer = AVAudioPCMBuffer(pcmFormat: audioPlayerNode.outputFormat(forBus: 0),frameCapacity:AVAudioFrameCount(length))
-//        buffer.frameLength = AVAudioFrameCount(length)
-        
-        // MARK: Changed Audio
-        do {
-            let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-            let recordingName = audioType[selectedButton]+".m4a"
-            let pathArray = [dirPath, recordingName]
-            let filePath = URL(string: pathArray.joined(separator: "/"))
-            
-            let audioSettings =
-                [AVFormatIDKey: kAudioFormatMPEG4AAC,
-                 AVSampleRateKey: 16000.0,
-                 AVNumberOfChannelsKey: 1] as [String : Any]
-            self.changedAudioFile = try! AVAudioFile(forWriting: filePath!, settings: audioSettings)
-            
-            let length = self.audioFile.length
-            /*
-            audioMixer.installTap(onBus: 0, bufferSize: 1024 , format: audioMixer.outputFormat(forBus: 0)){
-                (buffer: AVAudioPCMBuffer!, time: AVAudioTime!)  in
-                if (self.changedAudioFile.length) < (self.audioFile.length){
-                    
-                    do{
-                        //print(buffer)
-                        try self.changedAudioFile.write(from: buffer)
-                    }catch _{
-                        print("Problem Writing Buffer")
-                    }
-                }else{
-                    audioMixer.removeTap(onBus: 0)
-                }
-            }
-             */
-            
-            audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 1024, format: self.audioEngine.mainMixerNode.inputFormat(forBus: 0)) {
-                (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) -> Void in
-                if (self.changedAudioFile.length) < length {
-                    do{
-                        try self.changedAudioFile.write(from: buffer)
-                    }catch _{
-                        self.showAlert(Alerts.AudioEngineError, message: String(describing: "Error"))
-//                        return
-                    }
-                }else{
-                    self.audioEngine.mainMixerNode.removeTap(onBus: 0)
-                }
-            }
-             
-
-        } catch {
-            showAlert(Alerts.AudioEngineError, message: String(describing: "Error"))
-//            return
-        }
- 
         // play the recording!
-        audioPlayerNode.play()
+        self.audioPlayerNode.play()
+        self.audioEngine.mainMixerNode.removeTap(onBus: 0)
     }
     
     func stopAudio() {
+        
         
         if let audioPlayerNode = audioPlayerNode {
             audioPlayerNode.stop()
