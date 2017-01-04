@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WxN-ZQ-gb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FdH-7k-FFp">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -51,12 +51,12 @@
                         <outlet property="recordingButton" destination="vfm-sh-t4f" id="gNo-au-lL2"/>
                         <outlet property="recordingLabel" destination="551-AX-cFc" id="1NN-Pw-DEf"/>
                         <segue destination="5Go-St-8dJ" kind="show" identifier="stopRecording" id="6VD-xQ-PrC"/>
-                        <segue destination="WxN-ZQ-gb1" kind="show" id="Aex-II-3Y2"/>
+                        <segue destination="WxN-ZQ-gb1" kind="show" identifier="recordingCompletion" id="dos-cM-Nao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1075.3623188405797" y="138.58695652173915"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="aiC-2I-mVu">
@@ -248,13 +248,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BEg-Tg-DAQ" firstAttribute="leading" secondItem="aGP-4e-JKD" secondAttribute="leadingMargin" id="3EQ-3x-VJW"/>
-                            <constraint firstItem="2qY-ui-IlQ" firstAttribute="top" secondItem="BEg-Tg-DAQ" secondAttribute="bottom" id="SNS-es-VTu"/>
                             <constraint firstItem="BEg-Tg-DAQ" firstAttribute="top" secondItem="maf-Ur-SDY" secondAttribute="bottom" id="doW-a4-59f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BEg-Tg-DAQ" secondAttribute="trailing" id="hha-n4-XXV"/>
+                            <constraint firstItem="2qY-ui-IlQ" firstAttribute="top" secondItem="BEg-Tg-DAQ" secondAttribute="bottom" id="vcv-7E-Cd4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="VOVO" id="GrB-d7-6Jp" userLabel="VOVO">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="doW-wy-pp4">
+                            <connections>
+                                <action selector="sharingButtonPressed:" destination="WxN-ZQ-gb1" id="eRe-2n-PU1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="BEg-Tg-DAQ" id="Fhy-re-EvJ"/>
+                        <outlet property="sharingButton" destination="doW-wy-pp4" id="AkG-4u-ByM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brG-uf-KqV" userLabel="First Responder" sceneMemberID="firstResponder"/>

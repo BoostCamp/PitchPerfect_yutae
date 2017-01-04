@@ -27,6 +27,7 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
     
     // Edited By yutae
     var selectedItem:Int!
+//    let forPerformSegueVC: UIViewController = PlaySoundsDialLayoutViewController()
     
     var shouldSnap = false
     var shouldFlip = false
@@ -108,7 +109,6 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
     
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        //        print("Selected")
         var theLayoutAttributes = [UICollectionViewLayoutAttributes]()
         
         let maxVisiblesHalf:Int = 180 / Int(self.angularSpacing)
@@ -130,15 +130,6 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        //        print(proposedContentOffset)
-        //        print(velocity)
-        print("********Selected 1")
-//        print(selectedItem)
-        //        print(self)
-        //        print(sleep)
-        //        sleep(3)
-        //        sleep(1)
-        //        print(selectedItem)
         
         if(shouldSnap){
             let index = Int(floor(proposedContentOffset.y / self.itemHeight))
@@ -151,6 +142,8 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
                 targetY = (index+1) * height
             }
             
+            
+            
             return CGPoint(x: proposedContentOffset.x, y: CGFloat(targetY))
         }else{
             return proposedContentOffset;
@@ -159,9 +152,6 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
     
     
     override func targetIndexPath(forInteractivelyMovingItem previousIndexPath: IndexPath, withPosition position: CGPoint) -> IndexPath {
-        print("********Selected 2")
-        print(position)
-        print(IndexPath(item: 0, section: 0))
         return IndexPath(item: 0, section: 0)
     }
     

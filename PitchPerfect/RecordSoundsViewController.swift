@@ -128,7 +128,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     }
     func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
         self.controller.dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "stopRecording", sender: self.audioRecorder.url)
+//        performSegue(withIdentifier: "stopRecording", sender: self.audioRecorder.url)
+        performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
     }
     
     
@@ -143,6 +144,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "stopRecording"{
             let playSoundsVC = segue.destination as! PlaySoundsViewController
+            let recordedAudio = sender
+            playSoundsVC.recordedAudioURL = recordedAudio as! URL!
+        }
+        if segue.identifier == "recordingCompletion"{
+            let playSoundsVC = segue.destination as! PlaySoundsDialLayoutViewController
             let recordedAudio = sender
             playSoundsVC.recordedAudioURL = recordedAudio as! URL!
         }
