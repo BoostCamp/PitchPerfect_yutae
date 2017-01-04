@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>3</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>2</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>ko_KR</string>
 	<key>CFBundleExecutable</key>
@@ -37,8 +31,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>2</string>
+	<key>NSCameraUsageDescription</key>
+	<string>3</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This Application requires microphone access.</string>
+	<key>NSPrincipalClass</key>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

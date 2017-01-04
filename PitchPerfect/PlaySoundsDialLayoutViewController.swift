@@ -12,6 +12,12 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var deviceWidth = UIScreen.main.bounds.size.width
+    var deviceHeight = UIScreen.main.bounds.size.height
+    
+    var currentDeviceWidth:CGFloat!
+    var currentDeviceHeight:CGFloat!
+    
     var dialLayout:AWCollectionViewDialLayout!
     var cell_height:CGFloat!
     var cell_width:CGFloat!
@@ -20,13 +26,15 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureDialLayoutUI()
         
+        currentDeviceWidth = deviceWidth
+        currentDeviceHeight = deviceHeight
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configureDialLayoutUI()
 //        configureDialLayoutUI()
     }
     
@@ -42,9 +50,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     // DialLayout 초기화
     func configureDialLayoutUI(){
         print("Dial Layout Init")
-
-        let currentDeviceWidth = UIScreen.main.bounds.size.width
-        let currentDeviceHeight = UIScreen.main.bounds.size.height
+        self.dialLayout = nil
         
         print("UIDevice Witdh : \(currentDeviceWidth)")
         
@@ -84,5 +90,20 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         let audioType = self.audioTypes[indexPath.item]
         cell.iconImage.image = UIImage(named: audioType)
         return cell
+    }
+    
+    //Orientations Change!
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        print("Change")
+        if (UIDevice.current.orientation.isPortrait) {
+            print("Portrait!")
+            currentDeviceWidth = deviceWidth
+            currentDeviceHeight = deviceHeight
+        } else {
+            currentDeviceWidth = deviceHeight
+            currentDeviceHeight = deviceWidth
+            
+        }
+        self.configureDialLayoutUI()
     }
 }
