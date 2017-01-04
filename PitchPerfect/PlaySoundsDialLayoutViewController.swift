@@ -25,7 +25,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var cell_height:CGFloat!
     var cell_width:CGFloat!
     
-    let audioType = ["Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb"]
+    let audioType = ["Stop", "Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb"]
     
 //    AVAudio
     var recordedAudioURL: URL!
@@ -34,6 +34,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     var changedAudioFile:AVAudioFile!
+    
+    var dragging: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +61,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureDialLayoutUI()
-//        configureDialLayoutUI()
+        // Sharing Button init
+        self.sharingButton.isEnabled = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -94,8 +97,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         
         print("UIDevice Witdh : \(currentDeviceWidth)")
         
-//        print(currentDeviceWidth/20)
-//        if(currentDeviceWidth < 1024
         
         self.dialLayout = AWCollectionViewDialLayout(raduis: self.radius , angularSpacing: self.angularSpacing, cellSize: CGSize.init(width: cell_height, height: cell_width), alignment: WheelAlignmentType.center, itemHeight: cell_height, xOffset: currentDeviceWidth/2)
         
@@ -120,38 +121,74 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         return self.audioType.count
     }
     
-    // Scroll 시작 시 음악 정지.
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("Scroll Begin!!")
-        self.stopAudio()
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        // Mark : Yutae 음악 선택 후 sender 보내기 1초 Term 주고 음악 재생.
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) {
-            print("Selected : \(self.dialLayout.selectedItem)")
-            switch (self.dialLayout.selectedItem) {
-            case 0:
-                self.playSound(rate:0.5)
-            case 1:
-                self.playSound(rate:1.5)
-            case 2:
-                self.playSound(pitch:1000)
-            case 3:
-                self.playSound(pitch: -1000)
-            case 4:
-                self.playSound(echo:true)
-            case 5:
-                self.playSound(reverb:true)
-            default:
-                self.playSound()
+    // Scroll 끝났을 때 음악 재생.
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        //
+        print("1 Selected : \(self.dialLayout.selectedItem)")
+        
+        switch (self.dialLayout.selectedItem) {
+        case 0:
+            self.stopAudio()
+        case 1:
+            self.playSound(rate:0.5)
+        case 2:
+            self.playSound(rate:1.5)
+        case 3:
+            self.playSound(pitch:1000)
+        case 4:
+            self.playSound(pitch: -1000)
+        case 5:
+            self.playSound(echo:true)
+        case 6:
+            self.playSound(reverb:true)
+        default:
+            self.playSound()
+        }
+        
+        // UI라서 DispatQueue main 으로 관리 Sharing Button init
+        DispatchQueue.main.async {
+            self.sharingButton.isEnabled = true
+            //            self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yourImage.png"]];
+            //            customView.back
+            if(self.dialLayout.selectedItem != 0) {
+                let image = UIImage(named: "Bg")
+                let customView = UIImageView.init(image: image)
+                self.collectionView.backgroundView = customView
+                
+                self.navigationItem.title = self.audioType[self.dialLayout.selectedItem]
             }
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectedItem" {
-            print("selected! ")
+    
+    // Scroll 시작 시 음악 정지.
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        print("Scroll Begin!!")
+        self.stopAudio()
+        
+        // UI라서 DispatQueue main 으로 관리 Sharing Button init
+        DispatchQueue.main.async {
+            self.sharingButton.isEnabled = false
+            
+            let image = UIImage(named: "Stop")
+            let customView = UIImageView.init(image: image)
+            customView.alpha = 0.1
+            
+            /* Gradation
+            let gradient = CAGradientLayer()
+            gradient.frame = self.collectionView.frame
+            gradient.colors = [UIColor.black.cgColor, UIColor.white.cgColor]
+            self.collectionView.layer.sublayers?.insert(gradient, at: 0)
+            */
+            
+            self.collectionView.backgroundView = customView
+            
+            self.navigationItem.title = "VOVO"
         }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("1 Clicked : \(self.audioType[indexPath.item])")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

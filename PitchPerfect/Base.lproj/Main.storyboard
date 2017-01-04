@@ -207,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-Tg-DAQ">
-                                <rect key="frame" x="20" y="64" width="374" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5tf-k9-0Qj">
                                     <size key="itemSize" width="180" height="180"/>
@@ -247,10 +247,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BEg-Tg-DAQ" firstAttribute="leading" secondItem="aGP-4e-JKD" secondAttribute="leadingMargin" id="3EQ-3x-VJW"/>
-                            <constraint firstItem="BEg-Tg-DAQ" firstAttribute="top" secondItem="maf-Ur-SDY" secondAttribute="bottom" id="doW-a4-59f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BEg-Tg-DAQ" secondAttribute="trailing" id="hha-n4-XXV"/>
-                            <constraint firstItem="2qY-ui-IlQ" firstAttribute="top" secondItem="BEg-Tg-DAQ" secondAttribute="bottom" id="vcv-7E-Cd4"/>
+                            <constraint firstItem="BEg-Tg-DAQ" firstAttribute="bottom" secondItem="2qY-ui-IlQ" secondAttribute="top" id="HIE-oh-MyU"/>
+                            <constraint firstItem="BEg-Tg-DAQ" firstAttribute="leading" secondItem="aGP-4e-JKD" secondAttribute="leading" id="NNj-KV-ZNW"/>
+                            <constraint firstAttribute="trailing" secondItem="BEg-Tg-DAQ" secondAttribute="trailing" id="RY8-3a-nt2"/>
+                            <constraint firstItem="BEg-Tg-DAQ" firstAttribute="top" secondItem="maf-Ur-SDY" secondAttribute="bottom" id="mHh-av-ds0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="VOVO" id="GrB-d7-6Jp" userLabel="VOVO">
@@ -296,7 +296,7 @@
         <image name="Reverb" width="100" height="100"/>
         <image name="Share" width="85" height="85"/>
         <image name="Snail" width="100" height="100"/>
-        <image name="Stop" width="50" height="50"/>
+        <image name="Stop" width="341" height="341"/>
         <image name="Vader" width="100" height="100"/>
     </resources>
 </document>

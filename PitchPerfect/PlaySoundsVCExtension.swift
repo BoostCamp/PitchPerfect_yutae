@@ -180,24 +180,40 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         // play the recording!
         self.audioPlayerNode.play()
         self.audioEngine.mainMixerNode.removeTap(onBus: 0)
+        
+        
+        self.sharingButton.isEnabled = true
     }
     
     func stopAudio() {
-//        self.sharingBu.isEnabled = true
-        self.sharingButton.isEnabled = true
-        if (self.audioPlayerNode) != nil {
-            //            self.audioPlayerNode.stop()
-            self.audioPlayerNode = nil
+//        DispatchQueue.main.async {
+        if let audioPlayerNode = self.audioPlayerNode {
+            audioPlayerNode.stop()
         }
-        if (self.audioEngine) != nil {
-            //            audioEngine.stop()
-            //            audioEngine.reset()
-            self.audioEngine = nil
+        if let audioEngine = self.audioEngine {
+            audioEngine.stop()
+            audioEngine.reset()
         }
-        
-        if let stopTimer = stopTimer {
+        if let stopTimer = self.stopTimer {
             stopTimer.invalidate()
         }
+        
+//            if (self.audioPlayerNode) != nil {
+//                //            self.audioPlayerNode.stop()
+//                self.audioPlayerNode = nil
+//            }
+//            if (self.audioEngine) != nil {
+//                //            audioEngine.stop()
+//                //            audioEngine.reset()
+//                self.audioEngine = nil
+//            }
+        
+        
+//        }
+        
+        
+        // Sharing Button init
+        
     }
     
     // MARK: Connect List of Audio Nodes
