@@ -15,6 +15,9 @@
 		9623D6AF1E14C63F003588D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */; };
 		96850BFA1E14FB0100006955 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */; };
 		96850BFC1E1508F400006955 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */; };
+		96B5E1EC1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */; };
+		96B5E1EE1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */; };
+		96B5E1F01E1CE4CF00B10BB7 /* dialLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PitchPerfect-Bridging-Header.h"; sourceTree = "<group>"; };
 		96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
+		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
+		96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsDialLayoutViewController.swift; sourceTree = "<group>"; };
+		96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dialLayoutCell.swift; sourceTree = "<group>"; };
 		F74FE7032C65425B6E9CC936 /* Pods_PitchPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPerfect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +88,7 @@
 				9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */,
 				9623D6B01E14C63F003588D3 /* Info.plist */,
 				965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */,
+				96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -92,6 +99,8 @@
 				9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */,
 				96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */,
 				96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */,
+				96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */,
+				96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -232,7 +241,10 @@
 				9623D6A71E14C63F003588D3 /* RecordSoundsViewController.swift in Sources */,
 				96850BFC1E1508F400006955 /* PlaySoundsViewController+Audio.swift in Sources */,
 				96850BFA1E14FB0100006955 /* PlaySoundsViewController.swift in Sources */,
+				96B5E1F01E1CE4CF00B10BB7 /* dialLayoutCell.swift in Sources */,
 				9623D6A51E14C63F003588D3 /* AppDelegate.swift in Sources */,
+				96B5E1EE1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift in Sources */,
+				96B5E1EC1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
