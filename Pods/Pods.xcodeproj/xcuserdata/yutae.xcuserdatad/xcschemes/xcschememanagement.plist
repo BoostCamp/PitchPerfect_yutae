@@ -29,10 +29,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UICircularProgressRing.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>011CE5B94F5CF031B9B6C03BCA239CF1</key>
+		<key>51646520422D1764F8D255F573844C0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>BF5E8492AD833171E67A19F798CC6361</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF8A554D0DFA821051DF5B70C4280E93</key>
 		<dict>
 			<key>primary</key>
 			<true/>

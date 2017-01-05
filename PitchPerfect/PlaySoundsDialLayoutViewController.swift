@@ -65,6 +65,9 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        // 종료될때 현재 재생중인 음악 끄기.
+        self.stopAudio()
 
     }
     

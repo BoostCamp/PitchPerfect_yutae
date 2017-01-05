@@ -47,6 +47,7 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
     
     func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
         
+        
         // initialize audio engine components
         audioEngine = AVAudioEngine()
         
@@ -86,16 +87,6 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
          connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
          }
         
-        self.audioEngine.prepare()
-        
-        // schedule to play and start the engine!
-        do {
-            try self.audioEngine.start()
-        } catch {
-            showAlert(Alerts.AudioEngineError, message: String(describing: error))
-            return
-        }
-        
         self.audioPlayerNode.stop()
         
         self.audioPlayerNode.scheduleFile(self.audioFile, at: nil) {
@@ -116,6 +107,15 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
             RunLoop.main.add(self.stopTimer!, forMode: RunLoopMode.defaultRunLoopMode)
         }
         
+        self.audioEngine.prepare()
+        
+        // schedule to play and start the engine!
+        do {
+            try self.audioEngine.start()
+        } catch {
+            showAlert(Alerts.AudioEngineError, message: String(describing: error))
+            return
+        }
         
         // play the recording!
         self.audioPlayerNode.play()
@@ -124,6 +124,9 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
     func sharePlaySound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
         //Loading UI DispatchQueue main 으로 관리
         DispatchQueue.main.async {
+//            Pg 가 따라가는 선색, Bg 배경색
+//            CircularSpinner.trackBgColor = UIColor.red
+//            CircularSpinner.trackPgColor = UIColor.black
             CircularSpinner.show("Loading...", animated: true, type: .indeterminate, showDismissButton: false)
         }
         

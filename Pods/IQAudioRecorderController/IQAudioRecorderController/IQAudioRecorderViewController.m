@@ -720,7 +720,9 @@
             }
         }
 
-        [[AVAudioSession sharedInstance] setCategory:_oldSessionCategory error:nil];
+//        MARK : Yutae 성공적으로 녹음 시 스피커 출력 유지.
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error: nil];
+//        [[AVAudioSession sharedInstance] setCategory:_oldSessionCategory error:nil];
         [UIApplication sharedApplication].idleTimerDisabled = _wasIdleTimerDisabled;
     }
     else

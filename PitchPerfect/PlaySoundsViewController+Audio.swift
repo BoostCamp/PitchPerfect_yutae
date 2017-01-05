@@ -44,7 +44,9 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
-        
+        let session = AVAudioSession.sharedInstance()
+//        try! session.setCategory(AVAudioSessionCategoryAmbient, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+//        session.setMode(<#T##mode: String##String#>)
         // initialize audio engine components
         audioEngine = AVAudioEngine()
         

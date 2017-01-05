@@ -32,8 +32,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        // MARK : Yutae
         lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2, CGRectGetHeight(self.bounds))];
-        lineView.backgroundColor = [UIColor redColor];
+        lineView.backgroundColor = [UIColor blueColor];
         [self addSubview:lineView];
         
         smallLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds)/2, CGRectGetWidth(lineView.frame))];
@@ -41,7 +42,7 @@
         [self addSubview:smallLineView];
         
         timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds)-20, CGRectGetWidth(self.bounds), 20)];
-        timeLabel.textColor = [UIColor redColor];
+        timeLabel.textColor = [UIColor blackColor];
         timeLabel.minimumScaleFactor = 0.5;
         timeLabel.adjustsFontSizeToFitWidth = YES;
         timeLabel.textAlignment = NSTextAlignmentCenter;
