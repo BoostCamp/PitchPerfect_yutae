@@ -35,8 +35,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var stopTimer: Timer!
     var changedAudioFile:AVAudioFile!
     
-    var dragging: Bool!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,9 +75,29 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     // 공유하기버튼 액션
     @IBAction func sharingButtonPressed(_ sender: Any) {
+        switch (self.dialLayout.selectedItem) {
+        case 0:
+            self.stopAudio()
+        case 1:
+            self.sharePlaySound(rate:0.5)
+        case 2:
+            self.sharePlaySound(rate:1.5)
+        case 3:
+            self.sharePlaySound(pitch:1000)
+        case 4:
+            self.sharePlaySound(pitch:-1000)
+        case 5:
+            self.sharePlaySound(echo:true)
+        case 6:
+            self.sharePlaySound(reverb:true)
+        default:
+            self.stopAudio()
+        }
+        /*
         let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: changedAudioFile.url.absoluteString ) as URL)
         docController.delegate = self;
         docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
+         */
     }
     
     // 공유하고 후 Call Back VC 
@@ -147,10 +165,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         
         // UI라서 DispatQueue main 으로 관리 Sharing Button init
         DispatchQueue.main.async {
-            self.sharingButton.isEnabled = true
-            //            self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yourImage.png"]];
-            //            customView.back
             if(self.dialLayout.selectedItem != 0) {
+                self.sharingButton.isEnabled = true
                 let image = UIImage(named: "Bg")
                 let customView = UIImageView.init(image: image)
                 self.collectionView.backgroundView = customView
@@ -181,7 +197,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
             */
             
             self.collectionView.backgroundView = customView
-            
             self.navigationItem.title = "VOVO"
         }
     }

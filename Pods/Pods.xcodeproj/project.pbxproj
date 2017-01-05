@@ -7,75 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00F382CFD2426E9390967F45E000626C /* Pods-PitchPerfect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1340CA2FE79041012930596C0433F837 /* Pods-PitchPerfect-dummy.m */; };
-		0183E6D8926F00B7F8A2DBB87A55F726 /* IQAudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B274084D3DC0281DF26B1D96F391B930 /* IQAudioRecorderViewController.m */; };
+		0183E6D8926F00B7F8A2DBB87A55F726 /* IQAudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E0C577037E443AFCAFDDBE41BD6932 /* IQAudioRecorderViewController.m */; };
+		01C71AFEDCF18DFAF546217AB8EDA1A0 /* CircularSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D885A5271303C137495A2007EA7F2D /* CircularSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05713E54A4D5AE78DB21AB7DF79BF016 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
-		17D424BA5C309E1109615172FD2C5017 /* audio_record.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D5BA1A9CFE2AA655E9CFAD491D77A1 /* audio_record.png */; };
+		10E1BB851F0B4FDAD3377596F7D37319 /* x_darkGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */; };
+		152AA4CD5E508007D2512BC03A11595C /* CircularSpinner.xib in Sources */ = {isa = PBXBuildFile; fileRef = C253100967D466EFFB29118B66A27545 /* CircularSpinner.xib */; };
+		17D424BA5C309E1109615172FD2C5017 /* audio_record.png in Resources */ = {isa = PBXBuildFile; fileRef = ED10FC07230072DC82E378F0F9C045D3 /* audio_record.png */; };
 		29E0F9D1AACCBB7E7533A9D0D1A2C547 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFFC6C371E0E240CC417FC7EA0ACE91 /* QuartzCore.framework */; };
-		3015F02E49347B64CB43DF58EB06D1AD /* scissor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6204AAA019D54490C48F77BD4AF28475 /* scissor@2x.png */; };
-		305269DD136262175D1A0727D7CDA9A2 /* stop_recording@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE046DFE4CED1F368AA6A913FAB1403 /* stop_recording@2x.png */; };
+		2C71D0F1ABC3D66F3C5CE74B3C158C2D /* CircularSpinner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */; };
+		3015F02E49347B64CB43DF58EB06D1AD /* scissor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C99D6F0E942148E791F2CAFCEF82 /* scissor@2x.png */; };
+		305269DD136262175D1A0727D7CDA9A2 /* stop_recording@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6CC192F7CF56C941AE8ADAD3AE24E /* stop_recording@2x.png */; };
 		3665A878FFE0805592A4674253A3B91C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6893A2CCAE60DC427CA15D87BA59F60 /* CoreGraphics.framework */; };
-		37C799676D843531B4F8CE0325603183 /* NSString+IQTimeIntervalFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D689D778E03CDAC5711B48FB5015E95 /* NSString+IQTimeIntervalFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3ED606BF23EDB4A6B13161A5895EC1D8 /* IQ_FDWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F170251D17986BB8BCD60B7FFF9E19D /* IQ_FDWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41EA8AF56DE242EDA2F3714B761EDE86 /* IQCropSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11307CD59520593243D83A194C851A /* IQCropSelectionView.m */; };
-		429DEBBF3B75DC7468B68CA71148F6D4 /* stop_playing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE791E67CEDC2186644020D15AA99A1 /* stop_playing@2x.png */; };
-		443767ECD9924DEEA1A36A2D61682F6C /* IQPlaybackDurationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB70AB76421DEEBE1F7F7D983B4067B /* IQPlaybackDurationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		452C92BB5D06338EEEBF013C73C34001 /* stop_playing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D464A92F0C804CE58E2E385A8F04BA /* stop_playing@3x.png */; };
-		46A9E4DAD4C35811079A329E722BBE3E /* microphone_access@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B29C2E5E11429EA70BFFBDD6605BF464 /* microphone_access@3x.png */; };
-		4742C6B8FF177DF03A38F91F877F1F89 /* microphone_access@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7AA2B9FFABD82273AA51DE1B478DD5 /* microphone_access@2x.png */; };
-		4A61C8394F3074A12A159A8A1415AE90 /* IQAudioCropperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A26C89837DBDEFFAFF127CB007E1E422 /* IQAudioCropperViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EDC3E688F83FF99F042AF8955A5F2C2 /* stop_recording@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA9E2326646CA9C4074A40B49E5AAFD /* stop_recording@3x.png */; };
-		4F1E3EAAA5E21C07C86AB289A5E0076E /* IQAudioRecorderController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1B38D79B6429440D38F78640B9776F /* IQAudioRecorderController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D5BBFD8B361F6D80ED22F88FDEF30F1 /* IQPlaybackDurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11ECF4DEFB52A5526DE89794409A7B0 /* IQPlaybackDurationView.m */; };
+		37C799676D843531B4F8CE0325603183 /* NSString+IQTimeIntervalFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B90A4CD3798027F78E600A0494A4078 /* NSString+IQTimeIntervalFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DFAAF2C347A5DCA9ED8C3744EBB9818 /* Pods-PitchPerfect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1340CA2FE79041012930596C0433F837 /* Pods-PitchPerfect-dummy.m */; };
+		3ED606BF23EDB4A6B13161A5895EC1D8 /* IQ_FDWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD32B5315A1CD2ADA03B677B5D6D7B /* IQ_FDWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41EA8AF56DE242EDA2F3714B761EDE86 /* IQCropSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855644F41309232B0123135968F57414 /* IQCropSelectionView.m */; };
+		429DEBBF3B75DC7468B68CA71148F6D4 /* stop_playing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43CC11AA33BD8A8CD0AEAF7F0367F897 /* stop_playing@2x.png */; };
+		443767ECD9924DEEA1A36A2D61682F6C /* IQPlaybackDurationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F7C230DB5EF74699F12B15D537AD56C /* IQPlaybackDurationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452C92BB5D06338EEEBF013C73C34001 /* stop_playing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 237A5003D315620BD9D6213B4862036C /* stop_playing@3x.png */; };
+		46A9E4DAD4C35811079A329E722BBE3E /* microphone_access@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC8ED04A135A7087D329BB6C913238E /* microphone_access@3x.png */; };
+		4742C6B8FF177DF03A38F91F877F1F89 /* microphone_access@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66153E8400A01DC918A0198A25EA2E /* microphone_access@2x.png */; };
+		4A61C8394F3074A12A159A8A1415AE90 /* IQAudioCropperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3C4D49767893AFF437CFA205A886D /* IQAudioCropperViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EDC3E688F83FF99F042AF8955A5F2C2 /* stop_recording@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E547CE0362215C4E2C0D3D10915ED9A /* stop_recording@3x.png */; };
+		4F1E3EAAA5E21C07C86AB289A5E0076E /* IQAudioRecorderController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A20CDA3C6E4C7C91F9F27EF3103AA3 /* IQAudioRecorderController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		512CE8BF19B635C31893B3BFC8564003 /* Pods-PitchPerfect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F2914C833F4AB8ED6C753FCCE84213 /* Pods-PitchPerfect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		555EAF89669575C1158DF4645940E63D /* x_darkGray@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */; };
+		5D5BBFD8B361F6D80ED22F88FDEF30F1 /* IQPlaybackDurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2D654E28C411F7F19A7119030DC31 /* IQPlaybackDurationView.m */; };
 		5E9534FF91AAB97A4A08A8117AB41B69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3015C65EFD93E6C9A2C3E0CDF08BF6CB /* AVFoundation.framework */; };
-		62BFF1854627D667B663118C80804616 /* scissor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABAE93D66013005D806ACEDC03581E1D /* scissor@3x.png */; };
-		64A2196AB6080C641DF100096E267EF2 /* NSString+IQTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D091DD42DD02098986CDE129273C1 /* NSString+IQTimeIntervalFormatter.m */; };
-		757174AA9B1B03484BA2F7F00BAA3576 /* IQCropSelectionEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 211D114F40CC46EB635024D940E1B883 /* IQCropSelectionEndView.m */; };
-		7C1801C836D425C7ED44CDA094E22723 /* IQAudioRecorderConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F145F77270B5DC92358E3A91D46952 /* IQAudioRecorderConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D017C4766A8A6B24A80A356575F707A /* SCSiriWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F0A1E3A227170197F9454A9222E3FF /* SCSiriWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		806C21A7C6E61CFF69D639CAD77E714F /* IQCropSelectionEndView.h in Headers */ = {isa = PBXBuildFile; fileRef = 521E0EEADB9DEDF924E45D1073DEE14E /* IQCropSelectionEndView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62BFF1854627D667B663118C80804616 /* scissor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D7868FEC02AE00723432DA85FEFEEC /* scissor@3x.png */; };
+		6429C3138FDE5269DF479BDF2F929009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
+		64A2196AB6080C641DF100096E267EF2 /* NSString+IQTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968054B28D6F4BD48A8F98D4C656140 /* NSString+IQTimeIntervalFormatter.m */; };
+		6C731116BF6176C0F2F5DBB9D505A756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
+		757174AA9B1B03484BA2F7F00BAA3576 /* IQCropSelectionEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C34E72F0B9D198FA20132C24461E79 /* IQCropSelectionEndView.m */; };
+		7C1801C836D425C7ED44CDA094E22723 /* IQAudioRecorderConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0C47796E39B957C02B4003078F6BA9 /* IQAudioRecorderConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D017C4766A8A6B24A80A356575F707A /* SCSiriWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 026E27183C91048CE5D8FF1BE84AF010 /* SCSiriWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		806C21A7C6E61CFF69D639CAD77E714F /* IQCropSelectionEndView.h in Headers */ = {isa = PBXBuildFile; fileRef = 92863249A27E751F3A5345814341B3DE /* IQCropSelectionEndView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80A45D4AE05008356595D8EB613504FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		80BCDC067D49E704079BE5C15C046614 /* IQAudioRecorderController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 940DEDD1CC8854713306730B40CCA51E /* IQAudioRecorderController-dummy.m */; };
-		8206FDD2F6696F14419FD2BA9C633460 /* SCSiriWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C655C6469A0CD6B570A56F28B07459 /* SCSiriWaveformView-dummy.m */; };
-		849A8449312926683E7110EACC5EB524 /* stop_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EA5808F1EDBB1C0BEBB6AE1CCC1B19 /* stop_recording.png */; };
-		8A3836948B26F090FADA7CA4A58D31C2 /* audio_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7650A8BB4E2D2B5918FE4EF6AD44C38F /* audio_record@2x.png */; };
-		8AE23E99B5D81CE013A479C8C01DB9E6 /* IQAudioCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47888CF610C1BA6D32CDF1E84D2FA180 /* IQAudioCropperViewController.m */; };
+		80BCDC067D49E704079BE5C15C046614 /* IQAudioRecorderController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C929137DBA2327ACB29F1922BEBC4EE /* IQAudioRecorderController-dummy.m */; };
+		8206FDD2F6696F14419FD2BA9C633460 /* SCSiriWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC7119DD74CB0ADB274094806D3C458 /* SCSiriWaveformView-dummy.m */; };
+		849A8449312926683E7110EACC5EB524 /* stop_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = CA925EBDC86A25A77B81D4A54D73AB8F /* stop_recording.png */; };
+		87DDF909AB562084FAD364EBFD4B3FAC /* CircularSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0667E46D68FCAA3FF93A39A888F4C351 /* CircularSpinner-dummy.m */; };
+		8A3836948B26F090FADA7CA4A58D31C2 /* audio_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDCA5678211D62BDF0B643F947C00F49 /* audio_record@2x.png */; };
+		8AE23E99B5D81CE013A479C8C01DB9E6 /* IQAudioCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E21A389109E65FD524A5561B6364D6 /* IQAudioCropperViewController.m */; };
 		9396A049E3CDB24CE8208655AC29824F /* SCSiriWaveformView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB365B068D9500F5060990563F2F0799 /* SCSiriWaveformView.framework */; };
-		9860170FC39EA871E949CBBC46B5C95A /* IQMessageDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A31F7F8868C5BD671E1282D0380102B0 /* IQMessageDisplayView.m */; };
-		9CC5B819FD827819674EEEA6FCBFD34D /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FADB77132DD30EDE7D59B89AE3990F /* SCSiriWaveformView.m */; };
-		9EFA54977D58CC42FE19072C6BF7D542 /* scissor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E97A7BC65755CE8B8F4B3C2A7E5DA3F /* scissor.png */; };
+		9860170FC39EA871E949CBBC46B5C95A /* IQMessageDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2585A75B68F1939C9A62C206777938B /* IQMessageDisplayView.m */; };
+		9CC5B819FD827819674EEEA6FCBFD34D /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD37220B7340B47537529596A5FA0E8 /* SCSiriWaveformView.m */; };
+		9EFA54977D58CC42FE19072C6BF7D542 /* scissor.png in Resources */ = {isa = PBXBuildFile; fileRef = 23A3DBEA0803AA75EB2FEBE42B4EDF32 /* scissor.png */; };
+		A149AA733B3B30C84D7F7639F4450C98 /* x_darkGray@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */; };
 		A2F8521A1771731F9D394B6CC0F57A6F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3015C65EFD93E6C9A2C3E0CDF08BF6CB /* AVFoundation.framework */; };
 		A787E360F6AF854351D0F21A00C16C7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
-		A9BBA058D9732AC59A7377152E719112 /* IQCropSelectionBeginView.h in Headers */ = {isa = PBXBuildFile; fileRef = 320CAD06449D254416D48EF073ACB20D /* IQCropSelectionBeginView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAA696E6745D5B874A75B3EE613F3E41 /* IQCropSelectionBeginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9717F3DC1246E1AA5CFA83C73CC40154 /* IQCropSelectionBeginView.m */; };
+		A9BBA058D9732AC59A7377152E719112 /* IQCropSelectionBeginView.h in Headers */ = {isa = PBXBuildFile; fileRef = 733DB9D43436B7A5AF7B144B8037DE6E /* IQCropSelectionBeginView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA696E6745D5B874A75B3EE613F3E41 /* IQCropSelectionBeginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DA1237B79B103C642F8A1BDD62C965 /* IQCropSelectionBeginView.m */; };
+		AB2A31C56E4E2AD33A221CAE02E17464 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
 		B5539F8FD01B0346AD6C4F2743BB0B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		B59FB7ADF2C3686C4A8CA39E1E0598CE /* stop_playing.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F499B4B4AD6662C22D225D86D923 /* stop_playing.png */; };
-		B8FCF87620600A7A6CE45858E0FA8B67 /* SCSiriWaveformView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D0290A860D2FD4D77E5D3E444EC709 /* SCSiriWaveformView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C20ED5A79C2335EAEFD046731DBB4263 /* IQ_FDWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A666314496F01BC5757FAFE61E2364 /* IQ_FDWaveformView.m */; };
-		C85B68F7CE1CD55A995DC20927FBE52D /* audio_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 197670D4CE73C2974121418816E8DC40 /* audio_record@3x.png */; };
-		D7E587EB20BD9D32CF69D24F9CE3500D /* IQAudioRecorderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 36E7648D6452E8C42379DF5D42EC5F60 /* IQAudioRecorderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8CC64D168715454AA1A88E808E58F8D /* Pods-PitchPerfect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F2914C833F4AB8ED6C753FCCE84213 /* Pods-PitchPerfect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA1F68FAA7BC02E5E38377F0F453C2AA /* IQCropSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F91022616E24B58B3E48A9DE85B272 /* IQCropSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2D4A0B6BC5CDEDF80FC0312D9FF973B /* IQAudioRecorderConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A81EB1B4843E28CC1B98B4769BF33160 /* IQAudioRecorderConstraints.m */; };
-		F21082BBCEF15A9FBCAB996129A36479 /* IQMessageDisplayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EFCD7652580001AB5968BE29D983B1F /* IQMessageDisplayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F327C141C466C1732D603C8D4C42A27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		F460337DCEFE83C126EEDCDDBFBDF5BE /* microphone_access.png in Resources */ = {isa = PBXBuildFile; fileRef = E54DA82BF773B229EB039575FC43D99E /* microphone_access.png */; };
+		B59FB7ADF2C3686C4A8CA39E1E0598CE /* stop_playing.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A3B4BD028308F2F5C6471B5738421D /* stop_playing.png */; };
+		B7F997F4D216FD0256FC1E1021307E94 /* x_darkGray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */; };
+		B8FCF87620600A7A6CE45858E0FA8B67 /* SCSiriWaveformView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14CBF6C884038594EE71E60B700ECD9C /* SCSiriWaveformView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C20ED5A79C2335EAEFD046731DBB4263 /* IQ_FDWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9180421216852470808E7475FE24291 /* IQ_FDWaveformView.m */; };
+		C85B68F7CE1CD55A995DC20927FBE52D /* audio_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6535A43827F66F618BD1A8E5F4CEBA3 /* audio_record@3x.png */; };
+		CC4EF7D364925D0C803B28F77029C126 /* CircularSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F203130B536BE72B998D20F8D1AD3 /* CircularSpinner.swift */; };
+		D7E587EB20BD9D32CF69D24F9CE3500D /* IQAudioRecorderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1534C53A1B71D1FF7045FEA264889A /* IQAudioRecorderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1F68FAA7BC02E5E38377F0F453C2AA /* IQCropSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA0FF4D2435565F89C2AB9E19AAD528 /* IQCropSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2D4A0B6BC5CDEDF80FC0312D9FF973B /* IQAudioRecorderConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C2614D9CBC7414DA16A52079964275 /* IQAudioRecorderConstraints.m */; };
+		F21082BBCEF15A9FBCAB996129A36479 /* IQMessageDisplayView.h in Headers */ = {isa = PBXBuildFile; fileRef = D70B78E8260DED142FBB1A2CF53E1751 /* IQMessageDisplayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F460337DCEFE83C126EEDCDDBFBDF5BE /* microphone_access.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BDF9C31377716292E9EC1D61E897760 /* microphone_access.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		75D505560A1553555AC423218C7B9583 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 923C199FC8844D48B6E4D0E9B013C7C4;
-			remoteInfo = SCSiriWaveformView;
-		};
-		C38D97AA3CB0ED70D95EED8C1617498B /* PBXContainerItemProxy */ = {
+		26CB05EAF940B26DB8FB708BBB4191E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF5E8492AD833171E67A19F798CC6361;
 			remoteInfo = IQAudioRecorderController;
+		};
+		8829F8979CB71E0870826A8FB7EB26E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C63CB4AE559E609E163642ED2A914D4D;
+			remoteInfo = "CircularSpinner-CircularSpinner";
+		};
+		CDC83B1777918F844ABFEC751F13C560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D780F80A5793F3EFDAC1606AAA75B388;
+			remoteInfo = CircularSpinner;
+		};
+		DC38B9A99CB410604AC1CBCBA23488D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 923C199FC8844D48B6E4D0E9B013C7C4;
+			remoteInfo = SCSiriWaveformView;
 		};
 		DFF9654EB4EE42317C4F79D7461CC365 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,78 +112,99 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		027C69341ACE4A12D154DF0D6919D3A4 /* IQAudioRecorderController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-prefix.pch"; sourceTree = "<group>"; };
-		04751B1E0D84BA091BF24FBB62D9FFB9 /* SCSiriWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-prefix.pch"; sourceTree = "<group>"; };
-		0D689D778E03CDAC5711B48FB5015E95 /* NSString+IQTimeIntervalFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IQTimeIntervalFormatter.h"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.h"; sourceTree = "<group>"; };
-		0E97A7BC65755CE8B8F4B3C2A7E5DA3F /* scissor.png */ = {isa = PBXFileReference; includeInIndex = 1; name = scissor.png; path = IQAudioRecorderController/Resources/scissor.png; sourceTree = "<group>"; };
-		0EFCD7652580001AB5968BE29D983B1F /* IQMessageDisplayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQMessageDisplayView.h; path = IQAudioRecorderController/IQMessageDisplayView.h; sourceTree = "<group>"; };
+		00E0C577037E443AFCAFDDBE41BD6932 /* IQAudioRecorderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderViewController.m; path = IQAudioRecorderController/IQAudioRecorderViewController.m; sourceTree = "<group>"; };
+		026E27183C91048CE5D8FF1BE84AF010 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCSiriWaveformView.h; path = SCSiriWaveformView/SCSiriWaveformView.h; sourceTree = "<group>"; };
+		03F3C4D49767893AFF437CFA205A886D /* IQAudioCropperViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioCropperViewController.h; path = IQAudioRecorderController/IQAudioCropperViewController.h; sourceTree = "<group>"; };
+		0667E46D68FCAA3FF93A39A888F4C351 /* CircularSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircularSpinner-dummy.m"; sourceTree = "<group>"; };
 		1340CA2FE79041012930596C0433F837 /* Pods-PitchPerfect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PitchPerfect-dummy.m"; sourceTree = "<group>"; };
-		197670D4CE73C2974121418816E8DC40 /* audio_record@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@3x.png"; path = "IQAudioRecorderController/Resources/audio_record@3x.png"; sourceTree = "<group>"; };
-		211D114F40CC46EB635024D940E1B883 /* IQCropSelectionEndView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionEndView.m; path = IQAudioRecorderController/IQCropSelectionEndView.m; sourceTree = "<group>"; };
-		22F91022616E24B58B3E48A9DE85B272 /* IQCropSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionView.h; path = IQAudioRecorderController/IQCropSelectionView.h; sourceTree = "<group>"; };
-		23F145F77270B5DC92358E3A91D46952 /* IQAudioRecorderConstraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderConstraints.h; path = IQAudioRecorderController/IQAudioRecorderConstraints.h; sourceTree = "<group>"; };
-		24F0A1E3A227170197F9454A9222E3FF /* SCSiriWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCSiriWaveformView.h; path = SCSiriWaveformView/SCSiriWaveformView.h; sourceTree = "<group>"; };
+		14CBF6C884038594EE71E60B700ECD9C /* SCSiriWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-umbrella.h"; sourceTree = "<group>"; };
+		15E21A389109E65FD524A5561B6364D6 /* IQAudioCropperViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioCropperViewController.m; path = IQAudioRecorderController/IQAudioCropperViewController.m; sourceTree = "<group>"; };
+		20FB046F28325E37939E757776C75163 /* CircularSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircularSpinner.framework; path = CircularSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21531C45EE582B1FDF81D7060CDD6A9E /* ResourceBundle-CircularSpinner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CircularSpinner-Info.plist"; sourceTree = "<group>"; };
+		237A5003D315620BD9D6213B4862036C /* stop_playing@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@3x.png"; path = "IQAudioRecorderController/Resources/stop_playing@3x.png"; sourceTree = "<group>"; };
+		237EBC686E616209C88B989F2E455F85 /* IQAudioRecorderController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-prefix.pch"; sourceTree = "<group>"; };
+		23A3DBEA0803AA75EB2FEBE42B4EDF32 /* scissor.png */ = {isa = PBXFileReference; includeInIndex = 1; name = scissor.png; path = IQAudioRecorderController/Resources/scissor.png; sourceTree = "<group>"; };
+		26382537CBE251DF450A007B5527BD1D /* IQAudioRecorderController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQAudioRecorderController.modulemap; sourceTree = "<group>"; };
 		26FF7DBC01AECF064698D5A98F057E32 /* Pods-PitchPerfect-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PitchPerfect-frameworks.sh"; sourceTree = "<group>"; };
-		280D091DD42DD02098986CDE129273C1 /* NSString+IQTimeIntervalFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+IQTimeIntervalFormatter.m"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.m"; sourceTree = "<group>"; };
-		28D464A92F0C804CE58E2E385A8F04BA /* stop_playing@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@3x.png"; path = "IQAudioRecorderController/Resources/stop_playing@3x.png"; sourceTree = "<group>"; };
+		2A0C47796E39B957C02B4003078F6BA9 /* IQAudioRecorderConstraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderConstraints.h; path = IQAudioRecorderController/IQAudioRecorderConstraints.h; sourceTree = "<group>"; };
+		2C66153E8400A01DC918A0198A25EA2E /* microphone_access@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@2x.png"; path = "IQAudioRecorderController/Resources/microphone_access@2x.png"; sourceTree = "<group>"; };
 		2EC81F450DF088DECB39992933D2BDAF /* Pods-PitchPerfect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PitchPerfect.modulemap"; sourceTree = "<group>"; };
 		3015C65EFD93E6C9A2C3E0CDF08BF6CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		320CAD06449D254416D48EF073ACB20D /* IQCropSelectionBeginView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionBeginView.h; path = IQAudioRecorderController/IQCropSelectionBeginView.h; sourceTree = "<group>"; };
-		36E7648D6452E8C42379DF5D42EC5F60 /* IQAudioRecorderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderViewController.h; path = IQAudioRecorderController/IQAudioRecorderViewController.h; sourceTree = "<group>"; };
-		37B7F499B4B4AD6662C22D225D86D923 /* stop_playing.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_playing.png; path = IQAudioRecorderController/Resources/stop_playing.png; sourceTree = "<group>"; };
-		3B11307CD59520593243D83A194C851A /* IQCropSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionView.m; path = IQAudioRecorderController/IQCropSelectionView.m; sourceTree = "<group>"; };
-		3C4BFE934E43A5918686C73F6AD7061D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		429A946A74B3D69CEACB5E1B69DCF3F1 /* IQAudioRecorderController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQAudioRecorderController.framework; path = IQAudioRecorderController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47888CF610C1BA6D32CDF1E84D2FA180 /* IQAudioCropperViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioCropperViewController.m; path = IQAudioRecorderController/IQAudioCropperViewController.m; sourceTree = "<group>"; };
-		4EE046DFE4CED1F368AA6A913FAB1403 /* stop_recording@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@2x.png"; path = "IQAudioRecorderController/Resources/stop_recording@2x.png"; sourceTree = "<group>"; };
-		521E0EEADB9DEDF924E45D1073DEE14E /* IQCropSelectionEndView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionEndView.h; path = IQAudioRecorderController/IQCropSelectionEndView.h; sourceTree = "<group>"; };
-		6204AAA019D54490C48F77BD4AF28475 /* scissor@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@2x.png"; path = "IQAudioRecorderController/Resources/scissor@2x.png"; sourceTree = "<group>"; };
-		68EA5808F1EDBB1C0BEBB6AE1CCC1B19 /* stop_recording.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_recording.png; path = IQAudioRecorderController/Resources/stop_recording.png; sourceTree = "<group>"; };
-		6C7AA2B9FFABD82273AA51DE1B478DD5 /* microphone_access@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@2x.png"; path = "IQAudioRecorderController/Resources/microphone_access@2x.png"; sourceTree = "<group>"; };
-		6F170251D17986BB8BCD60B7FFF9E19D /* IQ_FDWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQ_FDWaveformView.h; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.h; sourceTree = "<group>"; };
-		7123DEB3600CB26835170657D830CD8E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7650A8BB4E2D2B5918FE4EF6AD44C38F /* audio_record@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@2x.png"; path = "IQAudioRecorderController/Resources/audio_record@2x.png"; sourceTree = "<group>"; };
+		38D7868FEC02AE00723432DA85FEFEEC /* scissor@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@3x.png"; path = "IQAudioRecorderController/Resources/scissor@3x.png"; sourceTree = "<group>"; };
+		3ABD32B5315A1CD2ADA03B677B5D6D7B /* IQ_FDWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQ_FDWaveformView.h; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.h; sourceTree = "<group>"; };
+		3EA0FF4D2435565F89C2AB9E19AAD528 /* IQCropSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionView.h; path = IQAudioRecorderController/IQCropSelectionView.h; sourceTree = "<group>"; };
+		3FB2D654E28C411F7F19A7119030DC31 /* IQPlaybackDurationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPlaybackDurationView.m; path = IQAudioRecorderController/IQPlaybackDurationView.m; sourceTree = "<group>"; };
+		3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQAudioRecorderController.xcconfig; sourceTree = "<group>"; };
+		41C34E72F0B9D198FA20132C24461E79 /* IQCropSelectionEndView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionEndView.m; path = IQAudioRecorderController/IQCropSelectionEndView.m; sourceTree = "<group>"; };
+		43CC11AA33BD8A8CD0AEAF7F0367F897 /* stop_playing@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@2x.png"; path = "IQAudioRecorderController/Resources/stop_playing@2x.png"; sourceTree = "<group>"; };
+		48B6CC192F7CF56C941AE8ADAD3AE24E /* stop_recording@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@2x.png"; path = "IQAudioRecorderController/Resources/stop_recording@2x.png"; sourceTree = "<group>"; };
+		49A3B4BD028308F2F5C6471B5738421D /* stop_playing.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_playing.png; path = IQAudioRecorderController/Resources/stop_playing.png; sourceTree = "<group>"; };
+		4F7C230DB5EF74699F12B15D537AD56C /* IQPlaybackDurationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQPlaybackDurationView.h; path = IQAudioRecorderController/IQPlaybackDurationView.h; sourceTree = "<group>"; };
+		5E547CE0362215C4E2C0D3D10915ED9A /* stop_recording@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@3x.png"; path = "IQAudioRecorderController/Resources/stop_recording@3x.png"; sourceTree = "<group>"; };
+		5FD37220B7340B47537529596A5FA0E8 /* SCSiriWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCSiriWaveformView.m; path = SCSiriWaveformView/SCSiriWaveformView.m; sourceTree = "<group>"; };
+		6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircularSpinner.xcconfig; sourceTree = "<group>"; };
+		68DA1237B79B103C642F8A1BDD62C965 /* IQCropSelectionBeginView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionBeginView.m; path = IQAudioRecorderController/IQCropSelectionBeginView.m; sourceTree = "<group>"; };
+		733DB9D43436B7A5AF7B144B8037DE6E /* IQCropSelectionBeginView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionBeginView.h; path = IQAudioRecorderController/IQCropSelectionBeginView.h; sourceTree = "<group>"; };
 		7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8AB70AB76421DEEBE1F7F7D983B4067B /* IQPlaybackDurationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQPlaybackDurationView.h; path = IQAudioRecorderController/IQPlaybackDurationView.h; sourceTree = "<group>"; };
-		8F1B38D79B6429440D38F78640B9776F /* IQAudioRecorderController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-umbrella.h"; sourceTree = "<group>"; };
-		903144781696F7281FEA721EC22DE360 /* IQAudioRecorderController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQAudioRecorderController.xcconfig; sourceTree = "<group>"; };
+		7B293AC115AA7D5DDD644CBAE5097B7F /* SCSiriWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-prefix.pch"; sourceTree = "<group>"; };
+		7C1534C53A1B71D1FF7045FEA264889A /* IQAudioRecorderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderViewController.h; path = IQAudioRecorderController/IQAudioRecorderViewController.h; sourceTree = "<group>"; };
+		7F8B0526EB85BE3616A2C02690676388 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A20CDA3C6E4C7C91F9F27EF3103AA3 /* IQAudioRecorderController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-umbrella.h"; sourceTree = "<group>"; };
+		855644F41309232B0123135968F57414 /* IQCropSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionView.m; path = IQAudioRecorderController/IQCropSelectionView.m; sourceTree = "<group>"; };
+		8968054B28D6F4BD48A8F98D4C656140 /* NSString+IQTimeIntervalFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+IQTimeIntervalFormatter.m"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.m"; sourceTree = "<group>"; };
+		8BDF9C31377716292E9EC1D61E897760 /* microphone_access.png */ = {isa = PBXFileReference; includeInIndex = 1; name = microphone_access.png; path = IQAudioRecorderController/Resources/microphone_access.png; sourceTree = "<group>"; };
+		8C929137DBA2327ACB29F1922BEBC4EE /* IQAudioRecorderController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQAudioRecorderController-dummy.m"; sourceTree = "<group>"; };
+		92863249A27E751F3A5345814341B3DE /* IQCropSelectionEndView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionEndView.h; path = IQAudioRecorderController/IQCropSelectionEndView.h; sourceTree = "<group>"; };
+		9353BBD52BA3E75D489136B5E1F35B31 /* IQAudioRecorderController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQAudioRecorderController.framework; path = IQAudioRecorderController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		940DEDD1CC8854713306730B40CCA51E /* IQAudioRecorderController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQAudioRecorderController-dummy.m"; sourceTree = "<group>"; };
-		9717F3DC1246E1AA5CFA83C73CC40154 /* IQCropSelectionBeginView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionBeginView.m; path = IQAudioRecorderController/IQCropSelectionBeginView.m; sourceTree = "<group>"; };
-		A26C89837DBDEFFAFF127CB007E1E422 /* IQAudioCropperViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioCropperViewController.h; path = IQAudioRecorderController/IQAudioCropperViewController.h; sourceTree = "<group>"; };
-		A2D7D578D2BB191431C58965B6383941 /* SCSiriWaveformView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCSiriWaveformView.xcconfig; sourceTree = "<group>"; };
-		A31F7F8868C5BD671E1282D0380102B0 /* IQMessageDisplayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQMessageDisplayView.m; path = IQAudioRecorderController/IQMessageDisplayView.m; sourceTree = "<group>"; };
-		A5CF0FAE51CE46D0AAAD6AE4E1F326E9 /* SCSiriWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSiriWaveformView.modulemap; sourceTree = "<group>"; };
-		A7D0290A860D2FD4D77E5D3E444EC709 /* SCSiriWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-umbrella.h"; sourceTree = "<group>"; };
-		A81EB1B4843E28CC1B98B4769BF33160 /* IQAudioRecorderConstraints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderConstraints.m; path = IQAudioRecorderController/IQAudioRecorderConstraints.m; sourceTree = "<group>"; };
-		ABA9E2326646CA9C4074A40B49E5AAFD /* stop_recording@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@3x.png"; path = "IQAudioRecorderController/Resources/stop_recording@3x.png"; sourceTree = "<group>"; };
-		ABAE93D66013005D806ACEDC03581E1D /* scissor@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@3x.png"; path = "IQAudioRecorderController/Resources/scissor@3x.png"; sourceTree = "<group>"; };
+		95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "x_darkGray@3x.png"; path = "CircularSpinner/Assets/x_darkGray@3x.png"; sourceTree = "<group>"; };
+		99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCSiriWaveformView.xcconfig; sourceTree = "<group>"; };
+		9B90A4CD3798027F78E600A0494A4078 /* NSString+IQTimeIntervalFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IQTimeIntervalFormatter.h"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.h"; sourceTree = "<group>"; };
+		A5B0C99D6F0E942148E791F2CAFCEF82 /* scissor@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@2x.png"; path = "IQAudioRecorderController/Resources/scissor@2x.png"; sourceTree = "<group>"; };
+		A6535A43827F66F618BD1A8E5F4CEBA3 /* audio_record@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@3x.png"; path = "IQAudioRecorderController/Resources/audio_record@3x.png"; sourceTree = "<group>"; };
+		A9180421216852470808E7475FE24291 /* IQ_FDWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQ_FDWaveformView.m; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.m; sourceTree = "<group>"; };
+		ABE510299EDF479383362C4FA7C9D35F /* SCSiriWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSiriWaveformView.modulemap; sourceTree = "<group>"; };
 		ADFFC6C371E0E240CC417FC7EA0ACE91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B1F2914C833F4AB8ED6C753FCCE84213 /* Pods-PitchPerfect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PitchPerfect-umbrella.h"; sourceTree = "<group>"; };
-		B274084D3DC0281DF26B1D96F391B930 /* IQAudioRecorderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderViewController.m; path = IQAudioRecorderController/IQAudioRecorderViewController.m; sourceTree = "<group>"; };
-		B29C2E5E11429EA70BFFBDD6605BF464 /* microphone_access@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@3x.png"; path = "IQAudioRecorderController/Resources/microphone_access@3x.png"; sourceTree = "<group>"; };
-		B2A666314496F01BC5757FAFE61E2364 /* IQ_FDWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQ_FDWaveformView.m; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.m; sourceTree = "<group>"; };
+		B598C76A215CB7752E016B0145516DFE /* Pods_PitchPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PitchPerfect.framework; path = "Pods-PitchPerfect.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D885A5271303C137495A2007EA7F2D /* CircularSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularSpinner-umbrella.h"; sourceTree = "<group>"; };
 		BB64BF6ECE29C5DA7DCD8CB94BDB8B23 /* Pods-PitchPerfect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PitchPerfect.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD785D1A30C29184C95712D521D47C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEE791E67CEDC2186644020D15AA99A1 /* stop_playing@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@2x.png"; path = "IQAudioRecorderController/Resources/stop_playing@2x.png"; sourceTree = "<group>"; };
-		C11ECF4DEFB52A5526DE89794409A7B0 /* IQPlaybackDurationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPlaybackDurationView.m; path = IQAudioRecorderController/IQPlaybackDurationView.m; sourceTree = "<group>"; };
+		C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "x_darkGray@2x.png"; path = "CircularSpinner/Assets/x_darkGray@2x.png"; sourceTree = "<group>"; };
+		C253100967D466EFFB29118B66A27545 /* CircularSpinner.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CircularSpinner.xib; path = CircularSpinner/Classes/CircularSpinner.xib; sourceTree = "<group>"; };
+		C29F203130B536BE72B998D20F8D1AD3 /* CircularSpinner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSpinner.swift; path = CircularSpinner/Classes/CircularSpinner.swift; sourceTree = "<group>"; };
 		C3FF6A0B3CA41F82CCFF2CA56B5E4301 /* Pods-PitchPerfect-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PitchPerfect-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C4A103A7B2B474F973F465780BC55F35 /* SCSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCSiriWaveformView.framework; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4C655C6469A0CD6B570A56F28B07459 /* SCSiriWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCSiriWaveformView-dummy.m"; sourceTree = "<group>"; };
+		CA925EBDC86A25A77B81D4A54D73AB8F /* stop_recording.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_recording.png; path = IQAudioRecorderController/Resources/stop_recording.png; sourceTree = "<group>"; };
+		CDCA5678211D62BDF0B643F947C00F49 /* audio_record@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@2x.png"; path = "IQAudioRecorderController/Resources/audio_record@2x.png"; sourceTree = "<group>"; };
+		D193EBFD986FFCF5CE77F33ED8D8B608 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CircularSpinner.bundle; path = CircularSpinner.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E8D7430709FB31BB956EED5E971C13 /* Pods-PitchPerfect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PitchPerfect.release.xcconfig"; sourceTree = "<group>"; };
+		D70B78E8260DED142FBB1A2CF53E1751 /* IQMessageDisplayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQMessageDisplayView.h; path = IQAudioRecorderController/IQMessageDisplayView.h; sourceTree = "<group>"; };
 		DD0803DF06CB2805A7E9880A81C885EE /* Pods-PitchPerfect-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PitchPerfect-acknowledgements.plist"; sourceTree = "<group>"; };
-		E350CCCBEDAADB738D1C1CAD0AEE86A7 /* IQAudioRecorderController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQAudioRecorderController.modulemap; sourceTree = "<group>"; };
-		E54DA82BF773B229EB039575FC43D99E /* microphone_access.png */ = {isa = PBXFileReference; includeInIndex = 1; name = microphone_access.png; path = IQAudioRecorderController/Resources/microphone_access.png; sourceTree = "<group>"; };
-		E7FADB77132DD30EDE7D59B89AE3990F /* SCSiriWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCSiriWaveformView.m; path = SCSiriWaveformView/SCSiriWaveformView.m; sourceTree = "<group>"; };
+		DDC7119DD74CB0ADB274094806D3C458 /* SCSiriWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCSiriWaveformView-dummy.m"; sourceTree = "<group>"; };
+		E0C2614D9CBC7414DA16A52079964275 /* IQAudioRecorderConstraints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderConstraints.m; path = IQAudioRecorderController/IQAudioRecorderConstraints.m; sourceTree = "<group>"; };
+		E3870F9A79AB635193C95368698CD5E9 /* SCSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCSiriWaveformView.framework; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB365B068D9500F5060990563F2F0799 /* SCSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2D5BA1A9CFE2AA655E9CFAD491D77A1 /* audio_record.png */ = {isa = PBXFileReference; includeInIndex = 1; name = audio_record.png; path = IQAudioRecorderController/Resources/audio_record.png; sourceTree = "<group>"; };
+		ED10FC07230072DC82E378F0F9C045D3 /* audio_record.png */ = {isa = PBXFileReference; includeInIndex = 1; name = audio_record.png; path = IQAudioRecorderController/Resources/audio_record.png; sourceTree = "<group>"; };
+		EEB852B43AF2236AC2282F065A9495FA /* CircularSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CircularSpinner.modulemap; sourceTree = "<group>"; };
+		F2585A75B68F1939C9A62C206777938B /* IQMessageDisplayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQMessageDisplayView.m; path = IQAudioRecorderController/IQMessageDisplayView.m; sourceTree = "<group>"; };
 		F3D4AEB428F4B50B2923927AA2E1E31D /* Pods-PitchPerfect-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PitchPerfect-resources.sh"; sourceTree = "<group>"; };
+		F58BCC678C611D7662798F8B5B271FAC /* CircularSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularSpinner-prefix.pch"; sourceTree = "<group>"; };
 		F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F656401953B16BEA6DA7025D262C1E55 /* Pods_PitchPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PitchPerfect.framework; path = "Pods-PitchPerfect.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6893A2CCAE60DC427CA15D87BA59F60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		FBC8ED04A135A7087D329BB6C913238E /* microphone_access@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@3x.png"; path = "IQAudioRecorderController/Resources/microphone_access@3x.png"; sourceTree = "<group>"; };
+		FE3C5DAA6320D018030C683DF7D9E860 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		105A434783F3901936C60C702BEC07D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6429C3138FDE5269DF479BDF2F929009 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B1B6BC52CC22E78BAEF7CAA93529513 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,11 +217,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31C339016403C06E0750DAEB487DAD5E /* Frameworks */ = {
+		5CF133044F16DEDFBD7533F1443E7BD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F327C141C466C1732D603C8D4C42A27E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815D5A1AA0A09FC09DB8538A8F0F5C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C731116BF6176C0F2F5DBB9D505A756 /* Foundation.framework in Frameworks */,
+				AB2A31C56E4E2AD33A221CAE02E17464 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +247,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0FAF58EBCD21699CC1143E22963921 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3C5DAA6320D018030C683DF7D9E860 /* Info.plist */,
+				ABE510299EDF479383362C4FA7C9D35F /* SCSiriWaveformView.modulemap */,
+				99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */,
+				DDC7119DD74CB0ADB274094806D3C458 /* SCSiriWaveformView-dummy.m */,
+				7B293AC115AA7D5DDD644CBAE5097B7F /* SCSiriWaveformView-prefix.pch */,
+				14CBF6C884038594EE71E60B700ECD9C /* SCSiriWaveformView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCSiriWaveformView";
+			sourceTree = "<group>";
+		};
 		0DB6403EA0373ADF7FCBF38C764327E1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,49 +278,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3D7919B1FD5F48BEDB40743DC022A88A /* Resources */ = {
+		23C35F73F9A5C96A72B14B8EAA744697 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F2D5BA1A9CFE2AA655E9CFAD491D77A1 /* audio_record.png */,
-				7650A8BB4E2D2B5918FE4EF6AD44C38F /* audio_record@2x.png */,
-				197670D4CE73C2974121418816E8DC40 /* audio_record@3x.png */,
-				E54DA82BF773B229EB039575FC43D99E /* microphone_access.png */,
-				6C7AA2B9FFABD82273AA51DE1B478DD5 /* microphone_access@2x.png */,
-				B29C2E5E11429EA70BFFBDD6605BF464 /* microphone_access@3x.png */,
-				0E97A7BC65755CE8B8F4B3C2A7E5DA3F /* scissor.png */,
-				6204AAA019D54490C48F77BD4AF28475 /* scissor@2x.png */,
-				ABAE93D66013005D806ACEDC03581E1D /* scissor@3x.png */,
-				37B7F499B4B4AD6662C22D225D86D923 /* stop_playing.png */,
-				BEE791E67CEDC2186644020D15AA99A1 /* stop_playing@2x.png */,
-				28D464A92F0C804CE58E2E385A8F04BA /* stop_playing@3x.png */,
-				68EA5808F1EDBB1C0BEBB6AE1CCC1B19 /* stop_recording.png */,
-				4EE046DFE4CED1F368AA6A913FAB1403 /* stop_recording@2x.png */,
-				ABA9E2326646CA9C4074A40B49E5AAFD /* stop_recording@3x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		494F609520F7CD13D6BEB6086750E4B8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7123DEB3600CB26835170657D830CD8E /* Info.plist */,
-				E350CCCBEDAADB738D1C1CAD0AEE86A7 /* IQAudioRecorderController.modulemap */,
-				903144781696F7281FEA721EC22DE360 /* IQAudioRecorderController.xcconfig */,
-				940DEDD1CC8854713306730B40CCA51E /* IQAudioRecorderController-dummy.m */,
-				027C69341ACE4A12D154DF0D6919D3A4 /* IQAudioRecorderController-prefix.pch */,
-				8F1B38D79B6429440D38F78640B9776F /* IQAudioRecorderController-umbrella.h */,
+				EEB852B43AF2236AC2282F065A9495FA /* CircularSpinner.modulemap */,
+				6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */,
+				0667E46D68FCAA3FF93A39A888F4C351 /* CircularSpinner-dummy.m */,
+				F58BCC678C611D7662798F8B5B271FAC /* CircularSpinner-prefix.pch */,
+				B5D885A5271303C137495A2007EA7F2D /* CircularSpinner-umbrella.h */,
+				D193EBFD986FFCF5CE77F33ED8D8B608 /* Info.plist */,
+				21531C45EE582B1FDF81D7060CDD6A9E /* ResourceBundle-CircularSpinner-Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/IQAudioRecorderController";
+			path = "../Target Support Files/CircularSpinner";
 			sourceTree = "<group>";
 		};
-		5EE1FEBCE5535409268DDCF38A51B0BC /* Pods */ = {
+		457E0602E5DEA435B0046F5E96F215D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C36552916802A618216557725E154653 /* IQAudioRecorderController */,
-				8BEC91790AF7A3F99708D01B609FB5B4 /* SCSiriWaveformView */,
+				D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */,
+				20FB046F28325E37939E757776C75163 /* CircularSpinner.framework */,
+				9353BBD52BA3E75D489136B5E1F35B31 /* IQAudioRecorderController.framework */,
+				B598C76A215CB7752E016B0145516DFE /* Pods_PitchPerfect.framework */,
+				E3870F9A79AB635193C95368698CD5E9 /* SCSiriWaveformView.framework */,
 			);
-			name = Pods;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D78B155AD590D461DA70884CB98CC3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -260,75 +317,56 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				19144D53A751FBC68D69D5013BA095F1 /* Frameworks */,
-				5EE1FEBCE5535409268DDCF38A51B0BC /* Pods */,
-				B74676BC33C75FA1EB17F079E2447C98 /* Products */,
+				A9DF68499D7E8DD2AC91F1D61A364A6F /* Pods */,
+				457E0602E5DEA435B0046F5E96F215D8 /* Products */,
 				0DB6403EA0373ADF7FCBF38C764327E1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8BEC91790AF7A3F99708D01B609FB5B4 /* SCSiriWaveformView */ = {
+		7E3D964FE160EB54E6304F83FAD420E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				24F0A1E3A227170197F9454A9222E3FF /* SCSiriWaveformView.h */,
-				E7FADB77132DD30EDE7D59B89AE3990F /* SCSiriWaveformView.m */,
-				B460DB66124761514D337C9C217081BB /* Support Files */,
+				ED10FC07230072DC82E378F0F9C045D3 /* audio_record.png */,
+				CDCA5678211D62BDF0B643F947C00F49 /* audio_record@2x.png */,
+				A6535A43827F66F618BD1A8E5F4CEBA3 /* audio_record@3x.png */,
+				8BDF9C31377716292E9EC1D61E897760 /* microphone_access.png */,
+				2C66153E8400A01DC918A0198A25EA2E /* microphone_access@2x.png */,
+				FBC8ED04A135A7087D329BB6C913238E /* microphone_access@3x.png */,
+				23A3DBEA0803AA75EB2FEBE42B4EDF32 /* scissor.png */,
+				A5B0C99D6F0E942148E791F2CAFCEF82 /* scissor@2x.png */,
+				38D7868FEC02AE00723432DA85FEFEEC /* scissor@3x.png */,
+				49A3B4BD028308F2F5C6471B5738421D /* stop_playing.png */,
+				43CC11AA33BD8A8CD0AEAF7F0367F897 /* stop_playing@2x.png */,
+				237A5003D315620BD9D6213B4862036C /* stop_playing@3x.png */,
+				CA925EBDC86A25A77B81D4A54D73AB8F /* stop_recording.png */,
+				48B6CC192F7CF56C941AE8ADAD3AE24E /* stop_recording@2x.png */,
+				5E547CE0362215C4E2C0D3D10915ED9A /* stop_recording@3x.png */,
 			);
-			name = SCSiriWaveformView;
-			path = SCSiriWaveformView;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		B460DB66124761514D337C9C217081BB /* Support Files */ = {
+		8339FEF84770AFBDB6B2124FFB7C4ECB /* CircularSpinner */ = {
 			isa = PBXGroup;
 			children = (
-				3C4BFE934E43A5918686C73F6AD7061D /* Info.plist */,
-				A5CF0FAE51CE46D0AAAD6AE4E1F326E9 /* SCSiriWaveformView.modulemap */,
-				A2D7D578D2BB191431C58965B6383941 /* SCSiriWaveformView.xcconfig */,
-				D4C655C6469A0CD6B570A56F28B07459 /* SCSiriWaveformView-dummy.m */,
-				04751B1E0D84BA091BF24FBB62D9FFB9 /* SCSiriWaveformView-prefix.pch */,
-				A7D0290A860D2FD4D77E5D3E444EC709 /* SCSiriWaveformView-umbrella.h */,
+				C29F203130B536BE72B998D20F8D1AD3 /* CircularSpinner.swift */,
+				C253100967D466EFFB29118B66A27545 /* CircularSpinner.xib */,
+				C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */,
+				95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */,
+				7D78B155AD590D461DA70884CB98CC3E /* Resources */,
+				23C35F73F9A5C96A72B14B8EAA744697 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SCSiriWaveformView";
+			name = CircularSpinner;
+			path = CircularSpinner;
 			sourceTree = "<group>";
 		};
-		B74676BC33C75FA1EB17F079E2447C98 /* Products */ = {
+		A9DF68499D7E8DD2AC91F1D61A364A6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				429A946A74B3D69CEACB5E1B69DCF3F1 /* IQAudioRecorderController.framework */,
-				F656401953B16BEA6DA7025D262C1E55 /* Pods_PitchPerfect.framework */,
-				C4A103A7B2B474F973F465780BC55F35 /* SCSiriWaveformView.framework */,
+				8339FEF84770AFBDB6B2124FFB7C4ECB /* CircularSpinner */,
+				D6862AC42114E2FB19FFEF872D3C10DD /* IQAudioRecorderController */,
+				E27D93361AAE6A9FD392E0F37F9609C7 /* SCSiriWaveformView */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C36552916802A618216557725E154653 /* IQAudioRecorderController */ = {
-			isa = PBXGroup;
-			children = (
-				6F170251D17986BB8BCD60B7FFF9E19D /* IQ_FDWaveformView.h */,
-				B2A666314496F01BC5757FAFE61E2364 /* IQ_FDWaveformView.m */,
-				A26C89837DBDEFFAFF127CB007E1E422 /* IQAudioCropperViewController.h */,
-				47888CF610C1BA6D32CDF1E84D2FA180 /* IQAudioCropperViewController.m */,
-				23F145F77270B5DC92358E3A91D46952 /* IQAudioRecorderConstraints.h */,
-				A81EB1B4843E28CC1B98B4769BF33160 /* IQAudioRecorderConstraints.m */,
-				36E7648D6452E8C42379DF5D42EC5F60 /* IQAudioRecorderViewController.h */,
-				B274084D3DC0281DF26B1D96F391B930 /* IQAudioRecorderViewController.m */,
-				320CAD06449D254416D48EF073ACB20D /* IQCropSelectionBeginView.h */,
-				9717F3DC1246E1AA5CFA83C73CC40154 /* IQCropSelectionBeginView.m */,
-				521E0EEADB9DEDF924E45D1073DEE14E /* IQCropSelectionEndView.h */,
-				211D114F40CC46EB635024D940E1B883 /* IQCropSelectionEndView.m */,
-				22F91022616E24B58B3E48A9DE85B272 /* IQCropSelectionView.h */,
-				3B11307CD59520593243D83A194C851A /* IQCropSelectionView.m */,
-				0EFCD7652580001AB5968BE29D983B1F /* IQMessageDisplayView.h */,
-				A31F7F8868C5BD671E1282D0380102B0 /* IQMessageDisplayView.m */,
-				8AB70AB76421DEEBE1F7F7D983B4067B /* IQPlaybackDurationView.h */,
-				C11ECF4DEFB52A5526DE89794409A7B0 /* IQPlaybackDurationView.m */,
-				0D689D778E03CDAC5711B48FB5015E95 /* NSString+IQTimeIntervalFormatter.h */,
-				280D091DD42DD02098986CDE129273C1 /* NSString+IQTimeIntervalFormatter.m */,
-				3D7919B1FD5F48BEDB40743DC022A88A /* Resources */,
-				494F609520F7CD13D6BEB6086750E4B8 /* Support Files */,
-			);
-			name = IQAudioRecorderController;
-			path = IQAudioRecorderController;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D57126AEEF2E31723D39878DC26305D3 /* iOS */ = {
@@ -341,6 +379,47 @@
 				F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D6862AC42114E2FB19FFEF872D3C10DD /* IQAudioRecorderController */ = {
+			isa = PBXGroup;
+			children = (
+				3ABD32B5315A1CD2ADA03B677B5D6D7B /* IQ_FDWaveformView.h */,
+				A9180421216852470808E7475FE24291 /* IQ_FDWaveformView.m */,
+				03F3C4D49767893AFF437CFA205A886D /* IQAudioCropperViewController.h */,
+				15E21A389109E65FD524A5561B6364D6 /* IQAudioCropperViewController.m */,
+				2A0C47796E39B957C02B4003078F6BA9 /* IQAudioRecorderConstraints.h */,
+				E0C2614D9CBC7414DA16A52079964275 /* IQAudioRecorderConstraints.m */,
+				7C1534C53A1B71D1FF7045FEA264889A /* IQAudioRecorderViewController.h */,
+				00E0C577037E443AFCAFDDBE41BD6932 /* IQAudioRecorderViewController.m */,
+				733DB9D43436B7A5AF7B144B8037DE6E /* IQCropSelectionBeginView.h */,
+				68DA1237B79B103C642F8A1BDD62C965 /* IQCropSelectionBeginView.m */,
+				92863249A27E751F3A5345814341B3DE /* IQCropSelectionEndView.h */,
+				41C34E72F0B9D198FA20132C24461E79 /* IQCropSelectionEndView.m */,
+				3EA0FF4D2435565F89C2AB9E19AAD528 /* IQCropSelectionView.h */,
+				855644F41309232B0123135968F57414 /* IQCropSelectionView.m */,
+				D70B78E8260DED142FBB1A2CF53E1751 /* IQMessageDisplayView.h */,
+				F2585A75B68F1939C9A62C206777938B /* IQMessageDisplayView.m */,
+				4F7C230DB5EF74699F12B15D537AD56C /* IQPlaybackDurationView.h */,
+				3FB2D654E28C411F7F19A7119030DC31 /* IQPlaybackDurationView.m */,
+				9B90A4CD3798027F78E600A0494A4078 /* NSString+IQTimeIntervalFormatter.h */,
+				8968054B28D6F4BD48A8F98D4C656140 /* NSString+IQTimeIntervalFormatter.m */,
+				7E3D964FE160EB54E6304F83FAD420E9 /* Resources */,
+				FA337D6FA4050B608292C2411B93BD88 /* Support Files */,
+			);
+			name = IQAudioRecorderController;
+			path = IQAudioRecorderController;
+			sourceTree = "<group>";
+		};
+		E27D93361AAE6A9FD392E0F37F9609C7 /* SCSiriWaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				026E27183C91048CE5D8FF1BE84AF010 /* SCSiriWaveformView.h */,
+				5FD37220B7340B47537529596A5FA0E8 /* SCSiriWaveformView.m */,
+				0A0FAF58EBCD21699CC1143E22963921 /* Support Files */,
+			);
+			name = SCSiriWaveformView;
+			path = SCSiriWaveformView;
 			sourceTree = "<group>";
 		};
 		E3BAA2143748DF1465D345207CF9A0D2 /* Pods-PitchPerfect */ = {
@@ -361,14 +440,28 @@
 			path = "Target Support Files/Pods-PitchPerfect";
 			sourceTree = "<group>";
 		};
+		FA337D6FA4050B608292C2411B93BD88 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F8B0526EB85BE3616A2C02690676388 /* Info.plist */,
+				26382537CBE251DF450A007B5527BD1D /* IQAudioRecorderController.modulemap */,
+				3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */,
+				8C929137DBA2327ACB29F1922BEBC4EE /* IQAudioRecorderController-dummy.m */,
+				237EBC686E616209C88B989F2E455F85 /* IQAudioRecorderController-prefix.pch */,
+				83A20CDA3C6E4C7C91F9F27EF3103AA3 /* IQAudioRecorderController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IQAudioRecorderController";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		267868D0196FC190A01E7835C31063C7 /* Headers */ = {
+		4BD12AE3563E1EB088825CCAA2FDD145 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CC64D168715454AA1A88E808E58F8D /* Pods-PitchPerfect-umbrella.h in Headers */,
+				01C71AFEDCF18DFAF546217AB8EDA1A0 /* CircularSpinner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +471,14 @@
 			files = (
 				B8FCF87620600A7A6CE45858E0FA8B67 /* SCSiriWaveformView-umbrella.h in Headers */,
 				7D017C4766A8A6B24A80A356575F707A /* SCSiriWaveformView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDDECDBD205F92A63BDE48F9DB9E31C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512CE8BF19B635C31893B3BFC8564003 /* Pods-PitchPerfect-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +503,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		011CE5B94F5CF031B9B6C03BCA239CF1 /* Pods-PitchPerfect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A816DAE2B95C9FA0525C2A138A79294A /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */;
+			buildPhases = (
+				DBF6D7D773E8C5B5897DA3ED986F72B4 /* Sources */,
+				105A434783F3901936C60C702BEC07D8 /* Frameworks */,
+				BDDECDBD205F92A63BDE48F9DB9E31C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7989088A29174F84582BB49A7EA029B9 /* PBXTargetDependency */,
+				0A508A0815E147DCDB42BC41BFB21FF2 /* PBXTargetDependency */,
+				0319E0547B05A5579DA49F9237D75346 /* PBXTargetDependency */,
+			);
+			name = "Pods-PitchPerfect";
+			productName = "Pods-PitchPerfect";
+			productReference = B598C76A215CB7752E016B0145516DFE /* Pods_PitchPerfect.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04394142DB41A28DBCADDB7CC62ECD00 /* Build configuration list for PBXNativeTarget "SCSiriWaveformView" */;
@@ -416,26 +537,7 @@
 			);
 			name = SCSiriWaveformView;
 			productName = SCSiriWaveformView;
-			productReference = C4A103A7B2B474F973F465780BC55F35 /* SCSiriWaveformView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B2076425E02280559FB511A6990D3850 /* Pods-PitchPerfect */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 19181B0BB6AACE0DBE97A01AA0E85C00 /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */;
-			buildPhases = (
-				C460EB1759BA829692952E6E6AA5C12A /* Sources */,
-				31C339016403C06E0750DAEB487DAD5E /* Frameworks */,
-				267868D0196FC190A01E7835C31063C7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FE85D5C32F4B3FFC3988A2797261A7C6 /* PBXTargetDependency */,
-				B76AA8CDFFBB7B2EF00B6CBFDEBD84E1 /* PBXTargetDependency */,
-			);
-			name = "Pods-PitchPerfect";
-			productName = "Pods-PitchPerfect";
-			productReference = F656401953B16BEA6DA7025D262C1E55 /* Pods_PitchPerfect.framework */;
+			productReference = E3870F9A79AB635193C95368698CD5E9 /* SCSiriWaveformView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */ = {
@@ -454,7 +556,43 @@
 			);
 			name = IQAudioRecorderController;
 			productName = IQAudioRecorderController;
-			productReference = 429A946A74B3D69CEACB5E1B69DCF3F1 /* IQAudioRecorderController.framework */;
+			productReference = 9353BBD52BA3E75D489136B5E1F35B31 /* IQAudioRecorderController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C63CB4AE559E609E163642ED2A914D4D /* CircularSpinner-CircularSpinner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80683BC148A69CAF4ABC5D1CF9CA6E7E /* Build configuration list for PBXNativeTarget "CircularSpinner-CircularSpinner" */;
+			buildPhases = (
+				7D98B7267CA9D90CDCA727C8572A551E /* Sources */,
+				5CF133044F16DEDFBD7533F1443E7BD0 /* Frameworks */,
+				E1DB729A8F1180FD841443B2B725C6E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CircularSpinner-CircularSpinner";
+			productName = "CircularSpinner-CircularSpinner";
+			productReference = D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72494B3FBCCB2284E8DE5C6F15FD9AE0 /* Build configuration list for PBXNativeTarget "CircularSpinner" */;
+			buildPhases = (
+				CA8CD112E8EC867A8FEB4AF65F0686E7 /* Sources */,
+				815D5A1AA0A09FC09DB8538A8F0F5C4B /* Frameworks */,
+				CC78F8626BCAEACE8CFEB354BB9B85AB /* Resources */,
+				4BD12AE3563E1EB088825CCAA2FDD145 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F2227A818FD7FE0AD4623B6A69DB33D /* PBXTargetDependency */,
+			);
+			name = CircularSpinner;
+			productName = CircularSpinner;
+			productReference = 20FB046F28325E37939E757776C75163 /* CircularSpinner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -474,12 +612,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B74676BC33C75FA1EB17F079E2447C98 /* Products */;
+			productRefGroup = 457E0602E5DEA435B0046F5E96F215D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */,
+				C63CB4AE559E609E163642ED2A914D4D /* CircularSpinner-CircularSpinner */,
 				BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */,
-				B2076425E02280559FB511A6990D3850 /* Pods-PitchPerfect */,
+				011CE5B94F5CF031B9B6C03BCA239CF1 /* Pods-PitchPerfect */,
 				923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */,
 			);
 		};
@@ -508,6 +648,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC78F8626BCAEACE8CFEB354BB9B85AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C71D0F1ABC3D66F3C5CE74B3C158C2D /* CircularSpinner.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DB729A8F1180FD841443B2B725C6E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E1BB851F0B4FDAD3377596F7D37319 /* x_darkGray@2x.png in Resources */,
+				B7F997F4D216FD0256FC1E1021307E94 /* x_darkGray@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -517,6 +674,13 @@
 			files = (
 				8206FDD2F6696F14419FD2BA9C633460 /* SCSiriWaveformView-dummy.m in Sources */,
 				9CC5B819FD827819674EEEA6FCBFD34D /* SCSiriWaveformView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D98B7267CA9D90CDCA727C8572A551E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,73 +702,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C460EB1759BA829692952E6E6AA5C12A /* Sources */ = {
+		CA8CD112E8EC867A8FEB4AF65F0686E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F382CFD2426E9390967F45E000626C /* Pods-PitchPerfect-dummy.m in Sources */,
+				87DDF909AB562084FAD364EBFD4B3FAC /* CircularSpinner-dummy.m in Sources */,
+				CC4EF7D364925D0C803B28F77029C126 /* CircularSpinner.swift in Sources */,
+				152AA4CD5E508007D2512BC03A11595C /* CircularSpinner.xib in Sources */,
+				A149AA733B3B30C84D7F7639F4450C98 /* x_darkGray@2x.png in Sources */,
+				555EAF89669575C1158DF4645940E63D /* x_darkGray@3x.png in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBF6D7D773E8C5B5897DA3ED986F72B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFAAF2C347A5DCA9ED8C3744EBB9818 /* Pods-PitchPerfect-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0319E0547B05A5579DA49F9237D75346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCSiriWaveformView;
+			target = 923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */;
+			targetProxy = DC38B9A99CB410604AC1CBCBA23488D5 /* PBXContainerItemProxy */;
+		};
+		0A508A0815E147DCDB42BC41BFB21FF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IQAudioRecorderController;
+			target = BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */;
+			targetProxy = 26CB05EAF940B26DB8FB708BBB4191E0 /* PBXContainerItemProxy */;
+		};
 		3F9AC8F959D262F76CC83D25A9100FEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SCSiriWaveformView;
 			target = 923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */;
 			targetProxy = DFF9654EB4EE42317C4F79D7461CC365 /* PBXContainerItemProxy */;
 		};
-		B76AA8CDFFBB7B2EF00B6CBFDEBD84E1 /* PBXTargetDependency */ = {
+		7989088A29174F84582BB49A7EA029B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SCSiriWaveformView;
-			target = 923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */;
-			targetProxy = 75D505560A1553555AC423218C7B9583 /* PBXContainerItemProxy */;
+			name = CircularSpinner;
+			target = D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */;
+			targetProxy = CDC83B1777918F844ABFEC751F13C560 /* PBXContainerItemProxy */;
 		};
-		FE85D5C32F4B3FFC3988A2797261A7C6 /* PBXTargetDependency */ = {
+		8F2227A818FD7FE0AD4623B6A69DB33D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = IQAudioRecorderController;
-			target = BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */;
-			targetProxy = C38D97AA3CB0ED70D95EED8C1617498B /* PBXContainerItemProxy */;
+			name = "CircularSpinner-CircularSpinner";
+			target = C63CB4AE559E609E163642ED2A914D4D /* CircularSpinner-CircularSpinner */;
+			targetProxy = 8829F8979CB71E0870826A8FB7EB26E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3F8A25A8F01AEC7EB5C303F1AEA94C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB64BF6ECE29C5DA7DCD8CB94BDB8B23 /* Pods-PitchPerfect.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PitchPerfect;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -647,7 +800,7 @@
 		};
 		6AF116B51B25BB82336D5754F0360A18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2D7D578D2BB191431C58965B6383941 /* SCSiriWaveformView.xcconfig */;
+			baseConfigurationReference = 99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -671,6 +824,42 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7DC7C104FC4DE01DD83311DD48C8A279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB64BF6ECE29C5DA7DCD8CB94BDB8B23 /* Pods-PitchPerfect.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PitchPerfect;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -679,7 +868,7 @@
 		};
 		917A570ECF65897BAF26F59EF6572254 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2D7D578D2BB191431C58965B6383941 /* SCSiriWaveformView.xcconfig */;
+			baseConfigurationReference = 99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -709,9 +898,77 @@
 			};
 			name = Release;
 		};
+		A089CAB71AAAB08686D8DD4EC75EC090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CircularSpinner/CircularSpinner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircularSpinner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircularSpinner/CircularSpinner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CircularSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3483DA3388AC098F1083AD68625C0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E8D7430709FB31BB956EED5E971C13 /* Pods-PitchPerfect.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PitchPerfect;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B66BAFE0D48F523E3F6D157DB8ADC387 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 903144781696F7281FEA721EC22DE360 /* IQAudioRecorderController.xcconfig */;
+			baseConfigurationReference = 3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -741,9 +998,26 @@
 			};
 			name = Release;
 		};
+		BE34A3AD43205457EBFAB6FC47DF8549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CircularSpinner";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/CircularSpinner/ResourceBundle-CircularSpinner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = CircularSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		D38ECBC21EE67A32F8E0D6CF0607598A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 903144781696F7281FEA721EC22DE360 /* IQAudioRecorderController.xcconfig */;
+			baseConfigurationReference = 3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -772,6 +1046,23 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		D7819BA69AFFBE11371D75D310BB645E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CircularSpinner";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/CircularSpinner/ResourceBundle-CircularSpinner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = CircularSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -817,9 +1108,9 @@
 			};
 			name = Debug;
 		};
-		EE6D433475A3CBE240CEF2C6B6C5C00C /* Release */ = {
+		FC5027D10386031D59334B53E046E0EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5E8D7430709FB31BB956EED5E971C13 /* Pods-PitchPerfect.release.xcconfig */;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -832,20 +1123,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CircularSpinner/CircularSpinner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircularSpinner/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
+				MODULEMAP_FILE = "Target Support Files/CircularSpinner/CircularSpinner.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PitchPerfect;
+				PRODUCT_NAME = CircularSpinner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -873,20 +1161,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19181B0BB6AACE0DBE97A01AA0E85C00 /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F8A25A8F01AEC7EB5C303F1AEA94C33 /* Debug */,
-				EE6D433475A3CBE240CEF2C6B6C5C00C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
 				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72494B3FBCCB2284E8DE5C6F15FD9AE0 /* Build configuration list for PBXNativeTarget "CircularSpinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A089CAB71AAAB08686D8DD4EC75EC090 /* Debug */,
+				FC5027D10386031D59334B53E046E0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80683BC148A69CAF4ABC5D1CF9CA6E7E /* Build configuration list for PBXNativeTarget "CircularSpinner-CircularSpinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE34A3AD43205457EBFAB6FC47DF8549 /* Debug */,
+				D7819BA69AFFBE11371D75D310BB645E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A816DAE2B95C9FA0525C2A138A79294A /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DC7C104FC4DE01DD83311DD48C8A279 /* Debug */,
+				A3483DA3388AC098F1083AD68625C0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

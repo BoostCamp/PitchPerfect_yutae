@@ -175,6 +175,10 @@
         _navigationTitle = self.title;
     }
     
+    // MARK : 버튼 타이틀명 설정
+    _doneButton.title = @"변환";
+    _cancelButton.title = @"삭제";
+    
     _audioRecorder = self.argAudioRecorder;
     _recordingFilePath = self.argAudioRecorder.url.absoluteString;
     

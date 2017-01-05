@@ -9,12 +9,14 @@
 import UIKit
 import AVFoundation
 
+// Loading Library
+import CircularSpinner
+
 // MARK: - PlaySoundsViewController: AVAudioPlayerDelegate
 
 extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
     
     // MARK: Alerts
-    
     struct Alerts {
         static let DismissAlert = "Dismiss"
         static let RecordingDisabledTitle = "Recording Disabled"
@@ -74,7 +76,6 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         audioEngine.attach(reverbNode)
         
         // connect nodes (Original)
-        /*
          if echo == true && reverb == true {
          connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
          } else if echo == true {
@@ -84,7 +85,79 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
          } else {
          connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
          }
-         */
+        
+        self.audioEngine.prepare()
+        
+        // schedule to play and start the engine!
+        do {
+            try self.audioEngine.start()
+        } catch {
+            showAlert(Alerts.AudioEngineError, message: String(describing: error))
+            return
+        }
+        
+        self.audioPlayerNode.stop()
+        
+        self.audioPlayerNode.scheduleFile(self.audioFile, at: nil) {
+            
+            var delayInSeconds: Double = 0
+            
+            
+            if let lastRenderTime = self.audioPlayerNode.lastRenderTime, let playerTime = self.audioPlayerNode.playerTime(forNodeTime: lastRenderTime) {
+                
+                if let rate = rate {
+                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate) / Double(rate)
+                } else {
+                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate)
+                }
+            }
+            // schedule a stop timer for when audio finishes playing
+            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsDialLayoutViewController.stopAudio), userInfo: nil, repeats: false)
+            RunLoop.main.add(self.stopTimer!, forMode: RunLoopMode.defaultRunLoopMode)
+        }
+        
+        
+        // play the recording!
+        self.audioPlayerNode.play()
+    }
+    
+    func sharePlaySound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
+        //Loading UI DispatchQueue main 으로 관리
+        DispatchQueue.main.async {
+            CircularSpinner.show("Loading...", animated: true, type: .indeterminate, showDismissButton: false)
+        }
+        
+        // 녹음을 위해 nil로 초기화
+        self.stopAudio()
+        audioEngine = nil
+        audioPlayerNode = nil
+        
+        audioEngine = AVAudioEngine()
+        
+        // node for playing audio
+        audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attach(audioPlayerNode)
+        
+        // node for adjusting rate/pitch
+        let changeRatePitchNode = AVAudioUnitTimePitch()
+        if let pitch = pitch {
+            changeRatePitchNode.pitch = pitch
+        }
+        if let rate = rate {
+            changeRatePitchNode.rate = rate
+        }
+        audioEngine.attach(changeRatePitchNode)
+        
+        // node for echo
+        let echoNode = AVAudioUnitDistortion()
+        echoNode.loadFactoryPreset(.multiEcho1)
+        audioEngine.attach(echoNode)
+        
+        // node for reverb
+        let reverbNode = AVAudioUnitReverb()
+        reverbNode.loadFactoryPreset(.cathedral)
+        reverbNode.wetDryMix = 50
+        audioEngine.attach(reverbNode)
         
         if echo == true && reverb == true {
             connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
@@ -128,6 +201,8 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         }
         
         DispatchQueue.global(qos: .userInitiated).async {
+            
+            // 8192 보다 높아 봣자 속도는 비슷하기때문.
             self.audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 8192, format: self.changedAudioFile.processingFormat, block: {
                 (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) in
                 do {
@@ -137,21 +212,6 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
                 } catch {
                     print(error)
                 }
-                /*
-                 let dataptrptr = buffer.floatChannelData!
-                 let dataptr = dataptrptr.pointee
-                 let datum = dataptr[Int(buffer.frameLength) - 1]
-                 
-                 if (done && abs(datum) < 0.000001 ){
-                 print("-----------------")
-                 print("Copy Completion")
-                 print("-----------------")
-                 self.stopAudio()
-                 self.audioEngine.mainMixerNode.removeTap(onBus: 0)
-                 return
-                 }
-                 */
-                
             })
         }
         
@@ -172,21 +232,28 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
             }
             
             // schedule a stop timer for when audio finishes playing
-            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsViewController.stopAudio), userInfo: nil, repeats: false)
+            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsDialLayoutViewController.shareUIDocument), userInfo: nil, repeats: false)
             RunLoop.main.add(self.stopTimer!, forMode: RunLoopMode.defaultRunLoopMode)
         }
         
         
         // play the recording!
         self.audioPlayerNode.play()
+        
+        
+        
+    }
+    
+    func shareUIDocument(){
         self.audioEngine.mainMixerNode.removeTap(onBus: 0)
-        
-        
-        self.sharingButton.isEnabled = true
+        CircularSpinner.hide {
+            let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: self.changedAudioFile.url.absoluteString ) as URL)
+            docController.delegate = self;
+            docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
+        }
     }
     
     func stopAudio() {
-//        DispatchQueue.main.async {
         if let audioPlayerNode = self.audioPlayerNode {
             audioPlayerNode.stop()
         }
@@ -197,23 +264,6 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         if let stopTimer = self.stopTimer {
             stopTimer.invalidate()
         }
-        
-//            if (self.audioPlayerNode) != nil {
-//                //            self.audioPlayerNode.stop()
-//                self.audioPlayerNode = nil
-//            }
-//            if (self.audioEngine) != nil {
-//                //            audioEngine.stop()
-//                //            audioEngine.reset()
-//                self.audioEngine = nil
-//            }
-        
-        
-//        }
-        
-        
-        // Sharing Button init
-        
     }
     
     // MARK: Connect List of Audio Nodes

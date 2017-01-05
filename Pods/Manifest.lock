@@ -1,15 +1,18 @@
 PODS:
+  - CircularSpinner (1.2.0)
   - IQAudioRecorderController (1.2.0):
     - SCSiriWaveformView
   - SCSiriWaveformView (1.0.3)
 
 DEPENDENCIES:
+  - CircularSpinner
   - IQAudioRecorderController
 
 SPEC CHECKSUMS:
+  CircularSpinner: 80b8ee3eda59b66d20631d4ca7c7c83720931739
   IQAudioRecorderController: 1d46d99330cb2c9381568665d123cf435460a43e
   SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395
 
-PODFILE CHECKSUM: 71cbe41e2c88d5b9ad90f918fbb8fa3bd1d63b6c
+PODFILE CHECKSUM: b296792721b1503df79ce4fa71514850c7c3f05e
 
 COCOAPODS: 1.1.1

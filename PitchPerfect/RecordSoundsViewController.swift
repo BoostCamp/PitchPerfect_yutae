@@ -23,14 +23,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.recordingAudioPlot.backgroundColor = [UIColor colorWithRed: 1.0 green: 0.2 blue: 0.365 alpha: 1];
-//        self.recordingAudioPlot.color           = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-//        self.recordingAudioPlot.plotType        = EZPlotTypeRolling;
-//        plot?.shouldFill = true;
-//        plot?.shouldMirror = true;
-//
-//        self.microphone = EZMicrophone(delegate: self, startsImmediately: true)
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +66,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 self.controller.argAudioRecorder = self.audioRecorder
                 self.controller.delegate = self
                 self.controller.title = "VOVO 음성 메모"
+//                self.controller.navigationItem.?.title = "삭제"
+//                self.controller.navigationItem.rightBarButtonItem?.title = "변환"
                 
                 self.controller.normalTintColor = UIColor.brown
                 self.controller.highlightedTintColor = UIColor.red
@@ -88,11 +83,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 self.audioRecorder.isMeteringEnabled = true
                 self.audioRecorder.prepareToRecord()
                 self.audioRecorder.record()
-
-                self.EZAudioInit()
                 */
 
             } else {
+                // 접근 권한 없어서 설정으로 이동.
                 let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "설정", style: .default, handler: { (action:UIAlertAction) -> Void in
                     let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
