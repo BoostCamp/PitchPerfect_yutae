@@ -6,7 +6,6 @@ target 'PitchPerfect' do
   use_frameworks!
    pod 'IQAudioRecorderController'
    pod 'CircularSpinner'
-   pod 'UICircularProgressRing'
   #  pod 'RealmSwift', '~> 2.1.1'
   # Pods for PitchPerfect
 

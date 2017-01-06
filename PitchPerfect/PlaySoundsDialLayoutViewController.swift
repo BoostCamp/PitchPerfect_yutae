@@ -174,7 +174,24 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
                 let customView = UIImageView.init(image: image)
                 self.collectionView.backgroundView = customView
                 
-                self.navigationItem.title = self.audioType[self.dialLayout.selectedItem]
+                let selectedItem = self.dialLayout.selectedItem
+                
+                let tempIndexPath = IndexPath(item: selectedItem!, section: 0)
+                
+                let cell = self.collectionView.cellForItem(at: tempIndexPath) as! dialLayoutCell
+                
+                if(selectedItem == 0){
+                    //            Stop
+                } else if (selectedItem == 1){
+                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate) / 0.5
+                } else if (selectedItem == 2){
+                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate) / 1.5
+                } else {
+                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate)
+                }
+                cell.itemView.start()
+                
+                self.navigationItem.title = self.audioType[selectedItem!]
             }
         }
     }
@@ -198,7 +215,12 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
             gradient.colors = [UIColor.black.cgColor, UIColor.white.cgColor]
             self.collectionView.layer.sublayers?.insert(gradient, at: 0)
             */
-            
+            let cells = self.collectionView.visibleCells
+            for cell in cells {
+                let c = cell as! dialLayoutCell
+                c.itemView.resetAnimationCircle()
+
+            }
             self.collectionView.backgroundView = customView
             self.navigationItem.title = "VOVO"
         }
@@ -212,9 +234,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! dialLayoutCell
         // Image 삽입
-        
         let audioType = self.audioType[indexPath.item]
-        cell.iconImage.image = UIImage(named: audioType)
+        cell.itemView.coverImage = UIImage(named: audioType)
         return cell
     }
     

@@ -15,6 +15,8 @@
 		9623D6AF1E14C63F003588D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */; };
 		96850BFA1E14FB0100006955 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */; };
 		96850BFC1E1508F400006955 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */; };
+		969A22BA1E1FA103000EFC08 /* InteractivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */; };
+		969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */; };
 		96B5E1EC1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */; };
 		96B5E1EE1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */; };
 		96B5E1F01E1CE4CF00B10BB7 /* dialLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */; };
@@ -34,6 +36,8 @@
 		965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PitchPerfect-Bridging-Header.h"; sourceTree = "<group>"; };
 		96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
+		969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePlayerView.swift; sourceTree = "<group>"; };
+		969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractivePlayerView.xib; sourceTree = "<group>"; };
 		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
 		96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsDialLayoutViewController.swift; sourceTree = "<group>"; };
 		96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dialLayoutCell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		9623D6A31E14C63F003588D3 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				969A22B61E1FA0DB000EFC08 /* Lib */,
 				964070E51E18C23A0041FAC2 /* ViewController */,
 				9623D6A41E14C63F003588D3 /* AppDelegate.swift */,
 				9623D6A81E14C63F003588D3 /* Main.storyboard */,
@@ -106,6 +111,24 @@
 				96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		969A22B61E1FA0DB000EFC08 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				969A22B71E1FA103000EFC08 /* ipv_source */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		969A22B71E1FA103000EFC08 /* ipv_source */ = {
+			isa = PBXGroup;
+			children = (
+				969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */,
+				969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */,
+			);
+			name = ipv_source;
+			path = Lib/ipv_source;
 			sourceTree = "<group>";
 		};
 		C7CDD381E3EA59BA2795DB83 /* Frameworks */ = {
@@ -180,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */,
 				9623D6AF1E14C63F003588D3 /* LaunchScreen.storyboard in Resources */,
 				9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */,
 				9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */,
@@ -248,6 +272,7 @@
 				9623D6A51E14C63F003588D3 /* AppDelegate.swift in Sources */,
 				96B5E1EE1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift in Sources */,
 				96B5E1F21E1D14F300B10BB7 /* PlaySoundsVCExtension.swift in Sources */,
+				969A22BA1E1FA103000EFC08 /* InteractivePlayerView.swift in Sources */,
 				96B5E1EC1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

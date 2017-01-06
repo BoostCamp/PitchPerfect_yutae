@@ -87,11 +87,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CircularSpinner/CircularSpinner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQAudioRecorderController/IQAudioRecorderController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SCSiriWaveformView/SCSiriWaveformView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/UICircularProgressRing/UICircularProgressRing.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CircularSpinner/CircularSpinner.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQAudioRecorderController/IQAudioRecorderController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SCSiriWaveformView/SCSiriWaveformView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/UICircularProgressRing/UICircularProgressRing.framework"
 fi

@@ -223,19 +223,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M4B-xY-UAI" userLabel="Icon">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzB-gG-Cu5" userLabel="itemView" customClass="InteractivePlayerView" customModule="PitchPerfect" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="10" width="160" height="160"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="M4B-xY-UAI" firstAttribute="leading" secondItem="ycM-Hr-c3T" secondAttribute="leading" id="5sL-tY-c4n"/>
-                                            <constraint firstAttribute="bottom" secondItem="M4B-xY-UAI" secondAttribute="bottom" id="AkF-lc-EhN"/>
-                                            <constraint firstAttribute="trailing" secondItem="M4B-xY-UAI" secondAttribute="trailing" id="SGv-YI-Afu"/>
-                                            <constraint firstItem="M4B-xY-UAI" firstAttribute="top" secondItem="ycM-Hr-c3T" secondAttribute="top" id="dqe-Jp-SY2"/>
+                                            <constraint firstAttribute="trailing" secondItem="SzB-gG-Cu5" secondAttribute="trailing" constant="10" id="BRf-SY-V7i"/>
+                                            <constraint firstAttribute="bottom" secondItem="SzB-gG-Cu5" secondAttribute="bottom" constant="10" id="Qqc-OY-lce"/>
+                                            <constraint firstItem="SzB-gG-Cu5" firstAttribute="leading" secondItem="ycM-Hr-c3T" secondAttribute="leading" constant="10" id="k31-rI-33l"/>
+                                            <constraint firstItem="SzB-gG-Cu5" firstAttribute="top" secondItem="ycM-Hr-c3T" secondAttribute="top" constant="10" id="mPk-eJ-pBB"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="iconImage" destination="M4B-xY-UAI" id="ZAg-jh-d3b"/>
+                                            <outlet property="itemView" destination="SzB-gG-Cu5" id="Wu0-HG-qts"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
