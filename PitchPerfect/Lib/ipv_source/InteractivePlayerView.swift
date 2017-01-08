@@ -54,8 +54,10 @@ class InteractivePlayerView : UIView {
     var actionImages = ActionButtonImages()
     
     /// set progress colors
-    var progressEmptyColor : UIColor = UIColor.white
-    var progressFullColor : UIColor = UIColor.blue
+    var progressEmptyColor : UIColor = UIColor.lightGray
+    
+    // Mark : Yutae Theme color
+    var progressFullColor : UIColor = UIColor.themeColor
     
     /// used to change current time of the sound . default is true
     var panEnabled:Bool = true

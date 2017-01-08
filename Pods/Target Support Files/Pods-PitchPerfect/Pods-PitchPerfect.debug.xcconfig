@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CircularSpinner" "$PODS_CONFIGURATION_BUILD_DIR/IQAudioRecorderController" "$PODS_CONFIGURATION_BUILD_DIR/SCSiriWaveformView"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/CircularSpinner" "$PODS_CONFIGURATION_BUILD_DIR/IQAudioRecorderController" "$PODS_CONFIGURATION_BUILD_DIR/SCSiriWaveformView"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/CircularSpinner/CircularSpinner.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/IQAudioRecorderController/IQAudioRecorderController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SCSiriWaveformView/SCSiriWaveformView.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "CircularSpinner" -framework "IQAudioRecorderController" -framework "SCSiriWaveformView"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/CircularSpinner/CircularSpinner.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/IQAudioRecorderController/IQAudioRecorderController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SCSiriWaveformView/SCSiriWaveformView.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "ChameleonFramework" -framework "CircularSpinner" -framework "IQAudioRecorderController" -framework "SCSiriWaveformView"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

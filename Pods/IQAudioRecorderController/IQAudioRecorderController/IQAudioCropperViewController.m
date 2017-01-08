@@ -191,7 +191,7 @@
     {
         if (self.title.length == 0)
         {
-            self.navigationItem.title = @"Edit";
+            self.navigationItem.title = @"VOVO 음성 편집";
         }
     }
     

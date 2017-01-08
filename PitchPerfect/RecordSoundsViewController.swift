@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import IQAudioRecorderController
+import ChameleonFramework
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQAudioRecorderViewControllerDelegate {
 
@@ -20,18 +21,44 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     var controller:IQAudioRecorderViewController!
     
     @IBOutlet weak var recordingLabel: UILabel!
+//    iPad Label size 33
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureUI()
+        // 배경 색 그라데이션 효과
+//        self.view.backgroundColor = UIColor.init(gradientStyle: .leftToRight, withFrame: self.view.frame, andColors: UIColor.themeColors)
+//        self.navigationController?.navigationBar.titleTextAttributes =
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        self.recordingLabel.text = "Tab to Record"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    func configureUI(){
+        self.recordingButton.setTitleColor(UIColor.themeColor, for: .selected)
+        // 기기별 text Size 조절
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            print("Current UI Device iPad")
+            self.recordingLabel.font = UIFont.init(name: self.recordingLabel.font.fontName, size: 30.0)
+        default:
+            self.recordingLabel.font = UIFont.init(name: "System", size: 15.0)
+        }
+    }
+    
     @IBAction func recordAction(_ sender: Any) {
         let session = AVAudioSession.sharedInstance()
         // Permission 예외 처리
@@ -55,7 +82,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                      AVNumberOfChannelsKey: 2,
                      AVSampleRateKey : 44100.0] as [String : Any]
                 */
-                self.recordingLabel.text = "Recording"
+                self.recordingLabel.text = "Recording..."
 //                self.recordingLabel.isHidden = false
 //                self.recordingButton.isEnabled = false
                 
@@ -65,12 +92,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 self.controller = IQAudioRecorderViewController.init()
                 self.controller.argAudioRecorder = self.audioRecorder
                 self.controller.delegate = self
-                self.controller.title = "VOVO 음성 메모"
-//                self.controller.navigationItem.?.title = "삭제"
-//                self.controller.navigationItem.rightBarButtonItem?.title = "변환"
+                self.controller.title = "VOVO 음성 녹음"
                 
-                self.controller.normalTintColor = UIColor.brown
-                self.controller.highlightedTintColor = UIColor.red
+                // Bar Color 설정
+                UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.themeColor]
+                self.controller.normalTintColor = UIColor.themeColor
                 
                 self.controller.allowCropping = true
                 
@@ -104,29 +130,26 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
         })
         
     }
-    @IBAction func stopRecording(_ sender: Any) {
-//        recordingLabel.text = "Tap to Record"
-        recordingButton.isEnabled = true
-        
-        audioRecorder.stop()
-        
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        try! audioSession.setActive(false)
-        
-        
-    }
+    
     // MARK : IQAudio
     func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
-        self.controller.dismiss(animated: true, completion: nil)
+        print("Cancel Button Pressed")
+        self.controller.dismiss(animated: true) { 
+            self.recordingLabel.text = "Tab to Record"
+            let audioSession = AVAudioSession.sharedInstance()
+            try! audioSession.setActive(false)
+        }
     }
     func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
-        self.controller.dismiss(animated: true, completion: nil)
-//        performSegue(withIdentifier: "stopRecording", sender: self.audioRecorder.url)
-        performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
+        self.controller.dismiss(animated: true) {
+            self.recordingLabel.text = "Tab to Record"
+            self.performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
+            let audioSession = AVAudioSession.sharedInstance()
+            try! audioSession.setActive(false)
+        }
     }
     
-    
+    /*
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
@@ -134,39 +157,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
             print("Recording was not successful")
         }
     }
+    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "stopRecording"{
-            let playSoundsVC = segue.destination as! PlaySoundsViewController
-            let recordedAudio = sender
-            playSoundsVC.recordedAudioURL = recordedAudio as! URL!
-        }
         if segue.identifier == "recordingCompletion"{
             let playSoundsVC = segue.destination as! PlaySoundsDialLayoutViewController
             let recordedAudio = sender
             playSoundsVC.recordedAudioURL = recordedAudio as! URL!
+            // 뒤로가기 글씨 없애기.
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         }
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.recordingLabel.isHidden = true
-        
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        print("View Did disappear!")
-    }
-    
-}
-
-extension TimeInterval {
-    func stringFromTimeInterval() -> NSString {
-        
-        let ti = NSInteger(self)
-        let ms = Int((self.truncatingRemainder(dividingBy: 1.0) * 100))
-        let seconds = ti % 60
-        let minutes = (ti / 60) % 60
-        //        let hours = (ti / 3600)
-        
-        return NSString(format: "%0.2d:%0.2d.%0.2d",minutes,seconds, ms)
     }
 }

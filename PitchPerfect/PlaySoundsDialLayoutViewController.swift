@@ -25,7 +25,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var cell_height:CGFloat!
     var cell_width:CGFloat!
     
-    let audioType = ["Stop", "Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ"]
+    let audioType = ["Stop", "Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ", "Drum"]
     
 //    AVAudio
     var recordedAudioURL: URL!
@@ -61,7 +61,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         currentDeviceHeight = deviceHeight
         
         setupAudio()
-//        if (currentDeviceWidth >
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,25 +91,20 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         case 0:
             self.stopAudio()
         case 1:
-            self.sharePlaySound(rate:0.5)
+            self.playSound(share: true, rate:0.5)
         case 2:
-            self.sharePlaySound(rate:1.5)
+            self.playSound(share: true, rate:1.5)
         case 3:
-            self.sharePlaySound(pitch:1000)
+            self.playSound(share: true, pitch:1000)
         case 4:
-            self.sharePlaySound(pitch:-1000)
+            self.playSound(share: true, pitch: -1000)
         case 5:
-            self.sharePlaySound(echo:true)
+            self.playSound(share: true, echo:true)
         case 6:
-            self.sharePlaySound(reverb:true)
+            self.playSound(share: true, reverb:true)
         default:
-            self.sharePlaySound(mixed:self.audioType[self.dialLayout.selectedItem])
+            self.playSound(share: true, mixed:self.audioType[self.dialLayout.selectedItem])
         }
-        /*
-        let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: changedAudioFile.url.absoluteString ) as URL)
-        docController.delegate = self;
-        docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
-         */
     }
     
     // 공유하고 후 Call Back VC 
@@ -137,6 +133,10 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.collectionViewLayout = self.dialLayout
         self.dialLayout.scrollDirection = .horizontal
+        
+        
+        // 배경 색 그라데이션 효과
+//         self.collectionView.backgroundColor = UIColor.init(gradientStyle: .leftToRight, withFrame: self.collectionView.frame, andColors: UIColor.themeColors)
         
         self.collectionView.reloadData()
         
@@ -221,12 +221,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
             customView.alpha = 0.1
             self.collectionView.backgroundView = customView
             */
-            /* Gradation
-            let gradient = CAGradientLayer()
-            gradient.frame = self.collectionView.frame
-            gradient.colors = [UIColor.black.cgColor, UIColor.white.cgColor]
-            self.collectionView.layer.sublayers?.insert(gradient, at: 0)
-            */
+            
             let cells = self.collectionView.visibleCells
             for cell in cells {
                 let c = cell as! dialLayoutCell

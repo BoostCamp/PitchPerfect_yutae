@@ -45,8 +45,62 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         }
     }
     
-    func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, mixed: String? = nil) {
+    func setupChangedAudio(){
+        // MARK: Changed Audio
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        let recordingName = "iOS_VOVO_app.aac"
+        let pathArray = [dirPath, recordingName]
+        let filePath = URL(string: pathArray.joined(separator: "/"))
         
+        let audioSettings =
+            [AVFormatIDKey: kAudioFormatMPEG4AAC,
+             AVSampleRateKey: 16000.0,
+             AVNumberOfChannelsKey: 1] as [String : Any]
+        
+        /* High Quality
+         let audioSettings =
+         [AVFormatIDKey: NSNumber(value:kAudioFormatAppleLossless),
+         AVEncoderAudioQualityKey : AVAudioQuality.low.rawValue,
+         AVEncoderBitRateKey : 320000,
+         AVNumberOfChannelsKey: 2,
+         AVSampleRateKey : 44100.0, ] as [String : Any]
+         */
+        
+        self.changedAudioFile = try! AVAudioFile(forWriting: filePath!, settings: audioSettings)
+    }
+    
+    func setupMixedAudio(audioName : String){
+        mixedPlayerNode = AVAudioPlayerNode()
+        audioEngine.attach(mixedPlayerNode)
+        
+        let filePath: String = Bundle.main.path(forResource: audioName, ofType: "m4a")!
+        print("\(filePath)")
+        let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
+        try! mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
+        self.mixedBuffer = AVAudioPCMBuffer.init(pcmFormat: mixedAudioFile.processingFormat, frameCapacity: AVAudioFrameCount(mixedAudioFile.length))
+        try! self.mixedAudioFile.read(into: self.mixedBuffer)
+        //            self.audioPlayerNode.pan = 0.5
+        //            self.audioPlayerNode.volume = 0.5
+        self.mixedPlayerNode.volume = 0.2
+    }
+    
+    func playSound(share: Bool = false, rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, mixed: String? = nil) {
+        
+        // For Share Show Loading Spinner
+        if share == true {
+            // UI main Queue 로 실행
+            DispatchQueue.main.async {
+                //            Pg 가 따라가는 선색, Bg 배경색
+                //            CircularSpinner.trackBgColor = UIColor.red
+                CircularSpinner.trackPgColor = UIColor.themeColor
+                CircularSpinner.show("Loading...", animated: true, type: .indeterminate, showDismissButton: false)
+            }
+            // 새로운 녹음을 위해 nil로 초기화
+            self.stopAudio()
+            audioEngine = nil
+            audioPlayerNode = nil
+            mixedPlayerNode = nil
+        }
         
         // initialize audio engine components
         audioEngine = AVAudioEngine()
@@ -76,42 +130,47 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         reverbNode.wetDryMix = 50
         audioEngine.attach(reverbNode)
         
-        // connect nodes (Original)
-        if echo == true && reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
-        } else if echo == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
-        } else if reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
-        } else if mixed != nil{
-            mixedPlayerNode = AVAudioPlayerNode()
-            audioEngine.attach(mixedPlayerNode)
-            
-            let filePath: String = Bundle.main.path(forResource: mixed, ofType: "m4a")!
-            print("\(filePath)")
-            let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
-            try! mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
-            self.mixedBuffer = AVAudioPCMBuffer.init(pcmFormat: mixedAudioFile.processingFormat, frameCapacity: AVAudioFrameCount(mixedAudioFile.length))
-            try! self.mixedAudioFile.read(into: self.mixedBuffer)
-//            self.audioPlayerNode.pan = 0.5
-//            self.audioPlayerNode.volume = 0.5
-            self.mixedPlayerNode.volume = 0.2
-            self.audioEngine.connect(audioPlayerNode, to: self.audioEngine.mainMixerNode, format: self.audioFile.processingFormat)
-            self.audioEngine.connect(mixedPlayerNode, to: self.audioEngine.mainMixerNode, format: self.mixedAudioFile.processingFormat)
+        
+        // connect nodes Share
+        if share == true {
+            if echo == true && reverb == true {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
+            } else if echo == true {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.mainMixerNode, audioEngine.outputNode)
+            } else if reverb == true {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
+            } else if mixed != nil{
+                self.setupMixedAudio(audioName : mixed!)
+                self.connectAudioNodes(audioPlayerNode, self.audioEngine.mainMixerNode, self.audioEngine.outputNode)
+                self.audioEngine.connect(mixedPlayerNode, to: self.audioEngine.mainMixerNode, format: self.mixedAudioFile.processingFormat)
+            } else {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.mainMixerNode, audioEngine.outputNode)
+            }
         }
+        // connect nodes For Play
         else {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
+            if echo == true && reverb == true {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.outputNode)
+            } else if echo == true {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.outputNode)
+            } else if reverb == true {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.outputNode)
+            } else if mixed != nil{
+                self.setupMixedAudio(audioName : mixed!)
+                self.audioEngine.connect(audioPlayerNode, to: self.audioEngine.mainMixerNode, format: self.audioFile.processingFormat)
+                self.audioEngine.connect(mixedPlayerNode, to: self.audioEngine.mainMixerNode, format: self.mixedAudioFile.processingFormat)
+            } else {
+                connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.outputNode)
+            }
         }
+        
         
         self.audioPlayerNode.stop()
-        
 //        Editted
         
         self.audioPlayerNode.scheduleFile(self.audioFile, at: nil) {
             
             var delayInSeconds: Double = 0
-            
-            
             if let lastRenderTime = self.audioPlayerNode.lastRenderTime, let playerTime = self.audioPlayerNode.playerTime(forNodeTime: lastRenderTime) {
                 
                 if let rate = rate {
@@ -121,9 +180,16 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
                 }
             }
             // schedule a stop timer for when audio finishes playing
-            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsDialLayoutViewController.stopAudio), userInfo: nil, repeats: false)
+            
+            if share == true {
+                self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsDialLayoutViewController.shareUIDocument), userInfo: nil, repeats: false)
+            } else {
+                self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsDialLayoutViewController.stopAudio), userInfo: nil, repeats: false)
+            }
+            
             RunLoop.main.add(self.stopTimer!, forMode: RunLoopMode.defaultRunLoopMode)
         }
+        
         
         self.audioEngine.prepare()
         
@@ -135,151 +201,22 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
             return
         }
         
-        if mixed != nil{
-            self.mixedPlayerNode.stop()
-            self.mixedPlayerNode.scheduleBuffer(self.mixedBuffer, at: nil, options: .loops, completionHandler: nil)
-            self.mixedPlayerNode.play()
-        }
-        // play the recording!
-        self.audioPlayerNode.play()
-    }
-
-    
-    func sharePlaySound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, mixed: String? = nil) {
-        //Loading UI DispatchQueue main 으로 관리
-        DispatchQueue.main.async {
-//            Pg 가 따라가는 선색, Bg 배경색
-//            CircularSpinner.trackBgColor = UIColor.red
-//            CircularSpinner.trackPgColor = UIColor.black
-            CircularSpinner.show("Loading...", animated: true, type: .indeterminate, showDismissButton: false)
-        }
-        
-        // 녹음을 위해 nil로 초기화
-        self.stopAudio()
-        audioEngine = nil
-        audioPlayerNode = nil
-        mixedPlayerNode = nil
-        
-        audioEngine = AVAudioEngine()
-        
-        // node for playing audio
-        audioPlayerNode = AVAudioPlayerNode()
-        audioEngine.attach(audioPlayerNode)
-        
-        // node for adjusting rate/pitch
-        let changeRatePitchNode = AVAudioUnitTimePitch()
-        if let pitch = pitch {
-            changeRatePitchNode.pitch = pitch
-        }
-        if let rate = rate {
-            changeRatePitchNode.rate = rate
-        }
-        audioEngine.attach(changeRatePitchNode)
-        
-        // node for echo
-        let echoNode = AVAudioUnitDistortion()
-        echoNode.loadFactoryPreset(.multiEcho1)
-        audioEngine.attach(echoNode)
-        
-        // node for reverb
-        let reverbNode = AVAudioUnitReverb()
-        reverbNode.loadFactoryPreset(.cathedral)
-        reverbNode.wetDryMix = 50
-        audioEngine.attach(reverbNode)
-        
-        if echo == true && reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
-        } else if echo == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, echoNode, audioEngine.mainMixerNode, audioEngine.outputNode)
-        } else if reverb == true {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, reverbNode, audioEngine.mainMixerNode, audioEngine.outputNode)
-        } else if mixed != nil{
-            mixedPlayerNode = AVAudioPlayerNode()
-            audioEngine.attach(mixedPlayerNode)
-            
-            let filePath: String = Bundle.main.path(forResource: mixed, ofType: "m4a")!
-            print("\(filePath)")
-            let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
-            try! mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
-            self.mixedBuffer = AVAudioPCMBuffer.init(pcmFormat: mixedAudioFile.processingFormat, frameCapacity: AVAudioFrameCount(mixedAudioFile.length))
-            try! self.mixedAudioFile.read(into: self.mixedBuffer)
-            //            self.audioPlayerNode.pan = 0.5
-            //            self.audioPlayerNode.volume = 0.5
-            self.mixedPlayerNode.volume = 0.2
-//            self.audioEngine.connect(audioPlayerNode, to: self.audioEngine.mainMixerNode, format: self.audioFile.processingFormat)
-            self.connectAudioNodes(audioPlayerNode, self.audioEngine.mainMixerNode, self.audioEngine.outputNode)
-            self.audioEngine.connect(mixedPlayerNode, to: self.audioEngine.mainMixerNode, format: self.mixedAudioFile.processingFormat)
-        }
-        else {
-            connectAudioNodes(audioPlayerNode, changeRatePitchNode, audioEngine.mainMixerNode, audioEngine.outputNode)
-        }
-        
-        // MARK: Changed Audio
-        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-        let recordingName = "iOS_VOVO_app.aac"
-        let pathArray = [dirPath, recordingName]
-        let filePath = URL(string: pathArray.joined(separator: "/"))
-        
-        let audioSettings =
-            [AVFormatIDKey: kAudioFormatMPEG4AAC,
-             AVSampleRateKey: 16000.0,
-             AVNumberOfChannelsKey: 1] as [String : Any]
-        
-        /* High Quality
-         let audioSettings =
-         [AVFormatIDKey: NSNumber(value:kAudioFormatAppleLossless),
-         AVEncoderAudioQualityKey : AVAudioQuality.low.rawValue,
-         AVEncoderBitRateKey : 320000,
-         AVNumberOfChannelsKey: 2,
-         AVSampleRateKey : 44100.0, ] as [String : Any]
-         */
-        
-        self.changedAudioFile = try! AVAudioFile(forWriting: filePath!, settings: audioSettings)
-        self.audioEngine.prepare()
-        
-        // schedule to play and start the engine!
-        do {
-            try self.audioEngine.start()
-        } catch {
-            showAlert(Alerts.AudioEngineError, message: String(describing: error))
-            return
-        }
-        
-        // Background Thread로 변환된 음원 복제
-        DispatchQueue.global(qos: .userInitiated).async {
-            
-            // 8192 보다 높아 봣자 속도는 비슷하기때문.
-            self.audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 8192, format: self.changedAudioFile.processingFormat, block: {
-                (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) in
-                do {
-                    try self.changedAudioFile.write(from:buffer)
-                    print("Copy...")
-                    print("new Audio : \(self.changedAudioFile.length)")
-                } catch {
-                    print(error)
-                }
-            })
-        }
-        
-        self.audioPlayerNode.stop()
-        
-        self.audioPlayerNode.scheduleFile(self.audioFile, at: nil) {
-            
-            var delayInSeconds: Double = 0
-            
-            
-            if let lastRenderTime = self.audioPlayerNode.lastRenderTime, let playerTime = self.audioPlayerNode.playerTime(forNodeTime: lastRenderTime) {
-                
-                if let rate = rate {
-                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate) / Double(rate)
-                } else {
-                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate)
-                }
+        if share == true {
+            // Background Thread로 변환된 음원 복제
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.setupChangedAudio()
+                // 8192 보다 높아 봣자 속도는 비슷하기때문.
+                self.audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 8192, format: self.changedAudioFile.processingFormat, block: {
+                    (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) in
+                    do {
+                        try self.changedAudioFile.write(from:buffer)
+                        print("Copy...")
+                        print("new Audio : \(self.changedAudioFile.length)")
+                    } catch {
+                        print(error)
+                    }
+                })
             }
-            
-            // schedule a stop timer for when audio finishes playing
-            self.stopTimer = Timer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsDialLayoutViewController.shareUIDocument), userInfo: nil, repeats: false)
-            RunLoop.main.add(self.stopTimer!, forMode: RunLoopMode.defaultRunLoopMode)
         }
         
         if mixed != nil{
@@ -287,10 +224,8 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
             self.mixedPlayerNode.scheduleBuffer(self.mixedBuffer, at: nil, options: .loops, completionHandler: nil)
             self.mixedPlayerNode.play()
         }
-        
         // play the recording!
         self.audioPlayerNode.play()
-        
     }
     
     func shareUIDocument(){

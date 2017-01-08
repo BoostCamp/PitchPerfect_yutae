@@ -6,6 +6,7 @@ target 'PitchPerfect' do
   use_frameworks!
    pod 'IQAudioRecorderController'
    pod 'CircularSpinner'
+   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   #  pod 'RealmSwift', '~> 2.1.1'
   # Pods for PitchPerfect
 

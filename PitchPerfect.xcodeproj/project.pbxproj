@@ -13,8 +13,6 @@
 		9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6A81E14C63F003588D3 /* Main.storyboard */; };
 		9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AB1E14C63F003588D3 /* Assets.xcassets */; };
 		9623D6AF1E14C63F003588D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */; };
-		96850BFA1E14FB0100006955 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */; };
-		96850BFC1E1508F400006955 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */; };
 		969A22BA1E1FA103000EFC08 /* InteractivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */; };
 		969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */; };
 		96AE35B11E1FE77500D30A89 /* Organ.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 96AE35B01E1FE77500D30A89 /* Organ.m4a */; };
@@ -23,6 +21,7 @@
 		96B5E1F01E1CE4CF00B10BB7 /* dialLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */; };
 		96B5E1F21E1D14F300B10BB7 /* PlaySoundsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */; };
 		96C9EDC61E212D220074F638 /* Drum.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 96C9EDC51E212D220074F638 /* Drum.m4a */; };
+		96C9EDCB1E22457A0074F638 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,16 +35,15 @@
 		9623D6AE1E14C63F003588D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9623D6B01E14C63F003588D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PitchPerfect-Bridging-Header.h"; sourceTree = "<group>"; };
-		96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 		969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePlayerView.swift; sourceTree = "<group>"; };
 		969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractivePlayerView.xib; sourceTree = "<group>"; };
-		96AE35B01E1FE77500D30A89 /* Organ.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Organ.m4a; sourceTree = "<group>"; };
+		96AE35B01E1FE77500D30A89 /* Organ.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Organ.m4a; path = Music/Organ.m4a; sourceTree = "<group>"; };
 		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
 		96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsDialLayoutViewController.swift; sourceTree = "<group>"; };
 		96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dialLayoutCell.swift; sourceTree = "<group>"; };
 		96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsVCExtension.swift; sourceTree = "<group>"; };
-		96C9EDC51E212D220074F638 /* Drum.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Drum.m4a; sourceTree = "<group>"; };
+		96C9EDC51E212D220074F638 /* Drum.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Drum.m4a; path = Music/Drum.m4a; sourceTree = "<group>"; };
+		96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F74FE7032C65425B6E9CC936 /* Pods_PitchPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchPerfect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,7 +89,7 @@
 		9623D6A31E14C63F003588D3 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
-				969A22B61E1FA0DB000EFC08 /* Lib */,
+				96C9EDCC1E227B390074F638 /* View */,
 				964070E51E18C23A0041FAC2 /* ViewController */,
 				9623D6A41E14C63F003588D3 /* AppDelegate.swift */,
 				9623D6A81E14C63F003588D3 /* Main.storyboard */,
@@ -99,7 +97,6 @@
 				9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */,
 				9623D6B01E14C63F003588D3 /* Info.plist */,
 				965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */,
-				96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */,
 				96AE35AF1E1FE77500D30A89 /* Resources */,
 			);
 			path = PitchPerfect;
@@ -109,10 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */,
-				96850BF91E14FB0100006955 /* PlaySoundsViewController.swift */,
-				96850BFB1E1508F400006955 /* PlaySoundsViewController+Audio.swift */,
 				96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */,
-				96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */,
 				96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */,
 			);
 			name = ViewController;
@@ -121,6 +115,7 @@
 		969A22B61E1FA0DB000EFC08 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */,
 				969A22B71E1FA103000EFC08 /* ipv_source */,
 			);
 			name = Lib;
@@ -143,6 +138,16 @@
 				96C9EDC51E212D220074F638 /* Drum.m4a */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		96C9EDCC1E227B390074F638 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */,
+				96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */,
+				969A22B61E1FA0DB000EFC08 /* Lib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		C7CDD381E3EA59BA2795DB83 /* Frameworks */ = {
@@ -282,12 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9623D6A71E14C63F003588D3 /* RecordSoundsViewController.swift in Sources */,
-				96850BFC1E1508F400006955 /* PlaySoundsViewController+Audio.swift in Sources */,
-				96850BFA1E14FB0100006955 /* PlaySoundsViewController.swift in Sources */,
 				96B5E1F01E1CE4CF00B10BB7 /* dialLayoutCell.swift in Sources */,
 				9623D6A51E14C63F003588D3 /* AppDelegate.swift in Sources */,
 				96B5E1EE1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift in Sources */,
 				96B5E1F21E1D14F300B10BB7 /* PlaySoundsVCExtension.swift in Sources */,
+				96C9EDCB1E22457A0074F638 /* UIColorExtension.swift in Sources */,
 				969A22BA1E1FA103000EFC08 /* InteractivePlayerView.swift in Sources */,
 				96B5E1EC1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift in Sources */,
 			);
