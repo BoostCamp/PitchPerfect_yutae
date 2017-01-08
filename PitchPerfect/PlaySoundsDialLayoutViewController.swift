@@ -25,7 +25,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var cell_height:CGFloat!
     var cell_width:CGFloat!
     
-    let audioType = ["Stop", "Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb"]
+    let audioType = ["Stop", "Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ"]
     
 //    AVAudio
     var recordedAudioURL: URL!
@@ -33,7 +33,15 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var audioEngine:AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
+    
+//    For Share
     var changedAudioFile:AVAudioFile!
+    
+//    To be mixed
+    var mixedAudioFile: AVAudioFile!
+    var mixedPlayerNode: AVAudioPlayerNode!
+    var mixedBuffer: AVAudioPCMBuffer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +102,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         case 6:
             self.sharePlaySound(reverb:true)
         default:
-            self.stopAudio()
+            self.sharePlaySound(mixed:self.audioType[self.dialLayout.selectedItem])
         }
         /*
         let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: changedAudioFile.url.absoluteString ) as URL)
@@ -163,17 +171,19 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         case 6:
             self.playSound(reverb:true)
         default:
-            self.playSound()
+            self.playSound(mixed:self.audioType[self.dialLayout.selectedItem])
         }
         
         // UI라서 DispatQueue main 으로 관리 Sharing Button init
         DispatchQueue.main.async {
             if(self.dialLayout.selectedItem != 0) {
                 self.sharingButton.isEnabled = true
+                
+                /* Background Image 바꾸기.
                 let image = UIImage(named: "Bg")
                 let customView = UIImageView.init(image: image)
                 self.collectionView.backgroundView = customView
-                
+                */
                 let selectedItem = self.dialLayout.selectedItem
                 
                 let tempIndexPath = IndexPath(item: selectedItem!, section: 0)
@@ -205,10 +215,12 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         DispatchQueue.main.async {
             self.sharingButton.isEnabled = false
             
+            /* Background Image 바꾸기.
             let image = UIImage(named: "Stop")
             let customView = UIImageView.init(image: image)
             customView.alpha = 0.1
-            
+            self.collectionView.backgroundView = customView
+            */
             /* Gradation
             let gradient = CAGradientLayer()
             gradient.frame = self.collectionView.frame
@@ -221,7 +233,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
                 c.itemView.resetAnimationCircle()
 
             }
-            self.collectionView.backgroundView = customView
             self.navigationItem.title = "VOVO"
         }
     }

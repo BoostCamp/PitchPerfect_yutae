@@ -46,7 +46,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                     [AVFormatIDKey: kAudioFormatMPEG4AAC,
                      AVSampleRateKey: 16000.0,
                      AVNumberOfChannelsKey: 1] as [String : Any]
-                
+//                High Quality
                 /*
                 let recordSettings =
                     [AVFormatIDKey: NSNumber(value:kAudioFormatAppleLossless),
