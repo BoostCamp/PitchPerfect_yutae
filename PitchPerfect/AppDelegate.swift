@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CXCallObserverDelegate {
             print("Calling Status!")
             // Waiting for call to end
             DispatchQueue.main.async {
-                CircularSpinner.trackPgColor = UIColor.init(red: 0/255, green: 183/255, blue: 168/255, alpha: 1.0)
+                CircularSpinner.trackPgColor = UIColor.init(red: 0/255, green: 184/255, blue: 185/255, alpha: 1.0)
                 CircularSpinner.show("Waiting...", animated: true, type: .indeterminate, showDismissButton: false)
             }
         }
