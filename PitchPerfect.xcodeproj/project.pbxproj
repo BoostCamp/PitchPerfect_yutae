@@ -12,7 +12,6 @@
 		9623D6A71E14C63F003588D3 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */; };
 		9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6A81E14C63F003588D3 /* Main.storyboard */; };
 		9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AB1E14C63F003588D3 /* Assets.xcassets */; };
-		9623D6AF1E14C63F003588D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */; };
 		969A22BA1E1FA103000EFC08 /* InteractivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */; };
 		969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */; };
 		96AE35B11E1FE77500D30A89 /* Organ.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 96AE35B01E1FE77500D30A89 /* Organ.m4a */; };
@@ -32,7 +31,6 @@
 		9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		9623D6A91E14C63F003588D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9623D6AB1E14C63F003588D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9623D6AE1E14C63F003588D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9623D6B01E14C63F003588D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PitchPerfect-Bridging-Header.h"; sourceTree = "<group>"; };
 		969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePlayerView.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				9623D6A41E14C63F003588D3 /* AppDelegate.swift */,
 				9623D6A81E14C63F003588D3 /* Main.storyboard */,
 				9623D6AB1E14C63F003588D3 /* Assets.xcassets */,
-				9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */,
 				9623D6B01E14C63F003588D3 /* Info.plist */,
 				965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */,
 				96AE35AF1E1FE77500D30A89 /* Resources */,
@@ -225,7 +222,6 @@
 				96AE35B11E1FE77500D30A89 /* Organ.m4a in Resources */,
 				969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */,
 				96C9EDC61E212D220074F638 /* Drum.m4a in Resources */,
-				9623D6AF1E14C63F003588D3 /* LaunchScreen.storyboard in Resources */,
 				9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */,
 				9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */,
 			);
@@ -306,14 +302,6 @@
 				9623D6A91E14C63F003588D3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9623D6AD1E14C63F003588D3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9623D6AE1E14C63F003588D3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -417,6 +405,7 @@
 			baseConfigurationReference = 32BC99EBD22C802F185D56C2 /* Pods-PitchPerfect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 22XN7UBS5Y;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
@@ -434,6 +423,7 @@
 			baseConfigurationReference = 739236C6B49BDEB5745EDF69 /* Pods-PitchPerfect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 22XN7UBS5Y;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;

@@ -50,13 +50,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     func configureUI(){
         self.recordingButton.setTitleColor(UIColor.themeColor, for: .selected)
         // 기기별 text Size 조절
-        switch UIDevice.current.userInterfaceIdiom {
-        case .pad:
-            print("Current UI Device iPad")
-            self.recordingLabel.font = UIFont.init(name: self.recordingLabel.font.fontName, size: 30.0)
-        default:
-            self.recordingLabel.font = UIFont.init(name: "System", size: 15.0)
-        }
+//        self.recordingLabel.adjustsFontSizeToFitWidth = true
+        
     }
     
     @IBAction func recordAction(_ sender: Any) {

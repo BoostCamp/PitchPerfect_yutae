@@ -82,6 +82,7 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         //            self.audioPlayerNode.pan = 0.5
         //            self.audioPlayerNode.volume = 0.5
         self.mixedPlayerNode.volume = 0.2
+        self.mixedPlayerNode.pan = 0.5
     }
     
     func playSound(share: Bool = false, rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, mixed: String? = nil) {

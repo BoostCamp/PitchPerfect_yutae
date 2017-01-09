@@ -16,8 +16,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var deviceWidth = UIScreen.main.bounds.size.width
     var deviceHeight = UIScreen.main.bounds.size.height
     
-    var currentDeviceWidth:CGFloat!
-    var currentDeviceHeight:CGFloat!
     var radius: CGFloat!
     var angularSpacing: CGFloat!
     
@@ -25,8 +23,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var cell_height:CGFloat!
     var cell_width:CGFloat!
     
-    let audioType = ["Stop", "Snail", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ", "Drum"]
-    
+    let audioType = ["Stop", "Turtle", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ", "Drum"]
+    let audioTypeDescription = ["STOP", "SLOW", "FAST", "LIGHT", "HEAVY", "ECHO", "REVERB", "ORGAN", "DRUM"]
 //    AVAudio
     var recordedAudioURL: URL!
     var audioFile:AVAudioFile!
@@ -49,19 +47,29 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         // Check iPad, iPhone Set Layout
         switch UIDevice.current.userInterfaceIdiom {
             case .pad:
-                print("Current UI Device iPad")
-                angularSpacing = 50.0
-                radius = 330.0
+                print("Current UI Device iPad - Dial Layout Resize")
+                self.angularSpacing = 50.0
+                self.radius = 440.0
+                self.cell_width = 200
+                self.cell_height = CGFloat((200*1.3)+10.0)
             default:
-                angularSpacing = 30.0
-                radius = 220.0
+                if(self.view.frame.width < 370){
+                    print("Current UI Device < iPhone 6- Dial Layout Resize")
+                    self.angularSpacing = 40.0
+                    self.radius = 220.0
+                    self.cell_width = 120
+                    self.cell_height = CGFloat((120*1.3)+10.0)
+                }
+                else {
+                    print("Current UI Device > iPhone 6 - Dial Layout Resize")
+                    self.angularSpacing = 40.0
+                    self.radius = 220.0
+                    self.cell_width = 150
+                    self.cell_height = CGFloat((150*1.3)+10.0)
+                }
         }
         
-        currentDeviceWidth = deviceWidth
-        currentDeviceHeight = deviceHeight
-        
         setupAudio()
-        
         
     }
     
@@ -70,15 +78,31 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         configureDialLayoutUI()
         // Sharing Button init
         self.sharingButton.isEnabled = false
+        
+        // Add Observer orientation Changed !!
+        NotificationCenter.default.addObserver(self, selector: #selector(PlaySoundsDialLayoutViewController.orientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+    }
+    
+    func orientationDidChange(notification: NSNotification) {
+        print("orientationDidChange")
+        // orientation Changed 일때 UI Reset
+        self.configureDialLayoutUI()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        // 종료될때 현재 재생중인 음악 끄기.
-        self.stopAudio()
 
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // 종료될때 Observer remove!!
+        NotificationCenter.default.removeObserver(self)
+        // 종료될때 현재 재생중인 음악 끄기.
+        self.stopAudio()
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -115,15 +139,10 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     // DialLayout 초기화
     func configureDialLayoutUI(){
         print("Dial Layout Init")
-        self.dialLayout = nil
         
-        self.cell_height = CGFloat(currentDeviceHeight/6)
-        self.cell_width = CGFloat(currentDeviceHeight/6)
+        print(self.view.frame.width)
         
-        print("UIDevice Witdh : \(currentDeviceWidth)")
-        
-        
-        self.dialLayout = AWCollectionViewDialLayout(raduis: self.radius , angularSpacing: self.angularSpacing, cellSize: CGSize.init(width: cell_height, height: cell_width), alignment: WheelAlignmentType.center, itemHeight: cell_height, xOffset: currentDeviceWidth/2)
+        self.dialLayout = AWCollectionViewDialLayout(raduis: self.radius , angularSpacing: self.angularSpacing, cellSize: CGSize.init(width: self.cell_width, height: self.cell_height), alignment: WheelAlignmentType.center, itemHeight: cell_height, xOffset: self.view.frame.width/2)
         
         
         self.dialLayout.shouldSnap = true
@@ -133,10 +152,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.collectionViewLayout = self.dialLayout
         self.dialLayout.scrollDirection = .horizontal
-        
-        
-        // 배경 색 그라데이션 효과
-//         self.collectionView.backgroundColor = UIColor.init(gradientStyle: .leftToRight, withFrame: self.collectionView.frame, andColors: UIColor.themeColors)
         
         self.collectionView.reloadData()
         
@@ -179,11 +194,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
             if(self.dialLayout.selectedItem != 0) {
                 self.sharingButton.isEnabled = true
                 
-                /* Background Image 바꾸기.
-                let image = UIImage(named: "Bg")
-                let customView = UIImageView.init(image: image)
-                self.collectionView.backgroundView = customView
-                */
                 let selectedItem = self.dialLayout.selectedItem
                 
                 let tempIndexPath = IndexPath(item: selectedItem!, section: 0)
@@ -201,34 +211,25 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
                 }
                 cell.itemView.start()
                 
-                self.navigationItem.title = self.audioType[selectedItem!]
+                self.navigationItem.title = self.audioType[selectedItem!].uppercased()
             }
         }
     }
     
     // Scroll 시작 시 음악 정지.
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        print("Scroll Begin!!")
         self.stopAudio()
         
         // UI라서 DispatQueue main 으로 관리 Sharing Button init
         DispatchQueue.main.async {
             self.sharingButton.isEnabled = false
             
-            /* Background Image 바꾸기.
-            let image = UIImage(named: "Stop")
-            let customView = UIImageView.init(image: image)
-            customView.alpha = 0.1
-            self.collectionView.backgroundView = customView
-            */
-            
             let cells = self.collectionView.visibleCells
             for cell in cells {
                 let c = cell as! dialLayoutCell
                 c.itemView.resetAnimationCircle()
-
             }
-            self.navigationItem.title = "VOVO"
+            self.navigationItem.title = "VOVO 음성 변환"
         }
     }
     
@@ -241,22 +242,17 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! dialLayoutCell
         // Image 삽입
         let audioType = self.audioType[indexPath.item]
+        
         cell.itemView.coverImage = UIImage(named: audioType)
+        cell.audioTypeDescription.text = audioTypeDescription[indexPath.item]
         return cell
     }
     
-    //Orientations Change!
+    
+    //Orientations Change! Will -> Orientation 변하려 할때 실행이 되는 함수
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        /*
         print("Change")
-        if (UIDevice.current.orientation.isPortrait) {
-            print("Portrait!")
-            currentDeviceWidth = deviceWidth
-            currentDeviceHeight = deviceHeight
-        } else {
-            currentDeviceWidth = deviceHeight
-            currentDeviceHeight = deviceWidth
-            
-        }
-        self.configureDialLayoutUI()
+         */
     }
 }

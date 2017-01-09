@@ -32,7 +32,7 @@ class InteractivePlayerView : UIView {
     var view: UIView!
     var delegate: InteractivePlayerViewDelegate?
     
-    @IBOutlet private var coverImageView: UIImageView!
+    @IBOutlet public var coverImageView: UIImageView!
     @IBOutlet private var timeLabel: UILabel!
     @IBOutlet private var actionOne: UIButton!
     @IBOutlet private var actionTwo: UIButton!
@@ -332,6 +332,8 @@ class InteractivePlayerView : UIView {
         coverImageView.backgroundColor = UIColor.clear
         view.backgroundColor = UIColor.clear
         
+//        coverImageView.contentMode = .scaleAspectFill
+        
         self.makeItRounded(view: view, newSize: view.bounds.width)
         self.backgroundColor = UIColor.clear
         
@@ -352,7 +354,9 @@ class InteractivePlayerView : UIView {
         let saveCenter : CGPoint = view.center
         let newFrame : CGRect = CGRect(x: view.frame.origin.x,y: view.frame.origin.y,width: newSize,height: newSize)
         view.frame = newFrame
-        view.layer.cornerRadius = newSize / 2.0
+        // MARK : Corner Radius 를 더 주어 이미지가 더 나올 수 있게끔.
+//        view.layer.cornerRadius = newSize / 2.0
+        view.layer.cornerRadius = newSize / 4.5
         view.clipsToBounds = true
         view.center = saveCenter
     }

@@ -8,6 +8,8 @@
 import UIKit
 
 class dialLayoutCell: UICollectionViewCell {
-    
     @IBOutlet weak var itemView: InteractivePlayerView!
+    
+    @IBOutlet weak var audioTypeDescription: UILabel!
+    
 }

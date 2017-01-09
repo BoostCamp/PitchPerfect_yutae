@@ -220,5 +220,4 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
         return theAttributes
         
     }
-
 }
