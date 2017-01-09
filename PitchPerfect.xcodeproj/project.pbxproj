@@ -12,6 +12,8 @@
 		9623D6A71E14C63F003588D3 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */; };
 		9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6A81E14C63F003588D3 /* Main.storyboard */; };
 		9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AB1E14C63F003588D3 /* Assets.xcassets */; };
+		9652F1481E23BC6000AD99CD /* Car.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9652F1471E23BB6900AD99CD /* Car.m4a */; };
+		9652F1491E23BC6300AD99CD /* Clap.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9652F1461E23BB6900AD99CD /* Clap.m4a */; };
 		969A22BA1E1FA103000EFC08 /* InteractivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */; };
 		969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */; };
 		96AE35B11E1FE77500D30A89 /* Organ.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 96AE35B01E1FE77500D30A89 /* Organ.m4a */; };
@@ -33,6 +35,8 @@
 		9623D6AB1E14C63F003588D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9623D6B01E14C63F003588D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965290E31E163D4600DE1D1C /* PitchPerfect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PitchPerfect-Bridging-Header.h"; sourceTree = "<group>"; };
+		9652F1461E23BB6900AD99CD /* Clap.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Clap.m4a; path = Music/Clap.m4a; sourceTree = "<group>"; };
+		9652F1471E23BB6900AD99CD /* Car.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Car.m4a; path = Music/Car.m4a; sourceTree = "<group>"; };
 		969A22B81E1FA103000EFC08 /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePlayerView.swift; sourceTree = "<group>"; };
 		969A22B91E1FA103000EFC08 /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractivePlayerView.xib; sourceTree = "<group>"; };
 		96AE35B01E1FE77500D30A89 /* Organ.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Organ.m4a; path = Music/Organ.m4a; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		96AE35AF1E1FE77500D30A89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9652F1461E23BB6900AD99CD /* Clap.m4a */,
+				9652F1471E23BB6900AD99CD /* Car.m4a */,
 				96AE35B01E1FE77500D30A89 /* Organ.m4a */,
 				96C9EDC51E212D220074F638 /* Drum.m4a */,
 			);
@@ -220,8 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				96AE35B11E1FE77500D30A89 /* Organ.m4a in Resources */,
+				9652F1491E23BC6300AD99CD /* Clap.m4a in Resources */,
 				969A22BB1E1FA104000EFC08 /* InteractivePlayerView.xib in Resources */,
 				96C9EDC61E212D220074F638 /* Drum.m4a in Resources */,
+				9652F1481E23BC6000AD99CD /* Car.m4a in Resources */,
 				9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */,
 				9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */,
 			);

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Drum.png",
+      "filename" : "Drum@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Drum-1.png",
+      "filename" : "Drum@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Drum-2.png",
+      "filename" : "Drum@3x.png",
       "scale" : "3x"
     }
   ],

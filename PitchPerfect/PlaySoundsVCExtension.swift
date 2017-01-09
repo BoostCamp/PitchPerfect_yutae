@@ -72,7 +72,7 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
     func setupMixedAudio(audioName : String){
         mixedPlayerNode = AVAudioPlayerNode()
         audioEngine.attach(mixedPlayerNode)
-        
+        print(audioName)
         let filePath: String = Bundle.main.path(forResource: audioName, ofType: "m4a")!
         print("\(filePath)")
         let fileURL: NSURL = NSURL(fileURLWithPath: filePath)

@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import CircularSpinner
+import CallKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CXCallObserverDelegate {
 
     var window: UIWindow?
-
-
+    var callObserver = CXCallObserver()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        Navigation Bar Color 지정
+        // Navigation Bar Color 지정
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = UIColor.themeColor
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        
+        // Call Observer Delegate 셋팅 CallKit iOS 10 이상
+        callObserver.setDelegate(self, queue: nil)
+        
         return true
     }
 
@@ -45,7 +51,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // Calling Status 일 때 로딩 화면 처리로 앱 튕김 예외처리
+    func callObserver(_ callObserver: CXCallObserver, callChanged call: CXCall) {
+        
+        if call.hasEnded {
+            print("Call End!")
+            DispatchQueue.main.async {
+                CircularSpinner.hide()
+            }
+        } else {
+            print("Calling Status!")
+            // Waiting for call to end
+            DispatchQueue.main.async {
+                CircularSpinner.trackPgColor = UIColor.init(red: 0/255, green: 183/255, blue: 168/255, alpha: 1.0)
+                CircularSpinner.show("Waiting...", animated: true, type: .indeterminate, showDismissButton: false)
+            }
+        }
+    }
+    
 
 }
 

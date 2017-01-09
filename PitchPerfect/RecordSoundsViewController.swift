@@ -129,15 +129,19 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     // MARK : IQAudio
     func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
         print("Cancel Button Pressed")
-        self.controller.dismiss(animated: true) { 
+        DispatchQueue.main.async {
             self.recordingLabel.text = "Tab to Record"
+        }
+        self.controller.dismiss(animated: true) {
             let audioSession = AVAudioSession.sharedInstance()
             try! audioSession.setActive(false)
         }
     }
     func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
-        self.controller.dismiss(animated: true) {
+        DispatchQueue.main.async {
             self.recordingLabel.text = "Tab to Record"
+        }
+        self.controller.dismiss(animated: true) {
             self.performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
             let audioSession = AVAudioSession.sharedInstance()
             try! audioSession.setActive(false)
