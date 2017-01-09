@@ -7,122 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0183E6D8926F00B7F8A2DBB87A55F726 /* IQAudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E003AB1EC70FA9FAF5C9DE26A86331E9 /* IQAudioRecorderViewController.m */; };
-		01C71AFEDCF18DFAF546217AB8EDA1A0 /* CircularSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C147F7D5E9B29E74F5013806B41CA314 /* CircularSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03DCD393DF69EE6DE4AD424B1192DD02 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A8F24FCEAF7A49D8D7E448B4A331446 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0183E6D8926F00B7F8A2DBB87A55F726 /* IQAudioRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E0C577037E443AFCAFDDBE41BD6932 /* IQAudioRecorderViewController.m */; };
+		01C71AFEDCF18DFAF546217AB8EDA1A0 /* CircularSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D885A5271303C137495A2007EA7F2D /* CircularSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05713E54A4D5AE78DB21AB7DF79BF016 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
-		0D7F425CFB628271BFB6FCFF8201BF4F /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D7F5F77948C6893058475FD653D2ECF /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10E1BB851F0B4FDAD3377596F7D37319 /* x_darkGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D5F6C09EAD347BA14CFE6CAC184F73 /* x_darkGray@2x.png */; };
-		139A9CEDE5163F58CBB1A3A135DAD6A3 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0BC45B287B78FF217EA15ECAB7E510 /* UIImage+ChameleonPrivate.m */; };
-		152AA4CD5E508007D2512BC03A11595C /* CircularSpinner.xib in Sources */ = {isa = PBXBuildFile; fileRef = EAB9A1E2B5D64967DA7FE07CCC3E9292 /* CircularSpinner.xib */; };
-		17D424BA5C309E1109615172FD2C5017 /* audio_record.png in Resources */ = {isa = PBXBuildFile; fileRef = E19538C73153C7C438E6DA010FCC2899 /* audio_record.png */; };
-		1B704F3C816C4532F9B7FDFE0625732E /* ChameleonFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 953AC6311B645DB6E4FD6FB67EF12DB5 /* ChameleonFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F47A888C214B0C7879116130F47D069 /* Pods-PitchPerfect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1340CA2FE79041012930596C0433F837 /* Pods-PitchPerfect-dummy.m */; };
+		10E1BB851F0B4FDAD3377596F7D37319 /* x_darkGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */; };
+		152AA4CD5E508007D2512BC03A11595C /* CircularSpinner.xib in Sources */ = {isa = PBXBuildFile; fileRef = C253100967D466EFFB29118B66A27545 /* CircularSpinner.xib */; };
+		17D424BA5C309E1109615172FD2C5017 /* audio_record.png in Resources */ = {isa = PBXBuildFile; fileRef = ED10FC07230072DC82E378F0F9C045D3 /* audio_record.png */; };
 		29E0F9D1AACCBB7E7533A9D0D1A2C547 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFFC6C371E0E240CC417FC7EA0ACE91 /* QuartzCore.framework */; };
-		29F74E8A334254C68C6720E3B247CE32 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 8964401A7B229DC42013F131D35A47D9 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C71D0F1ABC3D66F3C5CE74B3C158C2D /* CircularSpinner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 230D315525931200ABF9D53E1247CAEC /* CircularSpinner.bundle */; };
-		2DDDE2C06FB4DCC639CFD100F224D6FD /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = EE426177C539BC35DEB117359AA5F90B /* UIColor+Chameleon.m */; };
-		3015F02E49347B64CB43DF58EB06D1AD /* scissor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C2453567843534C60E7A697D374020 /* scissor@2x.png */; };
-		305269DD136262175D1A0727D7CDA9A2 /* stop_recording@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C612327BFB4A933B29ACE656B40EE27 /* stop_recording@2x.png */; };
+		2C71D0F1ABC3D66F3C5CE74B3C158C2D /* CircularSpinner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */; };
+		3015F02E49347B64CB43DF58EB06D1AD /* scissor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C99D6F0E942148E791F2CAFCEF82 /* scissor@2x.png */; };
+		305269DD136262175D1A0727D7CDA9A2 /* stop_recording@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B6CC192F7CF56C941AE8ADAD3AE24E /* stop_recording@2x.png */; };
 		3665A878FFE0805592A4674253A3B91C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6893A2CCAE60DC427CA15D87BA59F60 /* CoreGraphics.framework */; };
-		37C799676D843531B4F8CE0325603183 /* NSString+IQTimeIntervalFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 34B7E58407ADED2B279B5C56AB03F138 /* NSString+IQTimeIntervalFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D08C4F4E2E65D192D317AED0A8237B3 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E8EF414631CFAECEFEF1E8103FB64F /* UIColor+ChameleonPrivate.m */; };
-		3ED606BF23EDB4A6B13161A5895EC1D8 /* IQ_FDWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = BBADD3D462C4C836FB323165D0B71D99 /* IQ_FDWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41EA8AF56DE242EDA2F3714B761EDE86 /* IQCropSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A35134325742EB1502D104B8C3BB5 /* IQCropSelectionView.m */; };
-		429DEBBF3B75DC7468B68CA71148F6D4 /* stop_playing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C67B166399EB16B57963AE746B3EF9 /* stop_playing@2x.png */; };
-		44117424757A5E62D87B8BF4B41A4207 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F97FBBE4BD079BC099CA400438ED4693 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		443767ECD9924DEEA1A36A2D61682F6C /* IQPlaybackDurationView.h in Headers */ = {isa = PBXBuildFile; fileRef = D738C8E4ED4A84DC2808DC205EF184A6 /* IQPlaybackDurationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		452C92BB5D06338EEEBF013C73C34001 /* stop_playing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E81856F4D9227A2B76B02C3707B6218 /* stop_playing@3x.png */; };
-		459048ECD9FAA42B77566EC56ECAD793 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C86189C5367E97A3848F770B0D99DC11 /* UINavigationController+Chameleon.m */; };
-		46A9E4DAD4C35811079A329E722BBE3E /* microphone_access@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CB6055B83C06DB7E31687510D91826 /* microphone_access@3x.png */; };
-		4742C6B8FF177DF03A38F91F877F1F89 /* microphone_access@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC7FBABFD15BB278CDCCD49E5AB039 /* microphone_access@2x.png */; };
-		4A61C8394F3074A12A159A8A1415AE90 /* IQAudioCropperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9E8EF675567F86882C8DC1386A209A /* IQAudioCropperViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A7F6945FC35DB43E7C78876DD95CB2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
-		4EDC3E688F83FF99F042AF8955A5F2C2 /* stop_recording@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 934AA444E7B7F449C3FB316927F76085 /* stop_recording@3x.png */; };
-		4F1E3EAAA5E21C07C86AB289A5E0076E /* IQAudioRecorderController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC185A66A33A116D5330EF93321266F /* IQAudioRecorderController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		555EAF89669575C1158DF4645940E63D /* x_darkGray@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 6E78D8AEDA17D66358944199F4C9491B /* x_darkGray@3x.png */; };
-		5D5BBFD8B361F6D80ED22F88FDEF30F1 /* IQPlaybackDurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD04A0AEF743E69B519E3F57E3E823 /* IQPlaybackDurationView.m */; };
+		37C799676D843531B4F8CE0325603183 /* NSString+IQTimeIntervalFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B90A4CD3798027F78E600A0494A4078 /* NSString+IQTimeIntervalFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DFAAF2C347A5DCA9ED8C3744EBB9818 /* Pods-PitchPerfect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1340CA2FE79041012930596C0433F837 /* Pods-PitchPerfect-dummy.m */; };
+		3ED606BF23EDB4A6B13161A5895EC1D8 /* IQ_FDWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD32B5315A1CD2ADA03B677B5D6D7B /* IQ_FDWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41EA8AF56DE242EDA2F3714B761EDE86 /* IQCropSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855644F41309232B0123135968F57414 /* IQCropSelectionView.m */; };
+		429DEBBF3B75DC7468B68CA71148F6D4 /* stop_playing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43CC11AA33BD8A8CD0AEAF7F0367F897 /* stop_playing@2x.png */; };
+		443767ECD9924DEEA1A36A2D61682F6C /* IQPlaybackDurationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F7C230DB5EF74699F12B15D537AD56C /* IQPlaybackDurationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452C92BB5D06338EEEBF013C73C34001 /* stop_playing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 237A5003D315620BD9D6213B4862036C /* stop_playing@3x.png */; };
+		46A9E4DAD4C35811079A329E722BBE3E /* microphone_access@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC8ED04A135A7087D329BB6C913238E /* microphone_access@3x.png */; };
+		4742C6B8FF177DF03A38F91F877F1F89 /* microphone_access@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66153E8400A01DC918A0198A25EA2E /* microphone_access@2x.png */; };
+		4A61C8394F3074A12A159A8A1415AE90 /* IQAudioCropperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3C4D49767893AFF437CFA205A886D /* IQAudioCropperViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EDC3E688F83FF99F042AF8955A5F2C2 /* stop_recording@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E547CE0362215C4E2C0D3D10915ED9A /* stop_recording@3x.png */; };
+		4F1E3EAAA5E21C07C86AB289A5E0076E /* IQAudioRecorderController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A20CDA3C6E4C7C91F9F27EF3103AA3 /* IQAudioRecorderController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		512CE8BF19B635C31893B3BFC8564003 /* Pods-PitchPerfect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F2914C833F4AB8ED6C753FCCE84213 /* Pods-PitchPerfect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		555EAF89669575C1158DF4645940E63D /* x_darkGray@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */; };
+		5D5BBFD8B361F6D80ED22F88FDEF30F1 /* IQPlaybackDurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2D654E28C411F7F19A7119030DC31 /* IQPlaybackDurationView.m */; };
 		5E9534FF91AAB97A4A08A8117AB41B69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3015C65EFD93E6C9A2C3E0CDF08BF6CB /* AVFoundation.framework */; };
-		5EA9F0ED011B06DEFA8542EEE72508C3 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7BA54A46050081032DA0D090D2086 /* UIViewController+Chameleon.m */; };
-		604286A8F8A2ACB063BDF97B09D4987C /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB7820B9ED28FE8331B885377115F8A /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62BFF1854627D667B663118C80804616 /* scissor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A26D850C599F7D1AE48FF6CFE3204399 /* scissor@3x.png */; };
-		64A2196AB6080C641DF100096E267EF2 /* NSString+IQTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C720731D961DD962DD45C40ABA5FDC28 /* NSString+IQTimeIntervalFormatter.m */; };
-		6712100A2CCB9B987281A02F6778473C /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB40E9414B080733590D1EDAFBF0436 /* NSArray+Chameleon.m */; };
+		62BFF1854627D667B663118C80804616 /* scissor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D7868FEC02AE00723432DA85FEFEEC /* scissor@3x.png */; };
+		6429C3138FDE5269DF479BDF2F929009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
+		64A2196AB6080C641DF100096E267EF2 /* NSString+IQTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968054B28D6F4BD48A8F98D4C656140 /* NSString+IQTimeIntervalFormatter.m */; };
 		6C731116BF6176C0F2F5DBB9D505A756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		741DE36281C1B82FC774CE00B32E9FD6 /* Pods-PitchPerfect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F2914C833F4AB8ED6C753FCCE84213 /* Pods-PitchPerfect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757174AA9B1B03484BA2F7F00BAA3576 /* IQCropSelectionEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E97C6DCC8B16BE29386D9DF12882980 /* IQCropSelectionEndView.m */; };
-		78281D8673FC507089FCFDC439DEDC16 /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = E01FF87DE418C20431892362C276BCB6 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C1801C836D425C7ED44CDA094E22723 /* IQAudioRecorderConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = E10247866858A93FE4103E36F389A581 /* IQAudioRecorderConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D017C4766A8A6B24A80A356575F707A /* SCSiriWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC167B8001306E08B817CD7EB1621FC8 /* SCSiriWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		806C21A7C6E61CFF69D639CAD77E714F /* IQCropSelectionEndView.h in Headers */ = {isa = PBXBuildFile; fileRef = D5A677BD255176DDAE08570B654FC27A /* IQCropSelectionEndView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757174AA9B1B03484BA2F7F00BAA3576 /* IQCropSelectionEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C34E72F0B9D198FA20132C24461E79 /* IQCropSelectionEndView.m */; };
+		7C1801C836D425C7ED44CDA094E22723 /* IQAudioRecorderConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0C47796E39B957C02B4003078F6BA9 /* IQAudioRecorderConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D017C4766A8A6B24A80A356575F707A /* SCSiriWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 026E27183C91048CE5D8FF1BE84AF010 /* SCSiriWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		806C21A7C6E61CFF69D639CAD77E714F /* IQCropSelectionEndView.h in Headers */ = {isa = PBXBuildFile; fileRef = 92863249A27E751F3A5345814341B3DE /* IQCropSelectionEndView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80A45D4AE05008356595D8EB613504FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		80BCDC067D49E704079BE5C15C046614 /* IQAudioRecorderController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD91940E334976B8DFEB89045F0C00EE /* IQAudioRecorderController-dummy.m */; };
-		8206FDD2F6696F14419FD2BA9C633460 /* SCSiriWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C327BD39D487C577E35ED3EA502398 /* SCSiriWaveformView-dummy.m */; };
-		833F15A28A0D562548517BCA8EAF23B6 /* ChameleonShorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4824AD32FE5CFEC24F4C5E89EFE704 /* ChameleonShorthand.swift */; };
-		83CFC8F573AD5B75191E162E64C7D039 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A75A65BCBA40035EDA04E8B0921CF6 /* UIButton+Chameleon.m */; };
-		849A8449312926683E7110EACC5EB524 /* stop_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 249F01087A460FC9FBBEE06318F43F7D /* stop_recording.png */; };
-		86F7D970F220974A0E26C3B632C5C74F /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BC67A804816A67B6DFD0FF920A9D5A /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87DDF909AB562084FAD364EBFD4B3FAC /* CircularSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE0937E7010E46730974F95BC00EE1 /* CircularSpinner-dummy.m */; };
-		8A3836948B26F090FADA7CA4A58D31C2 /* audio_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE21E2D71D1B0724321CCB555124F0D /* audio_record@2x.png */; };
-		8AE23E99B5D81CE013A479C8C01DB9E6 /* IQAudioCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E863540274BB05C3F7F248B03A50A9CB /* IQAudioCropperViewController.m */; };
-		8ECF929AC5E737EBEB542283886D5E07 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F71E6B2F62E6FC245B807948099F7A /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		923369708790774BB768672AA79DCAD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
+		80BCDC067D49E704079BE5C15C046614 /* IQAudioRecorderController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C929137DBA2327ACB29F1922BEBC4EE /* IQAudioRecorderController-dummy.m */; };
+		8206FDD2F6696F14419FD2BA9C633460 /* SCSiriWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC7119DD74CB0ADB274094806D3C458 /* SCSiriWaveformView-dummy.m */; };
+		849A8449312926683E7110EACC5EB524 /* stop_recording.png in Resources */ = {isa = PBXBuildFile; fileRef = CA925EBDC86A25A77B81D4A54D73AB8F /* stop_recording.png */; };
+		87DDF909AB562084FAD364EBFD4B3FAC /* CircularSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0667E46D68FCAA3FF93A39A888F4C351 /* CircularSpinner-dummy.m */; };
+		8A3836948B26F090FADA7CA4A58D31C2 /* audio_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDCA5678211D62BDF0B643F947C00F49 /* audio_record@2x.png */; };
+		8AE23E99B5D81CE013A479C8C01DB9E6 /* IQAudioCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E21A389109E65FD524A5561B6364D6 /* IQAudioCropperViewController.m */; };
 		9396A049E3CDB24CE8208655AC29824F /* SCSiriWaveformView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB365B068D9500F5060990563F2F0799 /* SCSiriWaveformView.framework */; };
-		95E542740750F827BE2EBE3DE6F62D0E /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FA693707E525404B785FC98793B42 /* ChameleonFramework-dummy.m */; };
-		9860170FC39EA871E949CBBC46B5C95A /* IQMessageDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F40D89412AB9C89D0962CD4094BB167A /* IQMessageDisplayView.m */; };
-		9A3EAF15D3C58FD56A552FD703A9154C /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E182261980BE9C769566CD567BAB96 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B6AD39C81FAF37861FC0FEC41022146 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E44F3CFB6B6D89AAF4A6A57C283021 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BABCCEF0FDB93A542217F84C22DFB6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		9CC5B819FD827819674EEEA6FCBFD34D /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B31F1E6E3D24857E795BC4FA8AA2CB /* SCSiriWaveformView.m */; };
-		9EFA54977D58CC42FE19072C6BF7D542 /* scissor.png in Resources */ = {isa = PBXBuildFile; fileRef = CD05362CD948F976F403AEE5B30A947E /* scissor.png */; };
-		A149AA733B3B30C84D7F7639F4450C98 /* x_darkGray@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 74D5F6C09EAD347BA14CFE6CAC184F73 /* x_darkGray@2x.png */; };
+		9860170FC39EA871E949CBBC46B5C95A /* IQMessageDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2585A75B68F1939C9A62C206777938B /* IQMessageDisplayView.m */; };
+		9CC5B819FD827819674EEEA6FCBFD34D /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD37220B7340B47537529596A5FA0E8 /* SCSiriWaveformView.m */; };
+		9EFA54977D58CC42FE19072C6BF7D542 /* scissor.png in Resources */ = {isa = PBXBuildFile; fileRef = 23A3DBEA0803AA75EB2FEBE42B4EDF32 /* scissor.png */; };
+		A149AA733B3B30C84D7F7639F4450C98 /* x_darkGray@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */; };
 		A2F8521A1771731F9D394B6CC0F57A6F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3015C65EFD93E6C9A2C3E0CDF08BF6CB /* AVFoundation.framework */; };
-		A664D0A12D5F3DBD08A7E8DFE3AE83E2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B357BCA8F3907D301EC9C2361EE320AE /* UIView+ChameleonPrivate.m */; };
 		A787E360F6AF854351D0F21A00C16C7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
-		A9BBA058D9732AC59A7377152E719112 /* IQCropSelectionBeginView.h in Headers */ = {isa = PBXBuildFile; fileRef = 484C86ECC4B6DF33FD68A55D404019E8 /* IQCropSelectionBeginView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAA696E6745D5B874A75B3EE613F3E41 /* IQCropSelectionBeginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3488670547CC268498E6E84878953ACA /* IQCropSelectionBeginView.m */; };
+		A9BBA058D9732AC59A7377152E719112 /* IQCropSelectionBeginView.h in Headers */ = {isa = PBXBuildFile; fileRef = 733DB9D43436B7A5AF7B144B8037DE6E /* IQCropSelectionBeginView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA696E6745D5B874A75B3EE613F3E41 /* IQCropSelectionBeginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DA1237B79B103C642F8A1BDD62C965 /* IQCropSelectionBeginView.m */; };
 		AB2A31C56E4E2AD33A221CAE02E17464 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */; };
-		B26038F91C7C4CC322D7F25C5D16FE9E /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 746FB68825CE8022A557F900744CA30C /* ChameleonConstants.m */; };
-		B4EA53699AA19822E674188743266B2B /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CF07FFCA8A52D3293F679F3408EC3A4B /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5539F8FD01B0346AD6C4F2743BB0B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */; };
-		B59FB7ADF2C3686C4A8CA39E1E0598CE /* stop_playing.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E9D931F4118B140BCBA4F75A04126F /* stop_playing.png */; };
-		B7F997F4D216FD0256FC1E1021307E94 /* x_darkGray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E78D8AEDA17D66358944199F4C9491B /* x_darkGray@3x.png */; };
-		B8FCF87620600A7A6CE45858E0FA8B67 /* SCSiriWaveformView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C28B3513CEFBC31FDB4791018F8CF8 /* SCSiriWaveformView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFA97401155C4E14893D9AA1E0D1EC80 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = F613DE074798C38FA414AA7516A48C77 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C20ED5A79C2335EAEFD046731DBB4263 /* IQ_FDWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268A27DFA892D0638C9A7837931D06C1 /* IQ_FDWaveformView.m */; };
-		C3C8BB46937DD0BBC7FBE25E298052F8 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = B561EC4058F0FF47EB904722B08F7B39 /* UIAppearance+Swift.m */; };
-		C78AC9DF55C43B62D6851B2F30ADFE0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFFC6C371E0E240CC417FC7EA0ACE91 /* QuartzCore.framework */; };
-		C85B68F7CE1CD55A995DC20927FBE52D /* audio_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A89A2D9C40207F5E97DE5A6A5DF7AB /* audio_record@3x.png */; };
-		CC4EF7D364925D0C803B28F77029C126 /* CircularSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD8C78A9108A151663FFF7B564D4087 /* CircularSpinner.swift */; };
-		D5FAFC3C89B922BB4FFB6C0516EAF3D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6893A2CCAE60DC427CA15D87BA59F60 /* CoreGraphics.framework */; };
-		D7E587EB20BD9D32CF69D24F9CE3500D /* IQAudioRecorderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DFEE757B5E0B5FCFF67D9D7F1ADDCCB /* IQAudioRecorderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA1F68FAA7BC02E5E38377F0F453C2AA /* IQCropSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7975C6036E665AEF26800531462CDB1F /* IQCropSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB5FB611FB6EBF2F2BA7B78FE0CED535 /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = F08DBE1C0FF152112890D317C4E0D8FC /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2D4A0B6BC5CDEDF80FC0312D9FF973B /* IQAudioRecorderConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = F41B3C228CB04CB8F2DE465E764610EF /* IQAudioRecorderConstraints.m */; };
-		E7FA38FEAF957D69E92153FBAFB3DB40 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A4259FD05A2B691C84E4DCDA05194 /* Chameleon_.m */; };
-		EC786817C5CEBCD51A4C9EC9B883ED6F /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 45CFC96F0C3DF81BC6413A4F232EF06B /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED4DBD1E13182AA813DC1237FA6E3A42 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D2B2C1D57D2B9219A8A8BEFFAD4069 /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F21082BBCEF15A9FBCAB996129A36479 /* IQMessageDisplayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 45E1FA00C694BDFED7EEAC349A0063D1 /* IQMessageDisplayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F460337DCEFE83C126EEDCDDBFBDF5BE /* microphone_access.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DBD2ECD1DE85D8EBE3C0341D860F87D /* microphone_access.png */; };
-		FB82C1293D7DDE0D3E2E6D68CDD5852C /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A71A73D8EADCB16F4A75B40ECE6424 /* UILabel+Chameleon.m */; };
+		B59FB7ADF2C3686C4A8CA39E1E0598CE /* stop_playing.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A3B4BD028308F2F5C6471B5738421D /* stop_playing.png */; };
+		B7F997F4D216FD0256FC1E1021307E94 /* x_darkGray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */; };
+		B8FCF87620600A7A6CE45858E0FA8B67 /* SCSiriWaveformView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14CBF6C884038594EE71E60B700ECD9C /* SCSiriWaveformView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C20ED5A79C2335EAEFD046731DBB4263 /* IQ_FDWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9180421216852470808E7475FE24291 /* IQ_FDWaveformView.m */; };
+		C85B68F7CE1CD55A995DC20927FBE52D /* audio_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6535A43827F66F618BD1A8E5F4CEBA3 /* audio_record@3x.png */; };
+		CC4EF7D364925D0C803B28F77029C126 /* CircularSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F203130B536BE72B998D20F8D1AD3 /* CircularSpinner.swift */; };
+		D7E587EB20BD9D32CF69D24F9CE3500D /* IQAudioRecorderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1534C53A1B71D1FF7045FEA264889A /* IQAudioRecorderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1F68FAA7BC02E5E38377F0F453C2AA /* IQCropSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA0FF4D2435565F89C2AB9E19AAD528 /* IQCropSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2D4A0B6BC5CDEDF80FC0312D9FF973B /* IQAudioRecorderConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C2614D9CBC7414DA16A52079964275 /* IQAudioRecorderConstraints.m */; };
+		F21082BBCEF15A9FBCAB996129A36479 /* IQMessageDisplayView.h in Headers */ = {isa = PBXBuildFile; fileRef = D70B78E8260DED142FBB1A2CF53E1751 /* IQMessageDisplayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F460337DCEFE83C126EEDCDDBFBDF5BE /* microphone_access.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BDF9C31377716292E9EC1D61E897760 /* microphone_access.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		55FA2FBA9610342EB4CCAF0FCC6A076C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 923C199FC8844D48B6E4D0E9B013C7C4;
-			remoteInfo = SCSiriWaveformView;
-		};
-		64329957E3D390CA8017767AA5A154A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 76BD4592010354D6C23D6ECCA20D83A8;
-			remoteInfo = ChameleonFramework;
-		};
-		7332775398B1343A9F7FBFC5DA32603A /* PBXContainerItemProxy */ = {
+		26CB05EAF940B26DB8FB708BBB4191E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -136,6 +88,20 @@
 			remoteGlobalIDString = C63CB4AE559E609E163642ED2A914D4D;
 			remoteInfo = "CircularSpinner-CircularSpinner";
 		};
+		CDC83B1777918F844ABFEC751F13C560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D780F80A5793F3EFDAC1606AAA75B388;
+			remoteInfo = CircularSpinner;
+		};
+		DC38B9A99CB410604AC1CBCBA23488D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 923C199FC8844D48B6E4D0E9B013C7C4;
+			remoteInfo = SCSiriWaveformView;
+		};
 		DFF9654EB4EE42317C4F79D7461CC365 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -143,136 +109,102 @@
 			remoteGlobalIDString = 923C199FC8844D48B6E4D0E9B013C7C4;
 			remoteInfo = SCSiriWaveformView;
 		};
-		E37C70082E86C6386E6E81666D22F42A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D780F80A5793F3EFDAC1606AAA75B388;
-			remoteInfo = CircularSpinner;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CBC7FBABFD15BB278CDCCD49E5AB039 /* microphone_access@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@2x.png"; path = "IQAudioRecorderController/Resources/microphone_access@2x.png"; sourceTree = "<group>"; };
-		0DBD2ECD1DE85D8EBE3C0341D860F87D /* microphone_access.png */ = {isa = PBXFileReference; includeInIndex = 1; name = microphone_access.png; path = IQAudioRecorderController/Resources/microphone_access.png; sourceTree = "<group>"; };
-		0E4824AD32FE5CFEC24F4C5E89EFE704 /* ChameleonShorthand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChameleonShorthand.swift; path = Pod/Classes/Swift/ChameleonShorthand.swift; sourceTree = "<group>"; };
-		0E8F924C336E19E157B1D4BC97B417D3 /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
+		00E0C577037E443AFCAFDDBE41BD6932 /* IQAudioRecorderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderViewController.m; path = IQAudioRecorderController/IQAudioRecorderViewController.m; sourceTree = "<group>"; };
+		026E27183C91048CE5D8FF1BE84AF010 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCSiriWaveformView.h; path = SCSiriWaveformView/SCSiriWaveformView.h; sourceTree = "<group>"; };
+		03F3C4D49767893AFF437CFA205A886D /* IQAudioCropperViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioCropperViewController.h; path = IQAudioRecorderController/IQAudioCropperViewController.h; sourceTree = "<group>"; };
+		0667E46D68FCAA3FF93A39A888F4C351 /* CircularSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircularSpinner-dummy.m"; sourceTree = "<group>"; };
 		1340CA2FE79041012930596C0433F837 /* Pods-PitchPerfect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PitchPerfect-dummy.m"; sourceTree = "<group>"; };
-		14CB6055B83C06DB7E31687510D91826 /* microphone_access@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@3x.png"; path = "IQAudioRecorderController/Resources/microphone_access@3x.png"; sourceTree = "<group>"; };
-		17A75A65BCBA40035EDA04E8B0921CF6 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
-		17B54EEE47D8E4259A8333A82482B002 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DFEE757B5E0B5FCFF67D9D7F1ADDCCB /* IQAudioRecorderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderViewController.h; path = IQAudioRecorderController/IQAudioRecorderViewController.h; sourceTree = "<group>"; };
-		1FB4C415DE09FCC77AFCA2DF53AE0D6C /* IQAudioRecorderController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQAudioRecorderController.xcconfig; sourceTree = "<group>"; };
-		1FB7820B9ED28FE8331B885377115F8A /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
-		20FD04A0AEF743E69B519E3F57E3E823 /* IQPlaybackDurationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPlaybackDurationView.m; path = IQAudioRecorderController/IQPlaybackDurationView.m; sourceTree = "<group>"; };
-		210FA693707E525404B785FC98793B42 /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
-		2170B56C84E4B0E7D3DD841A7EF4ACDE /* ChameleonFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ChameleonFramework.modulemap; sourceTree = "<group>"; };
-		230D315525931200ABF9D53E1247CAEC /* CircularSpinner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CircularSpinner.bundle; path = CircularSpinner.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		2429AAE87A63DE0DC2752B0011B0857F /* CircularSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CircularSpinner.modulemap; sourceTree = "<group>"; };
-		249F01087A460FC9FBBEE06318F43F7D /* stop_recording.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_recording.png; path = IQAudioRecorderController/Resources/stop_recording.png; sourceTree = "<group>"; };
-		268A27DFA892D0638C9A7837931D06C1 /* IQ_FDWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQ_FDWaveformView.m; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.m; sourceTree = "<group>"; };
+		14CBF6C884038594EE71E60B700ECD9C /* SCSiriWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-umbrella.h"; sourceTree = "<group>"; };
+		15E21A389109E65FD524A5561B6364D6 /* IQAudioCropperViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioCropperViewController.m; path = IQAudioRecorderController/IQAudioCropperViewController.m; sourceTree = "<group>"; };
+		20FB046F28325E37939E757776C75163 /* CircularSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircularSpinner.framework; path = CircularSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21531C45EE582B1FDF81D7060CDD6A9E /* ResourceBundle-CircularSpinner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CircularSpinner-Info.plist"; sourceTree = "<group>"; };
+		237A5003D315620BD9D6213B4862036C /* stop_playing@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@3x.png"; path = "IQAudioRecorderController/Resources/stop_playing@3x.png"; sourceTree = "<group>"; };
+		237EBC686E616209C88B989F2E455F85 /* IQAudioRecorderController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-prefix.pch"; sourceTree = "<group>"; };
+		23A3DBEA0803AA75EB2FEBE42B4EDF32 /* scissor.png */ = {isa = PBXFileReference; includeInIndex = 1; name = scissor.png; path = IQAudioRecorderController/Resources/scissor.png; sourceTree = "<group>"; };
+		26382537CBE251DF450A007B5527BD1D /* IQAudioRecorderController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQAudioRecorderController.modulemap; sourceTree = "<group>"; };
 		26FF7DBC01AECF064698D5A98F057E32 /* Pods-PitchPerfect-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PitchPerfect-frameworks.sh"; sourceTree = "<group>"; };
-		29BC67A804816A67B6DFD0FF920A9D5A /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		2A8F24FCEAF7A49D8D7E448B4A331446 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		2A0C47796E39B957C02B4003078F6BA9 /* IQAudioRecorderConstraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderConstraints.h; path = IQAudioRecorderController/IQAudioRecorderConstraints.h; sourceTree = "<group>"; };
+		2C66153E8400A01DC918A0198A25EA2E /* microphone_access@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@2x.png"; path = "IQAudioRecorderController/Resources/microphone_access@2x.png"; sourceTree = "<group>"; };
 		2EC81F450DF088DECB39992933D2BDAF /* Pods-PitchPerfect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PitchPerfect.modulemap"; sourceTree = "<group>"; };
 		3015C65EFD93E6C9A2C3E0CDF08BF6CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		3488670547CC268498E6E84878953ACA /* IQCropSelectionBeginView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionBeginView.m; path = IQAudioRecorderController/IQCropSelectionBeginView.m; sourceTree = "<group>"; };
-		34B7E58407ADED2B279B5C56AB03F138 /* NSString+IQTimeIntervalFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IQTimeIntervalFormatter.h"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.h"; sourceTree = "<group>"; };
-		3536F4C7E59503C997BCC58FF8B9BD68 /* SCSiriWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-prefix.pch"; sourceTree = "<group>"; };
-		36C67B166399EB16B57963AE746B3EF9 /* stop_playing@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@2x.png"; path = "IQAudioRecorderController/Resources/stop_playing@2x.png"; sourceTree = "<group>"; };
-		38747CE0BC47D66E4B915AD1447C855E /* CircularSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircularSpinner.xcconfig; sourceTree = "<group>"; };
-		38E44F3CFB6B6D89AAF4A6A57C283021 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
-		3A680EA03A74ED12785B792F40EF6E61 /* IQAudioRecorderController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-prefix.pch"; sourceTree = "<group>"; };
-		3CDE0937E7010E46730974F95BC00EE1 /* CircularSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircularSpinner-dummy.m"; sourceTree = "<group>"; };
-		3DB7BA54A46050081032DA0D090D2086 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
-		43B31F1E6E3D24857E795BC4FA8AA2CB /* SCSiriWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCSiriWaveformView.m; path = SCSiriWaveformView/SCSiriWaveformView.m; sourceTree = "<group>"; };
-		45CFC96F0C3DF81BC6413A4F232EF06B /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
-		45E1FA00C694BDFED7EEAC349A0063D1 /* IQMessageDisplayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQMessageDisplayView.h; path = IQAudioRecorderController/IQMessageDisplayView.h; sourceTree = "<group>"; };
-		482A35134325742EB1502D104B8C3BB5 /* IQCropSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionView.m; path = IQAudioRecorderController/IQCropSelectionView.m; sourceTree = "<group>"; };
-		484C86ECC4B6DF33FD68A55D404019E8 /* IQCropSelectionBeginView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionBeginView.h; path = IQAudioRecorderController/IQCropSelectionBeginView.h; sourceTree = "<group>"; };
-		486CD2670D168B6FFD3041EB3FFCC3B8 /* CircularSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularSpinner-prefix.pch"; sourceTree = "<group>"; };
-		4BC185A66A33A116D5330EF93321266F /* IQAudioRecorderController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-umbrella.h"; sourceTree = "<group>"; };
-		4C612327BFB4A933B29ACE656B40EE27 /* stop_recording@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@2x.png"; path = "IQAudioRecorderController/Resources/stop_recording@2x.png"; sourceTree = "<group>"; };
-		557DD0F6596131D520AED0429288E5B5 /* SCSiriWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSiriWaveformView.modulemap; sourceTree = "<group>"; };
-		59A89A2D9C40207F5E97DE5A6A5DF7AB /* audio_record@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@3x.png"; path = "IQAudioRecorderController/Resources/audio_record@3x.png"; sourceTree = "<group>"; };
-		5FD8C78A9108A151663FFF7B564D4087 /* CircularSpinner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSpinner.swift; path = CircularSpinner/Classes/CircularSpinner.swift; sourceTree = "<group>"; };
-		63A71A73D8EADCB16F4A75B40ECE6424 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
-		6E78D8AEDA17D66358944199F4C9491B /* x_darkGray@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "x_darkGray@3x.png"; path = "CircularSpinner/Assets/x_darkGray@3x.png"; sourceTree = "<group>"; };
-		6E81856F4D9227A2B76B02C3707B6218 /* stop_playing@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@3x.png"; path = "IQAudioRecorderController/Resources/stop_playing@3x.png"; sourceTree = "<group>"; };
-		73E8EF414631CFAECEFEF1E8103FB64F /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		746FB68825CE8022A557F900744CA30C /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
-		74C28B3513CEFBC31FDB4791018F8CF8 /* SCSiriWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-umbrella.h"; sourceTree = "<group>"; };
-		74D5F6C09EAD347BA14CFE6CAC184F73 /* x_darkGray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "x_darkGray@2x.png"; path = "CircularSpinner/Assets/x_darkGray@2x.png"; sourceTree = "<group>"; };
-		7975C6036E665AEF26800531462CDB1F /* IQCropSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionView.h; path = IQAudioRecorderController/IQCropSelectionView.h; sourceTree = "<group>"; };
+		38D7868FEC02AE00723432DA85FEFEEC /* scissor@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@3x.png"; path = "IQAudioRecorderController/Resources/scissor@3x.png"; sourceTree = "<group>"; };
+		3ABD32B5315A1CD2ADA03B677B5D6D7B /* IQ_FDWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQ_FDWaveformView.h; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.h; sourceTree = "<group>"; };
+		3EA0FF4D2435565F89C2AB9E19AAD528 /* IQCropSelectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionView.h; path = IQAudioRecorderController/IQCropSelectionView.h; sourceTree = "<group>"; };
+		3FB2D654E28C411F7F19A7119030DC31 /* IQPlaybackDurationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPlaybackDurationView.m; path = IQAudioRecorderController/IQPlaybackDurationView.m; sourceTree = "<group>"; };
+		3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQAudioRecorderController.xcconfig; sourceTree = "<group>"; };
+		41C34E72F0B9D198FA20132C24461E79 /* IQCropSelectionEndView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionEndView.m; path = IQAudioRecorderController/IQCropSelectionEndView.m; sourceTree = "<group>"; };
+		43CC11AA33BD8A8CD0AEAF7F0367F897 /* stop_playing@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_playing@2x.png"; path = "IQAudioRecorderController/Resources/stop_playing@2x.png"; sourceTree = "<group>"; };
+		48B6CC192F7CF56C941AE8ADAD3AE24E /* stop_recording@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@2x.png"; path = "IQAudioRecorderController/Resources/stop_recording@2x.png"; sourceTree = "<group>"; };
+		49A3B4BD028308F2F5C6471B5738421D /* stop_playing.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_playing.png; path = IQAudioRecorderController/Resources/stop_playing.png; sourceTree = "<group>"; };
+		4F7C230DB5EF74699F12B15D537AD56C /* IQPlaybackDurationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQPlaybackDurationView.h; path = IQAudioRecorderController/IQPlaybackDurationView.h; sourceTree = "<group>"; };
+		5E547CE0362215C4E2C0D3D10915ED9A /* stop_recording@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@3x.png"; path = "IQAudioRecorderController/Resources/stop_recording@3x.png"; sourceTree = "<group>"; };
+		5FD37220B7340B47537529596A5FA0E8 /* SCSiriWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCSiriWaveformView.m; path = SCSiriWaveformView/SCSiriWaveformView.m; sourceTree = "<group>"; };
+		6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircularSpinner.xcconfig; sourceTree = "<group>"; };
+		68DA1237B79B103C642F8A1BDD62C965 /* IQCropSelectionBeginView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionBeginView.m; path = IQAudioRecorderController/IQCropSelectionBeginView.m; sourceTree = "<group>"; };
+		733DB9D43436B7A5AF7B144B8037DE6E /* IQCropSelectionBeginView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionBeginView.h; path = IQAudioRecorderController/IQCropSelectionBeginView.h; sourceTree = "<group>"; };
 		7A6ECBE227A30055A1FAD76437DA1517 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7AC2CD5D888866337B66B10332B490A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E97C6DCC8B16BE29386D9DF12882980 /* IQCropSelectionEndView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionEndView.m; path = IQAudioRecorderController/IQCropSelectionEndView.m; sourceTree = "<group>"; };
-		8133D45ECE236A69C196308E789AA92E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81C2453567843534C60E7A697D374020 /* scissor@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@2x.png"; path = "IQAudioRecorderController/Resources/scissor@2x.png"; sourceTree = "<group>"; };
-		85AA7D7B43B7F8613A0A1AC20C784170 /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
-		8964401A7B229DC42013F131D35A47D9 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
-		8DEBF50BD13B5B860DB90245CDFF00D7 /* SCSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCSiriWaveformView.framework; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92E9D931F4118B140BCBA4F75A04126F /* stop_playing.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_playing.png; path = IQAudioRecorderController/Resources/stop_playing.png; sourceTree = "<group>"; };
-		934AA444E7B7F449C3FB316927F76085 /* stop_recording@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "stop_recording@3x.png"; path = "IQAudioRecorderController/Resources/stop_recording@3x.png"; sourceTree = "<group>"; };
+		7B293AC115AA7D5DDD644CBAE5097B7F /* SCSiriWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-prefix.pch"; sourceTree = "<group>"; };
+		7C1534C53A1B71D1FF7045FEA264889A /* IQAudioRecorderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderViewController.h; path = IQAudioRecorderController/IQAudioRecorderViewController.h; sourceTree = "<group>"; };
+		7F8B0526EB85BE3616A2C02690676388 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A20CDA3C6E4C7C91F9F27EF3103AA3 /* IQAudioRecorderController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQAudioRecorderController-umbrella.h"; sourceTree = "<group>"; };
+		855644F41309232B0123135968F57414 /* IQCropSelectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQCropSelectionView.m; path = IQAudioRecorderController/IQCropSelectionView.m; sourceTree = "<group>"; };
+		8968054B28D6F4BD48A8F98D4C656140 /* NSString+IQTimeIntervalFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+IQTimeIntervalFormatter.m"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.m"; sourceTree = "<group>"; };
+		8BDF9C31377716292E9EC1D61E897760 /* microphone_access.png */ = {isa = PBXFileReference; includeInIndex = 1; name = microphone_access.png; path = IQAudioRecorderController/Resources/microphone_access.png; sourceTree = "<group>"; };
+		8C929137DBA2327ACB29F1922BEBC4EE /* IQAudioRecorderController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQAudioRecorderController-dummy.m"; sourceTree = "<group>"; };
+		92863249A27E751F3A5345814341B3DE /* IQCropSelectionEndView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionEndView.h; path = IQAudioRecorderController/IQCropSelectionEndView.h; sourceTree = "<group>"; };
+		9353BBD52BA3E75D489136B5E1F35B31 /* IQAudioRecorderController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQAudioRecorderController.framework; path = IQAudioRecorderController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		953AC6311B645DB6E4FD6FB67EF12DB5 /* ChameleonFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-umbrella.h"; sourceTree = "<group>"; };
-		9D0BC45B287B78FF217EA15ECAB7E510 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		9D7F5F77948C6893058475FD653D2ECF /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
-		A26D850C599F7D1AE48FF6CFE3204399 /* scissor@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@3x.png"; path = "IQAudioRecorderController/Resources/scissor@3x.png"; sourceTree = "<group>"; };
-		A29DA2D292237E99D7CD7978BDC95869 /* CircularSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircularSpinner.framework; path = CircularSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC167B8001306E08B817CD7EB1621FC8 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCSiriWaveformView.h; path = SCSiriWaveformView/SCSiriWaveformView.h; sourceTree = "<group>"; };
+		95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "x_darkGray@3x.png"; path = "CircularSpinner/Assets/x_darkGray@3x.png"; sourceTree = "<group>"; };
+		99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCSiriWaveformView.xcconfig; sourceTree = "<group>"; };
+		9B90A4CD3798027F78E600A0494A4078 /* NSString+IQTimeIntervalFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IQTimeIntervalFormatter.h"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.h"; sourceTree = "<group>"; };
+		A5B0C99D6F0E942148E791F2CAFCEF82 /* scissor@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "scissor@2x.png"; path = "IQAudioRecorderController/Resources/scissor@2x.png"; sourceTree = "<group>"; };
+		A6535A43827F66F618BD1A8E5F4CEBA3 /* audio_record@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@3x.png"; path = "IQAudioRecorderController/Resources/audio_record@3x.png"; sourceTree = "<group>"; };
+		A9180421216852470808E7475FE24291 /* IQ_FDWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQ_FDWaveformView.m; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.m; sourceTree = "<group>"; };
+		ABE510299EDF479383362C4FA7C9D35F /* SCSiriWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCSiriWaveformView.modulemap; sourceTree = "<group>"; };
 		ADFFC6C371E0E240CC417FC7EA0ACE91 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		AFB40E9414B080733590D1EDAFBF0436 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
-		B1C327BD39D487C577E35ED3EA502398 /* SCSiriWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCSiriWaveformView-dummy.m"; sourceTree = "<group>"; };
 		B1F2914C833F4AB8ED6C753FCCE84213 /* Pods-PitchPerfect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PitchPerfect-umbrella.h"; sourceTree = "<group>"; };
-		B357BCA8F3907D301EC9C2361EE320AE /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		B561EC4058F0FF47EB904722B08F7B39 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
-		B76F42A82ED4F3F0ED4227867EF03AFD /* SCSiriWaveformView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCSiriWaveformView.xcconfig; sourceTree = "<group>"; };
+		B598C76A215CB7752E016B0145516DFE /* Pods_PitchPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PitchPerfect.framework; path = "Pods-PitchPerfect.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D885A5271303C137495A2007EA7F2D /* CircularSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularSpinner-umbrella.h"; sourceTree = "<group>"; };
 		BB64BF6ECE29C5DA7DCD8CB94BDB8B23 /* Pods-PitchPerfect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PitchPerfect.debug.xcconfig"; sourceTree = "<group>"; };
-		BBADD3D462C4C836FB323165D0B71D99 /* IQ_FDWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQ_FDWaveformView.h; path = IQAudioRecorderController/FDWaveformView/IQ_FDWaveformView.h; sourceTree = "<group>"; };
 		BDD785D1A30C29184C95712D521D47C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE5E925D8CFB0D3F4A5A8548BB86B6F2 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ChameleonFramework.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF7EB8A4893CADD56C181BA91395E304 /* Pods_PitchPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PitchPerfect.framework; path = "Pods-PitchPerfect.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C147F7D5E9B29E74F5013806B41CA314 /* CircularSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularSpinner-umbrella.h"; sourceTree = "<group>"; };
-		C1A48CFDC75C66361F2AC91B89BCDF72 /* ResourceBundle-CircularSpinner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CircularSpinner-Info.plist"; sourceTree = "<group>"; };
-		C1DD866EF4D8228B0C900DD637E07428 /* IQAudioRecorderController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQAudioRecorderController.modulemap; sourceTree = "<group>"; };
+		C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "x_darkGray@2x.png"; path = "CircularSpinner/Assets/x_darkGray@2x.png"; sourceTree = "<group>"; };
+		C253100967D466EFFB29118B66A27545 /* CircularSpinner.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CircularSpinner.xib; path = CircularSpinner/Classes/CircularSpinner.xib; sourceTree = "<group>"; };
+		C29F203130B536BE72B998D20F8D1AD3 /* CircularSpinner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSpinner.swift; path = CircularSpinner/Classes/CircularSpinner.swift; sourceTree = "<group>"; };
 		C3FF6A0B3CA41F82CCFF2CA56B5E4301 /* Pods-PitchPerfect-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PitchPerfect-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C5E182261980BE9C769566CD567BAB96 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
-		C720731D961DD962DD45C40ABA5FDC28 /* NSString+IQTimeIntervalFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+IQTimeIntervalFormatter.m"; path = "IQAudioRecorderController/NSString+IQTimeIntervalFormatter.m"; sourceTree = "<group>"; };
-		C86189C5367E97A3848F770B0D99DC11 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
-		CB9E8EF675567F86882C8DC1386A209A /* IQAudioCropperViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioCropperViewController.h; path = IQAudioRecorderController/IQAudioCropperViewController.h; sourceTree = "<group>"; };
-		CBE21E2D71D1B0724321CCB555124F0D /* audio_record@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@2x.png"; path = "IQAudioRecorderController/Resources/audio_record@2x.png"; sourceTree = "<group>"; };
-		CD05362CD948F976F403AEE5B30A947E /* scissor.png */ = {isa = PBXFileReference; includeInIndex = 1; name = scissor.png; path = IQAudioRecorderController/Resources/scissor.png; sourceTree = "<group>"; };
-		CF07FFCA8A52D3293F679F3408EC3A4B /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
-		D5A677BD255176DDAE08570B654FC27A /* IQCropSelectionEndView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQCropSelectionEndView.h; path = IQAudioRecorderController/IQCropSelectionEndView.h; sourceTree = "<group>"; };
+		CA925EBDC86A25A77B81D4A54D73AB8F /* stop_recording.png */ = {isa = PBXFileReference; includeInIndex = 1; name = stop_recording.png; path = IQAudioRecorderController/Resources/stop_recording.png; sourceTree = "<group>"; };
+		CDCA5678211D62BDF0B643F947C00F49 /* audio_record@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "audio_record@2x.png"; path = "IQAudioRecorderController/Resources/audio_record@2x.png"; sourceTree = "<group>"; };
+		D193EBFD986FFCF5CE77F33ED8D8B608 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CircularSpinner.bundle; path = CircularSpinner.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E8D7430709FB31BB956EED5E971C13 /* Pods-PitchPerfect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PitchPerfect.release.xcconfig"; sourceTree = "<group>"; };
-		D738C8E4ED4A84DC2808DC205EF184A6 /* IQPlaybackDurationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQPlaybackDurationView.h; path = IQAudioRecorderController/IQPlaybackDurationView.h; sourceTree = "<group>"; };
+		D70B78E8260DED142FBB1A2CF53E1751 /* IQMessageDisplayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQMessageDisplayView.h; path = IQAudioRecorderController/IQMessageDisplayView.h; sourceTree = "<group>"; };
 		DD0803DF06CB2805A7E9880A81C885EE /* Pods-PitchPerfect-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PitchPerfect-acknowledgements.plist"; sourceTree = "<group>"; };
-		DD91940E334976B8DFEB89045F0C00EE /* IQAudioRecorderController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQAudioRecorderController-dummy.m"; sourceTree = "<group>"; };
-		E003AB1EC70FA9FAF5C9DE26A86331E9 /* IQAudioRecorderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderViewController.m; path = IQAudioRecorderController/IQAudioRecorderViewController.m; sourceTree = "<group>"; };
-		E01FF87DE418C20431892362C276BCB6 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
-		E10247866858A93FE4103E36F389A581 /* IQAudioRecorderConstraints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQAudioRecorderConstraints.h; path = IQAudioRecorderController/IQAudioRecorderConstraints.h; sourceTree = "<group>"; };
-		E19538C73153C7C438E6DA010FCC2899 /* audio_record.png */ = {isa = PBXFileReference; includeInIndex = 1; name = audio_record.png; path = IQAudioRecorderController/Resources/audio_record.png; sourceTree = "<group>"; };
-		E196F8BF17F72A333A3D132625A3CD37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6D2B2C1D57D2B9219A8A8BEFFAD4069 /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
-		E863540274BB05C3F7F248B03A50A9CB /* IQAudioCropperViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioCropperViewController.m; path = IQAudioRecorderController/IQAudioCropperViewController.m; sourceTree = "<group>"; };
-		E96A4259FD05A2B691C84E4DCDA05194 /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
-		EAB9A1E2B5D64967DA7FE07CCC3E9292 /* CircularSpinner.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CircularSpinner.xib; path = CircularSpinner/Classes/CircularSpinner.xib; sourceTree = "<group>"; };
+		DDC7119DD74CB0ADB274094806D3C458 /* SCSiriWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCSiriWaveformView-dummy.m"; sourceTree = "<group>"; };
+		E0C2614D9CBC7414DA16A52079964275 /* IQAudioRecorderConstraints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderConstraints.m; path = IQAudioRecorderController/IQAudioRecorderConstraints.m; sourceTree = "<group>"; };
+		E3870F9A79AB635193C95368698CD5E9 /* SCSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCSiriWaveformView.framework; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB365B068D9500F5060990563F2F0799 /* SCSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE426177C539BC35DEB117359AA5F90B /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
-		F08DBE1C0FF152112890D317C4E0D8FC /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
-		F0FFA3F44874D93F5D14782D6B82ECD8 /* IQAudioRecorderController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQAudioRecorderController.framework; path = IQAudioRecorderController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED10FC07230072DC82E378F0F9C045D3 /* audio_record.png */ = {isa = PBXFileReference; includeInIndex = 1; name = audio_record.png; path = IQAudioRecorderController/Resources/audio_record.png; sourceTree = "<group>"; };
+		EEB852B43AF2236AC2282F065A9495FA /* CircularSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CircularSpinner.modulemap; sourceTree = "<group>"; };
+		F2585A75B68F1939C9A62C206777938B /* IQMessageDisplayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQMessageDisplayView.m; path = IQAudioRecorderController/IQMessageDisplayView.m; sourceTree = "<group>"; };
 		F3D4AEB428F4B50B2923927AA2E1E31D /* Pods-PitchPerfect-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PitchPerfect-resources.sh"; sourceTree = "<group>"; };
-		F40D89412AB9C89D0962CD4094BB167A /* IQMessageDisplayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQMessageDisplayView.m; path = IQAudioRecorderController/IQMessageDisplayView.m; sourceTree = "<group>"; };
-		F41B3C228CB04CB8F2DE465E764610EF /* IQAudioRecorderConstraints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQAudioRecorderConstraints.m; path = IQAudioRecorderController/IQAudioRecorderConstraints.m; sourceTree = "<group>"; };
+		F58BCC678C611D7662798F8B5B271FAC /* CircularSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularSpinner-prefix.pch"; sourceTree = "<group>"; };
 		F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F5F71E6B2F62E6FC245B807948099F7A /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		F613DE074798C38FA414AA7516A48C77 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
 		F6893A2CCAE60DC427CA15D87BA59F60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		F97FBBE4BD079BC099CA400438ED4693 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		FBC8ED04A135A7087D329BB6C913238E /* microphone_access@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "microphone_access@3x.png"; path = "IQAudioRecorderController/Resources/microphone_access@3x.png"; sourceTree = "<group>"; };
+		FE3C5DAA6320D018030C683DF7D9E860 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		105A434783F3901936C60C702BEC07D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6429C3138FDE5269DF479BDF2F929009 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B1B6BC52CC22E78BAEF7CAA93529513 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,60 +244,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DACBF8BAFBFDB079D14A1A5A455F3802 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BABCCEF0FDB93A542217F84C22DFB6C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3FD70AC579E74592E2EAC475ADFB8D9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5FAFC3C89B922BB4FFB6C0516EAF3D2 /* CoreGraphics.framework in Frameworks */,
-				923369708790774BB768672AA79DCAD4 /* Foundation.framework in Frameworks */,
-				C78AC9DF55C43B62D6851B2F30ADFE0F /* QuartzCore.framework in Frameworks */,
-				4A7F6945FC35DB43E7C78876DD95CB2F /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0FAF58EBCD21699CC1143E22963921 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3C5DAA6320D018030C683DF7D9E860 /* Info.plist */,
+				ABE510299EDF479383362C4FA7C9D35F /* SCSiriWaveformView.modulemap */,
+				99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */,
+				DDC7119DD74CB0ADB274094806D3C458 /* SCSiriWaveformView-dummy.m */,
+				7B293AC115AA7D5DDD644CBAE5097B7F /* SCSiriWaveformView-prefix.pch */,
+				14CBF6C884038594EE71E60B700ECD9C /* SCSiriWaveformView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCSiriWaveformView";
+			sourceTree = "<group>";
+		};
 		0DB6403EA0373ADF7FCBF38C764327E1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				E3BAA2143748DF1465D345207CF9A0D2 /* Pods-PitchPerfect */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		15AC5DD1A2A57A2C5EBD3C151DFF62D8 /* SCSiriWaveformView */ = {
-			isa = PBXGroup;
-			children = (
-				AC167B8001306E08B817CD7EB1621FC8 /* SCSiriWaveformView.h */,
-				43B31F1E6E3D24857E795BC4FA8AA2CB /* SCSiriWaveformView.m */,
-				C28AB8E509FB99531C319BD309DE5505 /* Support Files */,
-			);
-			name = SCSiriWaveformView;
-			path = SCSiriWaveformView;
-			sourceTree = "<group>";
-		};
-		16B6A7D5884FFFC87B25CCEAC9B07FFD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2429AAE87A63DE0DC2752B0011B0857F /* CircularSpinner.modulemap */,
-				38747CE0BC47D66E4B915AD1447C855E /* CircularSpinner.xcconfig */,
-				3CDE0937E7010E46730974F95BC00EE1 /* CircularSpinner-dummy.m */,
-				486CD2670D168B6FFD3041EB3FFCC3B8 /* CircularSpinner-prefix.pch */,
-				C147F7D5E9B29E74F5013806B41CA314 /* CircularSpinner-umbrella.h */,
-				E196F8BF17F72A333A3D132625A3CD37 /* Info.plist */,
-				C1A48CFDC75C66361F2AC91B89BCDF72 /* ResourceBundle-CircularSpinner-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CircularSpinner";
 			sourceTree = "<group>";
 		};
 		19144D53A751FBC68D69D5013BA095F1 /* Frameworks */ = {
@@ -377,53 +278,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2967D5F9E2C80A20AE10A0B14C32B4EA /* ChameleonFramework */ = {
+		23C35F73F9A5C96A72B14B8EAA744697 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D36889DB092BE32E40DE43C07931E5C4 /* Default */,
-				94351B24206E7EC895894C88C3E3DB97 /* Support Files */,
-				E7A4C14FAE616183FE4EB5CA396B99B6 /* Swift */,
+				EEB852B43AF2236AC2282F065A9495FA /* CircularSpinner.modulemap */,
+				6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */,
+				0667E46D68FCAA3FF93A39A888F4C351 /* CircularSpinner-dummy.m */,
+				F58BCC678C611D7662798F8B5B271FAC /* CircularSpinner-prefix.pch */,
+				B5D885A5271303C137495A2007EA7F2D /* CircularSpinner-umbrella.h */,
+				D193EBFD986FFCF5CE77F33ED8D8B608 /* Info.plist */,
+				21531C45EE582B1FDF81D7060CDD6A9E /* ResourceBundle-CircularSpinner-Info.plist */,
 			);
-			name = ChameleonFramework;
-			path = ChameleonFramework;
+			name = "Support Files";
+			path = "../Target Support Files/CircularSpinner";
 			sourceTree = "<group>";
 		};
-		5FE0EF4B1D3B4912F3B485507EEE70DD /* Resources */ = {
+		457E0602E5DEA435B0046F5E96F215D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E19538C73153C7C438E6DA010FCC2899 /* audio_record.png */,
-				CBE21E2D71D1B0724321CCB555124F0D /* audio_record@2x.png */,
-				59A89A2D9C40207F5E97DE5A6A5DF7AB /* audio_record@3x.png */,
-				0DBD2ECD1DE85D8EBE3C0341D860F87D /* microphone_access.png */,
-				0CBC7FBABFD15BB278CDCCD49E5AB039 /* microphone_access@2x.png */,
-				14CB6055B83C06DB7E31687510D91826 /* microphone_access@3x.png */,
-				CD05362CD948F976F403AEE5B30A947E /* scissor.png */,
-				81C2453567843534C60E7A697D374020 /* scissor@2x.png */,
-				A26D850C599F7D1AE48FF6CFE3204399 /* scissor@3x.png */,
-				92E9D931F4118B140BCBA4F75A04126F /* stop_playing.png */,
-				36C67B166399EB16B57963AE746B3EF9 /* stop_playing@2x.png */,
-				6E81856F4D9227A2B76B02C3707B6218 /* stop_playing@3x.png */,
-				249F01087A460FC9FBBEE06318F43F7D /* stop_recording.png */,
-				4C612327BFB4A933B29ACE656B40EE27 /* stop_recording@2x.png */,
-				934AA444E7B7F449C3FB316927F76085 /* stop_recording@3x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		6C27BB3671AA86DE777E74E1FA660B61 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE5E925D8CFB0D3F4A5A8548BB86B6F2 /* ChameleonFramework.framework */,
-				230D315525931200ABF9D53E1247CAEC /* CircularSpinner.bundle */,
-				A29DA2D292237E99D7CD7978BDC95869 /* CircularSpinner.framework */,
-				F0FFA3F44874D93F5D14782D6B82ECD8 /* IQAudioRecorderController.framework */,
-				BF7EB8A4893CADD56C181BA91395E304 /* Pods_PitchPerfect.framework */,
-				8DEBF50BD13B5B860DB90245CDFF00D7 /* SCSiriWaveformView.framework */,
+				D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */,
+				20FB046F28325E37939E757776C75163 /* CircularSpinner.framework */,
+				9353BBD52BA3E75D489136B5E1F35B31 /* IQAudioRecorderController.framework */,
+				B598C76A215CB7752E016B0145516DFE /* Pods_PitchPerfect.framework */,
+				E3870F9A79AB635193C95368698CD5E9 /* SCSiriWaveformView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7C8ACEE9B7F2CEEDD4809BA9BD57D01C /* Resources */ = {
+		7D78B155AD590D461DA70884CB98CC3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -435,97 +317,56 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				19144D53A751FBC68D69D5013BA095F1 /* Frameworks */,
-				A828C19B61D839BA139EC5AD918EEE0A /* Pods */,
-				6C27BB3671AA86DE777E74E1FA660B61 /* Products */,
+				A9DF68499D7E8DD2AC91F1D61A364A6F /* Pods */,
+				457E0602E5DEA435B0046F5E96F215D8 /* Products */,
 				0DB6403EA0373ADF7FCBF38C764327E1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		94351B24206E7EC895894C88C3E3DB97 /* Support Files */ = {
+		7E3D964FE160EB54E6304F83FAD420E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2170B56C84E4B0E7D3DD841A7EF4ACDE /* ChameleonFramework.modulemap */,
-				85AA7D7B43B7F8613A0A1AC20C784170 /* ChameleonFramework.xcconfig */,
-				210FA693707E525404B785FC98793B42 /* ChameleonFramework-dummy.m */,
-				0E8F924C336E19E157B1D4BC97B417D3 /* ChameleonFramework-prefix.pch */,
-				953AC6311B645DB6E4FD6FB67EF12DB5 /* ChameleonFramework-umbrella.h */,
-				7AC2CD5D888866337B66B10332B490A4 /* Info.plist */,
+				ED10FC07230072DC82E378F0F9C045D3 /* audio_record.png */,
+				CDCA5678211D62BDF0B643F947C00F49 /* audio_record@2x.png */,
+				A6535A43827F66F618BD1A8E5F4CEBA3 /* audio_record@3x.png */,
+				8BDF9C31377716292E9EC1D61E897760 /* microphone_access.png */,
+				2C66153E8400A01DC918A0198A25EA2E /* microphone_access@2x.png */,
+				FBC8ED04A135A7087D329BB6C913238E /* microphone_access@3x.png */,
+				23A3DBEA0803AA75EB2FEBE42B4EDF32 /* scissor.png */,
+				A5B0C99D6F0E942148E791F2CAFCEF82 /* scissor@2x.png */,
+				38D7868FEC02AE00723432DA85FEFEEC /* scissor@3x.png */,
+				49A3B4BD028308F2F5C6471B5738421D /* stop_playing.png */,
+				43CC11AA33BD8A8CD0AEAF7F0367F897 /* stop_playing@2x.png */,
+				237A5003D315620BD9D6213B4862036C /* stop_playing@3x.png */,
+				CA925EBDC86A25A77B81D4A54D73AB8F /* stop_recording.png */,
+				48B6CC192F7CF56C941AE8ADAD3AE24E /* stop_recording@2x.png */,
+				5E547CE0362215C4E2C0D3D10915ED9A /* stop_recording@3x.png */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ChameleonFramework";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		A828C19B61D839BA139EC5AD918EEE0A /* Pods */ = {
+		8339FEF84770AFBDB6B2124FFB7C4ECB /* CircularSpinner */ = {
 			isa = PBXGroup;
 			children = (
-				2967D5F9E2C80A20AE10A0B14C32B4EA /* ChameleonFramework */,
-				AB34D8866CB129CFDB6EC8B683CDBFC0 /* CircularSpinner */,
-				E5D6105F09F056E13E04B16918AF6973 /* IQAudioRecorderController */,
-				15AC5DD1A2A57A2C5EBD3C151DFF62D8 /* SCSiriWaveformView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AB34D8866CB129CFDB6EC8B683CDBFC0 /* CircularSpinner */ = {
-			isa = PBXGroup;
-			children = (
-				5FD8C78A9108A151663FFF7B564D4087 /* CircularSpinner.swift */,
-				EAB9A1E2B5D64967DA7FE07CCC3E9292 /* CircularSpinner.xib */,
-				74D5F6C09EAD347BA14CFE6CAC184F73 /* x_darkGray@2x.png */,
-				6E78D8AEDA17D66358944199F4C9491B /* x_darkGray@3x.png */,
-				7C8ACEE9B7F2CEEDD4809BA9BD57D01C /* Resources */,
-				16B6A7D5884FFFC87B25CCEAC9B07FFD /* Support Files */,
+				C29F203130B536BE72B998D20F8D1AD3 /* CircularSpinner.swift */,
+				C253100967D466EFFB29118B66A27545 /* CircularSpinner.xib */,
+				C1D491A22769F251A94CF48D4255E284 /* x_darkGray@2x.png */,
+				95F6FC0ADEFD253352A401AA1FD57A35 /* x_darkGray@3x.png */,
+				7D78B155AD590D461DA70884CB98CC3E /* Resources */,
+				23C35F73F9A5C96A72B14B8EAA744697 /* Support Files */,
 			);
 			name = CircularSpinner;
 			path = CircularSpinner;
 			sourceTree = "<group>";
 		};
-		C28AB8E509FB99531C319BD309DE5505 /* Support Files */ = {
+		A9DF68499D7E8DD2AC91F1D61A364A6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8133D45ECE236A69C196308E789AA92E /* Info.plist */,
-				557DD0F6596131D520AED0429288E5B5 /* SCSiriWaveformView.modulemap */,
-				B76F42A82ED4F3F0ED4227867EF03AFD /* SCSiriWaveformView.xcconfig */,
-				B1C327BD39D487C577E35ED3EA502398 /* SCSiriWaveformView-dummy.m */,
-				3536F4C7E59503C997BCC58FF8B9BD68 /* SCSiriWaveformView-prefix.pch */,
-				74C28B3513CEFBC31FDB4791018F8CF8 /* SCSiriWaveformView-umbrella.h */,
+				8339FEF84770AFBDB6B2124FFB7C4ECB /* CircularSpinner */,
+				D6862AC42114E2FB19FFEF872D3C10DD /* IQAudioRecorderController */,
+				E27D93361AAE6A9FD392E0F37F9609C7 /* SCSiriWaveformView */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SCSiriWaveformView";
-			sourceTree = "<group>";
-		};
-		D36889DB092BE32E40DE43C07931E5C4 /* Default */ = {
-			isa = PBXGroup;
-			children = (
-				E6D2B2C1D57D2B9219A8A8BEFFAD4069 /* Chameleon.h */,
-				E01FF87DE418C20431892362C276BCB6 /* Chameleon_.h */,
-				E96A4259FD05A2B691C84E4DCDA05194 /* Chameleon_.m */,
-				C5E182261980BE9C769566CD567BAB96 /* ChameleonConstants.h */,
-				746FB68825CE8022A557F900744CA30C /* ChameleonConstants.m */,
-				45CFC96F0C3DF81BC6413A4F232EF06B /* ChameleonEnums.h */,
-				CF07FFCA8A52D3293F679F3408EC3A4B /* ChameleonMacros.h */,
-				8964401A7B229DC42013F131D35A47D9 /* NSArray+Chameleon.h */,
-				AFB40E9414B080733590D1EDAFBF0436 /* NSArray+Chameleon.m */,
-				38E44F3CFB6B6D89AAF4A6A57C283021 /* UIAppearance+Swift.h */,
-				B561EC4058F0FF47EB904722B08F7B39 /* UIAppearance+Swift.m */,
-				9D7F5F77948C6893058475FD653D2ECF /* UIButton+Chameleon.h */,
-				17A75A65BCBA40035EDA04E8B0921CF6 /* UIButton+Chameleon.m */,
-				F08DBE1C0FF152112890D317C4E0D8FC /* UIColor+Chameleon.h */,
-				EE426177C539BC35DEB117359AA5F90B /* UIColor+Chameleon.m */,
-				F97FBBE4BD079BC099CA400438ED4693 /* UIColor+ChameleonPrivate.h */,
-				73E8EF414631CFAECEFEF1E8103FB64F /* UIColor+ChameleonPrivate.m */,
-				29BC67A804816A67B6DFD0FF920A9D5A /* UIImage+ChameleonPrivate.h */,
-				9D0BC45B287B78FF217EA15ECAB7E510 /* UIImage+ChameleonPrivate.m */,
-				1FB7820B9ED28FE8331B885377115F8A /* UILabel+Chameleon.h */,
-				63A71A73D8EADCB16F4A75B40ECE6424 /* UILabel+Chameleon.m */,
-				F613DE074798C38FA414AA7516A48C77 /* UINavigationController+Chameleon.h */,
-				C86189C5367E97A3848F770B0D99DC11 /* UINavigationController+Chameleon.m */,
-				F5F71E6B2F62E6FC245B807948099F7A /* UIView+ChameleonPrivate.h */,
-				B357BCA8F3907D301EC9C2361EE320AE /* UIView+ChameleonPrivate.m */,
-				2A8F24FCEAF7A49D8D7E448B4A331446 /* UIViewController+Chameleon.h */,
-				3DB7BA54A46050081032DA0D090D2086 /* UIViewController+Chameleon.m */,
-			);
-			name = Default;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D57126AEEF2E31723D39878DC26305D3 /* iOS */ = {
@@ -538,6 +379,47 @@
 				F5EAB7B151BC697BE40B6F6D050C046B /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D6862AC42114E2FB19FFEF872D3C10DD /* IQAudioRecorderController */ = {
+			isa = PBXGroup;
+			children = (
+				3ABD32B5315A1CD2ADA03B677B5D6D7B /* IQ_FDWaveformView.h */,
+				A9180421216852470808E7475FE24291 /* IQ_FDWaveformView.m */,
+				03F3C4D49767893AFF437CFA205A886D /* IQAudioCropperViewController.h */,
+				15E21A389109E65FD524A5561B6364D6 /* IQAudioCropperViewController.m */,
+				2A0C47796E39B957C02B4003078F6BA9 /* IQAudioRecorderConstraints.h */,
+				E0C2614D9CBC7414DA16A52079964275 /* IQAudioRecorderConstraints.m */,
+				7C1534C53A1B71D1FF7045FEA264889A /* IQAudioRecorderViewController.h */,
+				00E0C577037E443AFCAFDDBE41BD6932 /* IQAudioRecorderViewController.m */,
+				733DB9D43436B7A5AF7B144B8037DE6E /* IQCropSelectionBeginView.h */,
+				68DA1237B79B103C642F8A1BDD62C965 /* IQCropSelectionBeginView.m */,
+				92863249A27E751F3A5345814341B3DE /* IQCropSelectionEndView.h */,
+				41C34E72F0B9D198FA20132C24461E79 /* IQCropSelectionEndView.m */,
+				3EA0FF4D2435565F89C2AB9E19AAD528 /* IQCropSelectionView.h */,
+				855644F41309232B0123135968F57414 /* IQCropSelectionView.m */,
+				D70B78E8260DED142FBB1A2CF53E1751 /* IQMessageDisplayView.h */,
+				F2585A75B68F1939C9A62C206777938B /* IQMessageDisplayView.m */,
+				4F7C230DB5EF74699F12B15D537AD56C /* IQPlaybackDurationView.h */,
+				3FB2D654E28C411F7F19A7119030DC31 /* IQPlaybackDurationView.m */,
+				9B90A4CD3798027F78E600A0494A4078 /* NSString+IQTimeIntervalFormatter.h */,
+				8968054B28D6F4BD48A8F98D4C656140 /* NSString+IQTimeIntervalFormatter.m */,
+				7E3D964FE160EB54E6304F83FAD420E9 /* Resources */,
+				FA337D6FA4050B608292C2411B93BD88 /* Support Files */,
+			);
+			name = IQAudioRecorderController;
+			path = IQAudioRecorderController;
+			sourceTree = "<group>";
+		};
+		E27D93361AAE6A9FD392E0F37F9609C7 /* SCSiriWaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				026E27183C91048CE5D8FF1BE84AF010 /* SCSiriWaveformView.h */,
+				5FD37220B7340B47537529596A5FA0E8 /* SCSiriWaveformView.m */,
+				0A0FAF58EBCD21699CC1143E22963921 /* Support Files */,
+			);
+			name = SCSiriWaveformView;
+			path = SCSiriWaveformView;
 			sourceTree = "<group>";
 		};
 		E3BAA2143748DF1465D345207CF9A0D2 /* Pods-PitchPerfect */ = {
@@ -558,53 +440,15 @@
 			path = "Target Support Files/Pods-PitchPerfect";
 			sourceTree = "<group>";
 		};
-		E5D6105F09F056E13E04B16918AF6973 /* IQAudioRecorderController */ = {
+		FA337D6FA4050B608292C2411B93BD88 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BBADD3D462C4C836FB323165D0B71D99 /* IQ_FDWaveformView.h */,
-				268A27DFA892D0638C9A7837931D06C1 /* IQ_FDWaveformView.m */,
-				CB9E8EF675567F86882C8DC1386A209A /* IQAudioCropperViewController.h */,
-				E863540274BB05C3F7F248B03A50A9CB /* IQAudioCropperViewController.m */,
-				E10247866858A93FE4103E36F389A581 /* IQAudioRecorderConstraints.h */,
-				F41B3C228CB04CB8F2DE465E764610EF /* IQAudioRecorderConstraints.m */,
-				1DFEE757B5E0B5FCFF67D9D7F1ADDCCB /* IQAudioRecorderViewController.h */,
-				E003AB1EC70FA9FAF5C9DE26A86331E9 /* IQAudioRecorderViewController.m */,
-				484C86ECC4B6DF33FD68A55D404019E8 /* IQCropSelectionBeginView.h */,
-				3488670547CC268498E6E84878953ACA /* IQCropSelectionBeginView.m */,
-				D5A677BD255176DDAE08570B654FC27A /* IQCropSelectionEndView.h */,
-				7E97C6DCC8B16BE29386D9DF12882980 /* IQCropSelectionEndView.m */,
-				7975C6036E665AEF26800531462CDB1F /* IQCropSelectionView.h */,
-				482A35134325742EB1502D104B8C3BB5 /* IQCropSelectionView.m */,
-				45E1FA00C694BDFED7EEAC349A0063D1 /* IQMessageDisplayView.h */,
-				F40D89412AB9C89D0962CD4094BB167A /* IQMessageDisplayView.m */,
-				D738C8E4ED4A84DC2808DC205EF184A6 /* IQPlaybackDurationView.h */,
-				20FD04A0AEF743E69B519E3F57E3E823 /* IQPlaybackDurationView.m */,
-				34B7E58407ADED2B279B5C56AB03F138 /* NSString+IQTimeIntervalFormatter.h */,
-				C720731D961DD962DD45C40ABA5FDC28 /* NSString+IQTimeIntervalFormatter.m */,
-				5FE0EF4B1D3B4912F3B485507EEE70DD /* Resources */,
-				EC3A515F509112E36190C088693EB396 /* Support Files */,
-			);
-			name = IQAudioRecorderController;
-			path = IQAudioRecorderController;
-			sourceTree = "<group>";
-		};
-		E7A4C14FAE616183FE4EB5CA396B99B6 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				0E4824AD32FE5CFEC24F4C5E89EFE704 /* ChameleonShorthand.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		EC3A515F509112E36190C088693EB396 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				17B54EEE47D8E4259A8333A82482B002 /* Info.plist */,
-				C1DD866EF4D8228B0C900DD637E07428 /* IQAudioRecorderController.modulemap */,
-				1FB4C415DE09FCC77AFCA2DF53AE0D6C /* IQAudioRecorderController.xcconfig */,
-				DD91940E334976B8DFEB89045F0C00EE /* IQAudioRecorderController-dummy.m */,
-				3A680EA03A74ED12785B792F40EF6E61 /* IQAudioRecorderController-prefix.pch */,
-				4BC185A66A33A116D5330EF93321266F /* IQAudioRecorderController-umbrella.h */,
+				7F8B0526EB85BE3616A2C02690676388 /* Info.plist */,
+				26382537CBE251DF450A007B5527BD1D /* IQAudioRecorderController.modulemap */,
+				3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */,
+				8C929137DBA2327ACB29F1922BEBC4EE /* IQAudioRecorderController-dummy.m */,
+				237EBC686E616209C88B989F2E455F85 /* IQAudioRecorderController-prefix.pch */,
+				83A20CDA3C6E4C7C91F9F27EF3103AA3 /* IQAudioRecorderController-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/IQAudioRecorderController";
@@ -613,42 +457,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		326378F3F620C2EFA86D582F72A9D29A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				741DE36281C1B82FC774CE00B32E9FD6 /* Pods-PitchPerfect-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4BD12AE3563E1EB088825CCAA2FDD145 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				01C71AFEDCF18DFAF546217AB8EDA1A0 /* CircularSpinner-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D4457F7F2F28A0B99FF8F1B98219F8E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED4DBD1E13182AA813DC1237FA6E3A42 /* Chameleon.h in Headers */,
-				78281D8673FC507089FCFDC439DEDC16 /* Chameleon_.h in Headers */,
-				9A3EAF15D3C58FD56A552FD703A9154C /* ChameleonConstants.h in Headers */,
-				EC786817C5CEBCD51A4C9EC9B883ED6F /* ChameleonEnums.h in Headers */,
-				1B704F3C816C4532F9B7FDFE0625732E /* ChameleonFramework-umbrella.h in Headers */,
-				B4EA53699AA19822E674188743266B2B /* ChameleonMacros.h in Headers */,
-				29F74E8A334254C68C6720E3B247CE32 /* NSArray+Chameleon.h in Headers */,
-				9B6AD39C81FAF37861FC0FEC41022146 /* UIAppearance+Swift.h in Headers */,
-				0D7F425CFB628271BFB6FCFF8201BF4F /* UIButton+Chameleon.h in Headers */,
-				DB5FB611FB6EBF2F2BA7B78FE0CED535 /* UIColor+Chameleon.h in Headers */,
-				44117424757A5E62D87B8BF4B41A4207 /* UIColor+ChameleonPrivate.h in Headers */,
-				86F7D970F220974A0E26C3B632C5C74F /* UIImage+ChameleonPrivate.h in Headers */,
-				604286A8F8A2ACB063BDF97B09D4987C /* UILabel+Chameleon.h in Headers */,
-				BFA97401155C4E14893D9AA1E0D1EC80 /* UINavigationController+Chameleon.h in Headers */,
-				8ECF929AC5E737EBEB542283886D5E07 /* UIView+ChameleonPrivate.h in Headers */,
-				03DCD393DF69EE6DE4AD424B1192DD02 /* UIViewController+Chameleon.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +471,14 @@
 			files = (
 				B8FCF87620600A7A6CE45858E0FA8B67 /* SCSiriWaveformView-umbrella.h in Headers */,
 				7D017C4766A8A6B24A80A356575F707A /* SCSiriWaveformView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDDECDBD205F92A63BDE48F9DB9E31C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512CE8BF19B635C31893B3BFC8564003 /* Pods-PitchPerfect-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,21 +503,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		76BD4592010354D6C23D6ECCA20D83A8 /* ChameleonFramework */ = {
+		011CE5B94F5CF031B9B6C03BCA239CF1 /* Pods-PitchPerfect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07398A672F3D6D682C4B2E94C83E2A0D /* Build configuration list for PBXNativeTarget "ChameleonFramework" */;
+			buildConfigurationList = A816DAE2B95C9FA0525C2A138A79294A /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */;
 			buildPhases = (
-				FA68695022B7C8DC3A47D6DF81079652 /* Sources */,
-				E3FD70AC579E74592E2EAC475ADFB8D9 /* Frameworks */,
-				8D4457F7F2F28A0B99FF8F1B98219F8E /* Headers */,
+				DBF6D7D773E8C5B5897DA3ED986F72B4 /* Sources */,
+				105A434783F3901936C60C702BEC07D8 /* Frameworks */,
+				BDDECDBD205F92A63BDE48F9DB9E31C0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7989088A29174F84582BB49A7EA029B9 /* PBXTargetDependency */,
+				0A508A0815E147DCDB42BC41BFB21FF2 /* PBXTargetDependency */,
+				0319E0547B05A5579DA49F9237D75346 /* PBXTargetDependency */,
 			);
-			name = ChameleonFramework;
-			productName = ChameleonFramework;
-			productReference = BE5E925D8CFB0D3F4A5A8548BB86B6F2 /* ChameleonFramework.framework */;
+			name = "Pods-PitchPerfect";
+			productName = "Pods-PitchPerfect";
+			productReference = B598C76A215CB7752E016B0145516DFE /* Pods_PitchPerfect.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */ = {
@@ -713,7 +537,7 @@
 			);
 			name = SCSiriWaveformView;
 			productName = SCSiriWaveformView;
-			productReference = 8DEBF50BD13B5B860DB90245CDFF00D7 /* SCSiriWaveformView.framework */;
+			productReference = E3870F9A79AB635193C95368698CD5E9 /* SCSiriWaveformView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */ = {
@@ -732,7 +556,7 @@
 			);
 			name = IQAudioRecorderController;
 			productName = IQAudioRecorderController;
-			productReference = F0FFA3F44874D93F5D14782D6B82ECD8 /* IQAudioRecorderController.framework */;
+			productReference = 9353BBD52BA3E75D489136B5E1F35B31 /* IQAudioRecorderController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C63CB4AE559E609E163642ED2A914D4D /* CircularSpinner-CircularSpinner */ = {
@@ -749,7 +573,7 @@
 			);
 			name = "CircularSpinner-CircularSpinner";
 			productName = "CircularSpinner-CircularSpinner";
-			productReference = 230D315525931200ABF9D53E1247CAEC /* CircularSpinner.bundle */;
+			productReference = D5E8C6E01F74E7D8E2717EBDBD257FA3 /* CircularSpinner.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */ = {
@@ -768,28 +592,7 @@
 			);
 			name = CircularSpinner;
 			productName = CircularSpinner;
-			productReference = A29DA2D292237E99D7CD7978BDC95869 /* CircularSpinner.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EB9D1C12F4E67D65B1BAE616E5D3CA68 /* Pods-PitchPerfect */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B5F64CD67B42FE95205D3C0B33C90C6 /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */;
-			buildPhases = (
-				AD262B7484A271851FE1BFB9DF41E15F /* Sources */,
-				DACBF8BAFBFDB079D14A1A5A455F3802 /* Frameworks */,
-				326378F3F620C2EFA86D582F72A9D29A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FCDB360C10B45CE37D8B85B1969CD1DD /* PBXTargetDependency */,
-				F083056248AB5C61268E1F50227A3BB4 /* PBXTargetDependency */,
-				C0A9A8CA89A1BDA9342DA89111EC3544 /* PBXTargetDependency */,
-				EE80424A9F56CFF566400125DE7A25F1 /* PBXTargetDependency */,
-			);
-			name = "Pods-PitchPerfect";
-			productName = "Pods-PitchPerfect";
-			productReference = BF7EB8A4893CADD56C181BA91395E304 /* Pods_PitchPerfect.framework */;
+			productReference = 20FB046F28325E37939E757776C75163 /* CircularSpinner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -809,15 +612,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6C27BB3671AA86DE777E74E1FA660B61 /* Products */;
+			productRefGroup = 457E0602E5DEA435B0046F5E96F215D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76BD4592010354D6C23D6ECCA20D83A8 /* ChameleonFramework */,
 				D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */,
 				C63CB4AE559E609E163642ED2A914D4D /* CircularSpinner-CircularSpinner */,
 				BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */,
-				EB9D1C12F4E67D65B1BAE616E5D3CA68 /* Pods-PitchPerfect */,
+				011CE5B94F5CF031B9B6C03BCA239CF1 /* Pods-PitchPerfect */,
 				923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */,
 			);
 		};
@@ -900,14 +702,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD262B7484A271851FE1BFB9DF41E15F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F47A888C214B0C7879116130F47D069 /* Pods-PitchPerfect-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CA8CD112E8EC867A8FEB4AF65F0686E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -920,35 +714,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA68695022B7C8DC3A47D6DF81079652 /* Sources */ = {
+		DBF6D7D773E8C5B5897DA3ED986F72B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FA38FEAF957D69E92153FBAFB3DB40 /* Chameleon_.m in Sources */,
-				B26038F91C7C4CC322D7F25C5D16FE9E /* ChameleonConstants.m in Sources */,
-				95E542740750F827BE2EBE3DE6F62D0E /* ChameleonFramework-dummy.m in Sources */,
-				833F15A28A0D562548517BCA8EAF23B6 /* ChameleonShorthand.swift in Sources */,
-				6712100A2CCB9B987281A02F6778473C /* NSArray+Chameleon.m in Sources */,
-				C3C8BB46937DD0BBC7FBE25E298052F8 /* UIAppearance+Swift.m in Sources */,
-				83CFC8F573AD5B75191E162E64C7D039 /* UIButton+Chameleon.m in Sources */,
-				2DDDE2C06FB4DCC639CFD100F224D6FD /* UIColor+Chameleon.m in Sources */,
-				3D08C4F4E2E65D192D317AED0A8237B3 /* UIColor+ChameleonPrivate.m in Sources */,
-				139A9CEDE5163F58CBB1A3A135DAD6A3 /* UIImage+ChameleonPrivate.m in Sources */,
-				FB82C1293D7DDE0D3E2E6D68CDD5852C /* UILabel+Chameleon.m in Sources */,
-				459048ECD9FAA42B77566EC56ECAD793 /* UINavigationController+Chameleon.m in Sources */,
-				A664D0A12D5F3DBD08A7E8DFE3AE83E2 /* UIView+ChameleonPrivate.m in Sources */,
-				5EA9F0ED011B06DEFA8542EEE72508C3 /* UIViewController+Chameleon.m in Sources */,
+				3DFAAF2C347A5DCA9ED8C3744EBB9818 /* Pods-PitchPerfect-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0319E0547B05A5579DA49F9237D75346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCSiriWaveformView;
+			target = 923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */;
+			targetProxy = DC38B9A99CB410604AC1CBCBA23488D5 /* PBXContainerItemProxy */;
+		};
+		0A508A0815E147DCDB42BC41BFB21FF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IQAudioRecorderController;
+			target = BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */;
+			targetProxy = 26CB05EAF940B26DB8FB708BBB4191E0 /* PBXContainerItemProxy */;
+		};
 		3F9AC8F959D262F76CC83D25A9100FEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SCSiriWaveformView;
 			target = 923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */;
 			targetProxy = DFF9654EB4EE42317C4F79D7461CC365 /* PBXContainerItemProxy */;
+		};
+		7989088A29174F84582BB49A7EA029B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircularSpinner;
+			target = D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */;
+			targetProxy = CDC83B1777918F844ABFEC751F13C560 /* PBXContainerItemProxy */;
 		};
 		8F2227A818FD7FE0AD4623B6A69DB33D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -956,136 +755,9 @@
 			target = C63CB4AE559E609E163642ED2A914D4D /* CircularSpinner-CircularSpinner */;
 			targetProxy = 8829F8979CB71E0870826A8FB7EB26E4 /* PBXContainerItemProxy */;
 		};
-		C0A9A8CA89A1BDA9342DA89111EC3544 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IQAudioRecorderController;
-			target = BF5E8492AD833171E67A19F798CC6361 /* IQAudioRecorderController */;
-			targetProxy = 7332775398B1343A9F7FBFC5DA32603A /* PBXContainerItemProxy */;
-		};
-		EE80424A9F56CFF566400125DE7A25F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SCSiriWaveformView;
-			target = 923C199FC8844D48B6E4D0E9B013C7C4 /* SCSiriWaveformView */;
-			targetProxy = 55FA2FBA9610342EB4CCAF0FCC6A076C /* PBXContainerItemProxy */;
-		};
-		F083056248AB5C61268E1F50227A3BB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CircularSpinner;
-			target = D780F80A5793F3EFDAC1606AAA75B388 /* CircularSpinner */;
-			targetProxy = E37C70082E86C6386E6E81666D22F42A /* PBXContainerItemProxy */;
-		};
-		FCDB360C10B45CE37D8B85B1969CD1DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ChameleonFramework;
-			target = 76BD4592010354D6C23D6ECCA20D83A8 /* ChameleonFramework */;
-			targetProxy = 64329957E3D390CA8017767AA5A154A0 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E9594D0BB9CB8D598C72551B987A622 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5E8D7430709FB31BB956EED5E971C13 /* Pods-PitchPerfect.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PitchPerfect;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		12D1ED1D420E43FF5B2A4556549FA56D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB64BF6ECE29C5DA7DCD8CB94BDB8B23 /* Pods-PitchPerfect.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PitchPerfect;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3E09A745CF2882E71BFC1132C8D8AE7D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85AA7D7B43B7F8613A0A1AC20C784170 /* ChameleonFramework.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ChameleonFramework;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1128,7 +800,7 @@
 		};
 		6AF116B51B25BB82336D5754F0360A18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B76F42A82ED4F3F0ED4227867EF03AFD /* SCSiriWaveformView.xcconfig */;
+			baseConfigurationReference = 99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1158,9 +830,45 @@
 			};
 			name = Debug;
 		};
+		7DC7C104FC4DE01DD83311DD48C8A279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB64BF6ECE29C5DA7DCD8CB94BDB8B23 /* Pods-PitchPerfect.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PitchPerfect;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		917A570ECF65897BAF26F59EF6572254 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B76F42A82ED4F3F0ED4227867EF03AFD /* SCSiriWaveformView.xcconfig */;
+			baseConfigurationReference = 99729AA9808AA600C6A7800CB0DDB54D /* SCSiriWaveformView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1192,7 +900,7 @@
 		};
 		A089CAB71AAAB08686D8DD4EC75EC090 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38747CE0BC47D66E4B915AD1447C855E /* CircularSpinner.xcconfig */;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1223,9 +931,44 @@
 			};
 			name = Debug;
 		};
+		A3483DA3388AC098F1083AD68625C0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E8D7430709FB31BB956EED5E971C13 /* Pods-PitchPerfect.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PitchPerfect/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PitchPerfect/Pods-PitchPerfect.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PitchPerfect;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B66BAFE0D48F523E3F6D157DB8ADC387 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FB4C415DE09FCC77AFCA2DF53AE0D6C /* IQAudioRecorderController.xcconfig */;
+			baseConfigurationReference = 3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1257,7 +1000,7 @@
 		};
 		BE34A3AD43205457EBFAB6FC47DF8549 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38747CE0BC47D66E4B915AD1447C855E /* CircularSpinner.xcconfig */;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CircularSpinner";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1274,7 +1017,7 @@
 		};
 		D38ECBC21EE67A32F8E0D6CF0607598A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FB4C415DE09FCC77AFCA2DF53AE0D6C /* IQAudioRecorderController.xcconfig */;
+			baseConfigurationReference = 3FFBA84C91BCE30B53B53E4946C284BF /* IQAudioRecorderController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1306,7 +1049,7 @@
 		};
 		D7819BA69AFFBE11371D75D310BB645E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38747CE0BC47D66E4B915AD1447C855E /* CircularSpinner.xcconfig */;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CircularSpinner";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1320,39 +1063,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
-		};
-		E3923CE70A641398913B8A3AA0FDBB30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85AA7D7B43B7F8613A0A1AC20C784170 /* ChameleonFramework.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ChameleonFramework;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1400,7 +1110,7 @@
 		};
 		FC5027D10386031D59334B53E046E0EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38747CE0BC47D66E4B915AD1447C855E /* CircularSpinner.xcconfig */;
+			baseConfigurationReference = 6172790C68D719FB6E0014F50E577772 /* CircularSpinner.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1442,29 +1152,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07398A672F3D6D682C4B2E94C83E2A0D /* Build configuration list for PBXNativeTarget "ChameleonFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E3923CE70A641398913B8A3AA0FDBB30 /* Debug */,
-				3E09A745CF2882E71BFC1132C8D8AE7D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0D83D8A4CE6CDF7F9775560C351FF653 /* Build configuration list for PBXNativeTarget "IQAudioRecorderController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D38ECBC21EE67A32F8E0D6CF0607598A /* Debug */,
 				B66BAFE0D48F523E3F6D157DB8ADC387 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B5F64CD67B42FE95205D3C0B33C90C6 /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12D1ED1D420E43FF5B2A4556549FA56D /* Debug */,
-				0E9594D0BB9CB8D598C72551B987A622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1492,6 +1184,15 @@
 			buildConfigurations = (
 				BE34A3AD43205457EBFAB6FC47DF8549 /* Debug */,
 				D7819BA69AFFBE11371D75D310BB645E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A816DAE2B95C9FA0525C2A138A79294A /* Build configuration list for PBXNativeTarget "Pods-PitchPerfect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DC7C104FC4DE01DD83311DD48C8A279 /* Debug */,
+				A3483DA3388AC098F1083AD68625C0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

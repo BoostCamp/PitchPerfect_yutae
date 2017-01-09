@@ -331,9 +331,7 @@ class InteractivePlayerView : UIView {
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         coverImageView.backgroundColor = UIColor.clear
         view.backgroundColor = UIColor.clear
-        
-//        coverImageView.contentMode = .scaleAspectFill
-        
+
         self.makeItRounded(view: view, newSize: view.bounds.width)
         self.backgroundColor = UIColor.clear
         
@@ -370,7 +368,7 @@ class InteractivePlayerView : UIView {
         let path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2+5, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
         
         let arc = CAShapeLayer()
-        arc.lineWidth = 2
+        arc.lineWidth = 4
         arc.path = path
         arc.strokeStart = strokeStart
         arc.strokeEnd = strokeEnd
@@ -400,7 +398,7 @@ class InteractivePlayerView : UIView {
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.shadowColor = UIColor.black.cgColor
         circleLayer.strokeColor = self.progressFullColor.cgColor
-        circleLayer.lineWidth = 2.0;
+        circleLayer.lineWidth = 4.0;
         circleLayer.strokeStart = 0.0
         circleLayer.shadowRadius = 0
         circleLayer.shadowOpacity = 0

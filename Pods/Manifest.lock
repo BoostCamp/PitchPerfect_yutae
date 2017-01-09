@@ -1,32 +1,18 @@
 PODS:
-  - ChameleonFramework/Default (2.1.0)
-  - ChameleonFramework/Swift (2.1.0):
-    - ChameleonFramework/Default
   - CircularSpinner (1.2.0)
   - IQAudioRecorderController (1.2.0):
     - SCSiriWaveformView
   - SCSiriWaveformView (1.0.3)
 
 DEPENDENCIES:
-  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - CircularSpinner
   - IQAudioRecorderController
 
-EXTERNAL SOURCES:
-  ChameleonFramework:
-    :git: https://github.com/ViccAlexander/Chameleon.git
-
-CHECKOUT OPTIONS:
-  ChameleonFramework:
-    :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
-    :git: https://github.com/ViccAlexander/Chameleon.git
-
 SPEC CHECKSUMS:
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CircularSpinner: 80b8ee3eda59b66d20631d4ca7c7c83720931739
   IQAudioRecorderController: 1d46d99330cb2c9381568665d123cf435460a43e
   SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395
 
-PODFILE CHECKSUM: 13ccb2793bb706d5c29bc1668f69801b7e9fb3f3
+PODFILE CHECKSUM: b296792721b1503df79ce4fa71514850c7c3f05e
 
 COCOAPODS: 1.1.1

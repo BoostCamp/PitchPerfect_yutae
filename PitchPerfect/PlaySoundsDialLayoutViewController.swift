@@ -24,7 +24,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var cell_width:CGFloat!
     
     let audioType = ["Stop", "Turtle", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ", "Drum", "Car", "Clap"]
-    let audioTypeDescription = ["STOP", "SLOW", "FAST", "LIGHT", "HEAVY", "ECHO", "REVERB", "ORGAN", "DRUM", "CAR", "APPLAUSE"]
+    let audioTypeDescription = ["STOP", "SLOW", "FAST", "LIGHT", "HEAVY", "ECHO", "REVERB", "ORGAN", "DRUM", "HORN", "APPLAUSE"]
 //    AVAudio
     var recordedAudioURL: URL!
     var audioFile:AVAudioFile!
