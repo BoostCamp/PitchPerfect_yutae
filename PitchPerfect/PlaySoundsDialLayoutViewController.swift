@@ -235,7 +235,59 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("1 Clicked : \(self.audioType[indexPath.item])")
+        print("Clicked IndexPath: \(self.audioType[indexPath.item])")
+        self.stopAudio()
+        switch (indexPath.item) {
+        case 0:
+            self.stopAudio()
+        case 1:
+            self.playSound(rate:0.5)
+        case 2:
+            self.playSound(rate:1.5)
+        case 3:
+            self.playSound(pitch:1000)
+        case 4:
+            self.playSound(pitch: -1000)
+        case 5:
+            self.playSound(echo:true)
+        case 6:
+            self.playSound(reverb:true)
+        default:
+            self.playSound(mixed:self.audioType[indexPath.item])
+        }
+        
+        // UI라서 DispatQueue main 으로 관리 Sharing Button init
+        DispatchQueue.main.async {
+            if(self.dialLayout.selectedItem != 0) {
+                
+                let cells = self.collectionView.visibleCells
+                for cell in cells {
+                    let c = cell as! dialLayoutCell
+                    c.itemView.resetAnimationCircle()
+                }
+                
+                self.sharingButton.isEnabled = true
+                
+                let selectedItem = indexPath.item
+                
+                let tempIndexPath = IndexPath(item: selectedItem, section: 0)
+                
+                let cell = self.collectionView.cellForItem(at: tempIndexPath) as! dialLayoutCell
+                
+                if(selectedItem == 0){
+                    //            Stop
+                } else if (selectedItem == 1){
+                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate) / 0.5
+                } else if (selectedItem == 2){
+                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate) / 1.5
+                } else {
+                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate)
+                }
+                cell.itemView.start()
+                
+                self.navigationItem.title = self.audioType[selectedItem].uppercased()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
