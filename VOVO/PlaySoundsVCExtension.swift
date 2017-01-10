@@ -76,8 +76,8 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
         try! mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
         self.mixedBuffer = AVAudioPCMBuffer.init(pcmFormat: mixedAudioFile.processingFormat, frameCapacity: AVAudioFrameCount(mixedAudioFile.length))
         try! self.mixedAudioFile.read(into: self.mixedBuffer)
-        self.mixedPlayerNode.volume = 0.2
-        self.mixedPlayerNode.pan = 0.5
+        self.mixedPlayerNode.volume = 0.1
+//        self.mixedPlayerNode.pan = 0.5
     }
     
     func playSound(share: Bool = false, rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, mixed: String? = nil) {
