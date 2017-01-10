@@ -16,7 +16,6 @@ extension UIColor {
     public class var themeColor : UIColor {
         return UIColor.init(red: 0/255, green: 184/255, blue: 185/255, alpha: 1.0)
     }
-    
     public class var themeColors : [UIColor] {
         return [
             UIColor.init(red: 222/255, green: 252/255, blue: 255/255, alpha: 1.0),

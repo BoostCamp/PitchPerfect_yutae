@@ -85,7 +85,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
                 }
         }
         
-        setupAudio()
         
     }
     
@@ -94,6 +93,9 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         configureDialLayoutUI()
         // Sharing Button init
         self.sharingButton.isEnabled = false
+        
+        // URL 주소가 바뀔 수 있어서 WillAppear
+        self.setupAudio()
         
         // Add Observer orientation Changed !!
         NotificationCenter.default.addObserver(self, selector: #selector(PlaySoundsDialLayoutViewController.orientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -149,12 +151,16 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     // 공유하고 후 Call Back VC 
     func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        // 공유 하고 난 뒤 음성 변조 복제된 파일 삭제.
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: self.changedAudioFile.url.absoluteString){
+            try! fileManager.removeItem(atPath: self.changedAudioFile.url.absoluteString)
+        }
         return self
     }
     
     // DialLayout 초기화
     func configureDialLayoutUI(){
-        print("Dial Layout Init")
         let xOffset:CGFloat!
         if self.fixedXOffset == nil {
             xOffset = self.view.frame.width/2
@@ -170,7 +176,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         
         self.collectionView.collectionViewLayout = self.dialLayout
         self.dialLayout.scrollDirection = .horizontal
-        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -265,15 +270,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         let audioType = self.audioType[indexPath.item]
         
         cell.itemView.coverImage = UIImage(named: audioType)
+        cell.itemView.delegate = self
         cell.audioTypeDescription.text = audioTypeDescription[indexPath.item]
         return cell
-    }
-    
-    
-    //Orientations Change! Will -> Orientation 변하려 할때 실행이 되는 함수
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        /*
-        print("Change")
-         */
     }
 }

@@ -15,42 +15,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     var audioRecorder:AVAudioRecorder!
 
     @IBOutlet weak var recordingButton: UIButton!
-    
-    
     var controller:IQAudioRecorderViewController!
-    
     @IBOutlet weak var recordingLabel: UILabel!
-//    iPad Label size 33
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
-        // 배경 색 그라데이션 효과
-//        self.view.backgroundColor = UIColor.init(gradientStyle: .leftToRight, withFrame: self.view.frame, andColors: UIColor.themeColors)
-//        self.navigationController?.navigationBar.titleTextAttributes =
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
         self.recordingLabel.text = "Tab to Record"
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("viewWillDisappear")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func configureUI(){
-        self.recordingButton.setTitleColor(UIColor.themeColor, for: .selected)
-        // 기기별 text Size 조절
-//        self.recordingLabel.adjustsFontSizeToFitWidth = true
-        
     }
     
     @IBAction func recordAction(_ sender: Any) {
@@ -67,8 +45,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                     [AVFormatIDKey: kAudioFormatMPEG4AAC,
                      AVSampleRateKey: 16000.0,
                      AVNumberOfChannelsKey: 1] as [String : Any]
-//                High Quality
-                /*
+                
+                /* High Quality
                 let recordSettings =
                     [AVFormatIDKey: NSNumber(value:kAudioFormatAppleLossless),
                      AVEncoderAudioQualityKey : AVAudioQuality.low.rawValue,
@@ -77,10 +55,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                      AVSampleRateKey : 44100.0] as [String : Any]
                 */
                 self.recordingLabel.text = "Recording..."
-//                self.recordingLabel.isHidden = false
-//                self.recordingButton.isEnabled = false
                 
                 try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+                try! session.setActive(true)
                 try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: recordSettings)
                 
                 self.controller = IQAudioRecorderViewController.init()
@@ -97,8 +74,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 self.presentBlurredAudioRecorderViewControllerAnimated(self.controller)
                 
                 /*
-                try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-                
                 self.audioRecorder.delegate = self
                 self.audioRecorder.isMeteringEnabled = true
                 self.audioRecorder.prepareToRecord()
@@ -147,7 +122,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
         }
     }
     
-    /*
+    /* // IQAudioRecorderViewController 에 구현
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)

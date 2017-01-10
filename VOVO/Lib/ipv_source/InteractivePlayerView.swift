@@ -12,10 +12,6 @@ import UIKit
 
 protocol InteractivePlayerViewDelegate {
     
-    func actionOneButtonTapped(sender : UIButton, isSelected : Bool)
-    func actionTwoButtonTapped(sender : UIButton, isSelected : Bool)
-    func actionThreeButtonTapped(sender : UIButton, isSelected : Bool)
-    
     func interactivePlayerViewDidStartPlaying(playerInteractive:InteractivePlayerView)
     func interactivePlayerViewDidStopPlaying(playerInteractive:InteractivePlayerView)
     
@@ -34,15 +30,7 @@ class InteractivePlayerView : UIView {
     
     @IBOutlet public var coverImageView: UIImageView!
     @IBOutlet private var timeLabel: UILabel!
-    @IBOutlet private var actionOne: UIButton!
-    @IBOutlet private var actionTwo: UIButton!
-    @IBOutlet private var actionThree: UIButton!
-    @IBOutlet private var actionOneButtonWidth: NSLayoutConstraint!
-    @IBOutlet private var actionOneButtonHeight: NSLayoutConstraint!
-    @IBOutlet private var actionTwoButtonWidth: NSLayoutConstraint!
-    @IBOutlet private var actionTwoButtonHeight: NSLayoutConstraint!
-    @IBOutlet private var actionThreeButtonWidth: NSLayoutConstraint!
-    @IBOutlet private var actionThreeButtonHeight: NSLayoutConstraint!
+
     
     /// duration of song
     var progress : Double = 0.0
@@ -51,7 +39,6 @@ class InteractivePlayerView : UIView {
     var isPlaying : Bool = false
     
     /// You can set action button images with this struct
-    var actionImages = ActionButtonImages()
     
     /// set progress colors
     var progressEmptyColor : UIColor = UIColor.lightGray
@@ -61,49 +48,6 @@ class InteractivePlayerView : UIView {
     
     /// used to change current time of the sound . default is true
     var panEnabled:Bool = true
-    
-    /// is ActionOne selected
-    var isActionOneSelected : Bool = false {
-        
-        didSet {
-            
-            if isActionOneSelected {
-                self.actionOne.isSelected = true
-                self.actionOne.setImage(self.actionImages.actionOneSelected, for: UIControlState.selected)
-            }else {
-                self.actionOne.isSelected = false
-                self.actionOne.setImage(self.actionImages.actionOneUnSelected, for: UIControlState.normal)
-            }
-        }
-    }
-    
-    /// is ActionTwo selected
-    var isActionTwoSelected : Bool = false {
-        
-        didSet {
-            if isActionTwoSelected {
-                self.actionTwo.isSelected = true
-                self.actionTwo.setImage(self.actionImages.actionTwoSelected, for: UIControlState.selected)
-            }else {
-                self.actionTwo.isSelected = false
-                self.actionTwo.setImage(self.actionImages.actionTwoUnSelected, for: UIControlState.normal)
-            }
-        }
-    }
-    
-    /// is ActionThree selected
-    var isActionThreeSelected : Bool = false {
-        
-        didSet {
-            if isActionThreeSelected {
-                self.actionThree.isSelected = true
-                self.actionThree.setImage(self.actionImages.actionThreeSelected, for: UIControlState.selected)
-            }else {
-                self.actionThree.isSelected = false
-                self.actionThree.setImage(self.actionImages.actionThreeUnSelected, for: UIControlState.normal)
-            }
-        }
-    }
     
     
     /* Timer for update time*/
@@ -126,18 +70,7 @@ class InteractivePlayerView : UIView {
 
     private var circleLayer: CAShapeLayer! = CAShapeLayer()
 
-    /* Setting action buttons constraint width - height with buttonSizes */
-    @IBInspectable var buttonSizes : CGFloat = 20.0 {
-        
-        didSet {
-            self.actionOneButtonHeight.constant = buttonSizes
-            self.actionOneButtonWidth.constant = buttonSizes
-            self.actionTwoButtonHeight.constant = buttonSizes
-            self.actionTwoButtonWidth.constant = buttonSizes
-            self.actionThreeButtonHeight.constant = buttonSizes
-            self.actionThreeButtonWidth.constant = buttonSizes
-        }
-    }
+    
     
     /* 
      *
@@ -151,87 +84,6 @@ class InteractivePlayerView : UIView {
         set(coverImage) {
             coverImageView.image = coverImage
         }
-    }
-    
-    @IBInspectable var actionOne_icon_selected: UIImage? {
-        
-        get {
-            return actionImages.actionOneSelected
-        }
-        set(actionOne_icon_selected) {
-            actionOne.setImage(actionOne_icon_selected, for: UIControlState.selected)
-            actionImages.actionOneSelected = actionOne_icon_selected
-        }
-    }
-    
-    @IBInspectable var actionOne_icon_unselected: UIImage? {
-        
-        get {
-            return actionImages.actionOneUnSelected
-        }
-        set(actionOne_icon_unselected) {
-            actionOne.setImage(actionOne_icon_unselected, for: UIControlState.normal)
-            actionImages.actionOneUnSelected = actionOne_icon_unselected
-        }
-    }
-    
-    @IBInspectable var actionTwo_icon_selected: UIImage? {
-        
-        get {
-            return actionImages.actionTwoSelected
-        }
-        set(actionTwo_icon_selected) {
-            actionTwo.setImage(actionTwo_icon_selected, for: UIControlState.selected)
-            actionImages.actionTwoSelected = actionTwo_icon_selected
-        }
-    }
-    
-    @IBInspectable var actionTwo_icon_unselected: UIImage? {
-        
-        get {
-            return actionImages.actionTwoUnSelected
-        }
-        set(actionTwo_icon_unselected) {
-            actionTwo.setImage(actionTwo_icon_unselected, for: UIControlState.normal)
-            actionImages.actionTwoUnSelected = actionTwo_icon_unselected
-        }
-    }
-    
-    @IBInspectable var actionThree_icon_selected: UIImage? {
-        
-        get {
-            return actionImages.actionThreeSelected
-        }
-        set(actionThree_icon_selected) {
-            actionThree.setImage(actionThree_icon_selected, for: UIControlState.selected)
-            actionImages.actionThreeSelected = actionThree_icon_selected
-        }
-    }
-    
-    @IBInspectable var actionThree_icon_unselected: UIImage? {
-        
-        get {
-            return actionImages.actionThreeUnSelected
-        }
-        set(actionThree_icon_unselected) {
-            actionThree.setImage(actionThree_icon_unselected, for: UIControlState.normal)
-            actionImages.actionThreeUnSelected = actionThree_icon_unselected
-        }
-    }
-    
-    /*
-     * Button images struct
-     */
-    
-    struct ActionButtonImages {
-        
-        var actionOneSelected : UIImage?
-        var actionOneUnSelected : UIImage?
-        var actionTwoSelected : UIImage?
-        var actionTwoUnSelected : UIImage?
-        var actionThreeSelected : UIImage?
-        var actionThreeUnSelected : UIImage?
-        
     }
     
     override init(frame: CGRect) {
@@ -252,51 +104,6 @@ class InteractivePlayerView : UIView {
         self.createUI()
         self.addPanGesture()
        
-    }
-    
-    @IBAction private func actionOneButtonTapped(sender: UIButton) {
-        
-        if sender.isSelected {
-            sender.isSelected = false
-        }else {
-            sender.isSelected = true
-        }
-        
-        self.isActionOneSelected = sender.isSelected
-        
-        if let delegate = self.delegate{
-            delegate.actionOneButtonTapped(sender: sender, isSelected : sender.isSelected)
-        }
-    }
-    
-    @IBAction private func actionTwoButtonTapped(sender: UIButton) {
-
-        if sender.isSelected {
-            sender.isSelected = false
-        } else {
-            sender.isSelected = true
-        }
-
-        self.isActionTwoSelected = sender.isSelected
-        
-        if let delegate = self.delegate{
-            delegate.actionTwoButtonTapped(sender: sender, isSelected : sender.isSelected)
-        }
-    }
-    
-    @IBAction private func actionThreeButtonTapped(sender: UIButton) {
-        
-        if sender.isSelected {
-            sender.isSelected = false
-        }else {
-            sender.isSelected = true
-        }
-        
-        self.isActionThreeSelected = sender.isSelected
-        
-        if let delegate = self.delegate{
-            delegate.actionThreeButtonTapped(sender: sender, isSelected : sender.isSelected)
-        }
     }
     
     override func draw(_ rect: CGRect) {

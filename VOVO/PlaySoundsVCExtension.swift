@@ -12,9 +12,8 @@ import AVFoundation
 // Loading Library
 import CircularSpinner
 
-// MARK: - PlaySoundsViewController: AVAudioPlayerDelegate
-
-extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
+// MARK: - PlaySoundsViewController: AVAudioPlayerDelegate Player
+extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
     
     // MARK: Alerts
     struct Alerts {
@@ -72,15 +71,11 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
     func setupMixedAudio(audioName : String){
         mixedPlayerNode = AVAudioPlayerNode()
         audioEngine.attach(mixedPlayerNode)
-        print(audioName)
         let filePath: String = Bundle.main.path(forResource: audioName, ofType: "m4a")!
-        print("\(filePath)")
         let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
         try! mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
         self.mixedBuffer = AVAudioPCMBuffer.init(pcmFormat: mixedAudioFile.processingFormat, frameCapacity: AVAudioFrameCount(mixedAudioFile.length))
         try! self.mixedAudioFile.read(into: self.mixedBuffer)
-        //            self.audioPlayerNode.pan = 0.5
-        //            self.audioPlayerNode.volume = 0.5
         self.mixedPlayerNode.volume = 0.2
         self.mixedPlayerNode.pan = 0.5
     }
@@ -91,8 +86,7 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         if share == true {
             // UI main Queue 로 실행
             DispatchQueue.main.async {
-                //            Pg 가 따라가는 선색, Bg 배경색
-                //            CircularSpinner.trackBgColor = UIColor.red
+                // Pg 가 따라가는 선색, Bg 배경색
                 CircularSpinner.trackPgColor = UIColor.themeColor
                 CircularSpinner.show("Loading...", animated: true, type: .indeterminate, showDismissButton: false)
             }
@@ -167,7 +161,6 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         
         
         self.audioPlayerNode.stop()
-//        Editted
         
         self.audioPlayerNode.scheduleFile(self.audioFile, at: nil) {
             
@@ -268,11 +261,35 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
             audioEngine.connect(nodes[x], to: nodes[x+1], format: audioFile.processingFormat)
         }
     }
-    
+    /*
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if flag {
+            print("Success DidFinishPlaying")
+            self.stopAllAudioResetCircle()
+        }
+    }
+     */
 
     func showAlert(_ title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: Alerts.DismissAlert, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func interactivePlayerViewDidStopPlaying(playerInteractive: InteractivePlayerView) {
+        // Audio Stop
+        self.navigationItem.title = "VOVO 음성 변환"
+    }
+    
+    func interactivePlayerViewDidStartPlaying(playerInteractive: InteractivePlayerView) {
+        
+    }
+    func interactivePlayerViewDidChangedDuration(playerInteractive: InteractivePlayerView, currentDuration: Double) {
+        
+    }
+    /* Changed orientation, Will 이라서 제외.
+    func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+    }
+     */
 }

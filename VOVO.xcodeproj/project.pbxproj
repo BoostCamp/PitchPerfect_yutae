@@ -11,7 +11,7 @@
 		9623D6A51E14C63F003588D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9623D6A41E14C63F003588D3 /* AppDelegate.swift */; };
 		9623D6A71E14C63F003588D3 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */; };
 		9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6A81E14C63F003588D3 /* Main.storyboard */; };
-		9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9623D6AB1E14C63F003588D3 /* Assets.xcassets */; };
+		963948641E253029007BF5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963948631E253029007BF5C5 /* Assets.xcassets */; };
 		96B5E1EC1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */; };
 		96B5E1EE1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */; };
 		96B5E1F01E1CE4CF00B10BB7 /* dialLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */; };
@@ -33,9 +33,9 @@
 		9623D6A41E14C63F003588D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = VOVO/AppDelegate.swift; sourceTree = "<group>"; };
 		9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordSoundsViewController.swift; path = VOVO/RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		9623D6A91E14C63F003588D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9623D6AB1E14C63F003588D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VOVO/Assets.xcassets; sourceTree = "<group>"; };
 		9623D6B01E14C63F003588D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = VOVO/Info.plist; sourceTree = "<group>"; };
-		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWCollectionViewDialLayout.swift; path = VOVO/AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
+		963948631E253029007BF5C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VOVO/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWCollectionViewDialLayout.swift; path = VOVO/Lib/AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
 		96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsDialLayoutViewController.swift; path = VOVO/PlaySoundsDialLayoutViewController.swift; sourceTree = "<group>"; };
 		96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = dialLayoutCell.swift; path = VOVO/dialLayoutCell.swift; sourceTree = "<group>"; };
 		96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsVCExtension.swift; path = VOVO/PlaySoundsVCExtension.swift; sourceTree = "<group>"; };
@@ -93,36 +93,41 @@
 		9623D6A31E14C63F003588D3 /* VOVO */ = {
 			isa = PBXGroup;
 			children = (
-				96E9D5431E24E55D00DB48F9 /* Bridging-Header.h */,
-				96C9EDCC1E227B390074F638 /* View */,
-				964070E51E18C23A0041FAC2 /* ViewController */,
+				9629E5641E25291100D9C166 /* Helper */,
+				9629E5631E25284A00D9C166 /* Extension */,
+				96C9EDCC1E227B390074F638 /* Views */,
+				964070E51E18C23A0041FAC2 /* Controllers */,
 				9623D6A41E14C63F003588D3 /* AppDelegate.swift */,
-				9623D6A81E14C63F003588D3 /* Main.storyboard */,
-				9605B05F1E23F52000C68B5F /* Launch Screen.storyboard */,
-				9623D6AB1E14C63F003588D3 /* Assets.xcassets */,
 				9623D6B01E14C63F003588D3 /* Info.plist */,
 				96AE35AF1E1FE77500D30A89 /* Resources */,
 			);
 			name = VOVO;
 			sourceTree = "<group>";
 		};
-		964070E51E18C23A0041FAC2 /* ViewController */ = {
+		9629E5631E25284A00D9C166 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		9629E5641E25291100D9C166 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				96E9D5431E24E55D00DB48F9 /* Bridging-Header.h */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		964070E51E18C23A0041FAC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */,
 				96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */,
 				96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */,
 			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		969A22B61E1FA0DB000EFC08 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */,
-				969A22B71E1FA103000EFC08 /* ipv_source */,
-			);
-			name = Lib;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		969A22B71E1FA103000EFC08 /* ipv_source */ = {
@@ -138,6 +143,7 @@
 		96AE35AF1E1FE77500D30A89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				963948631E253029007BF5C5 /* Assets.xcassets */,
 				96E9D5441E24E88C00DB48F9 /* Car.m4a */,
 				96E9D5451E24E88C00DB48F9 /* Clap.m4a */,
 				96E9D5461E24E88C00DB48F9 /* Drum.m4a */,
@@ -146,14 +152,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		96C9EDCC1E227B390074F638 /* View */ = {
+		96C9EDCC1E227B390074F638 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */,
+				9623D6A81E14C63F003588D3 /* Main.storyboard */,
+				9605B05F1E23F52000C68B5F /* Launch Screen.storyboard */,
 				96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */,
-				969A22B61E1FA0DB000EFC08 /* Lib */,
+				96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */,
+				969A22B71E1FA103000EFC08 /* ipv_source */,
 			);
-			name = View;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		C7CDD381E3EA59BA2795DB83 /* Frameworks */ = {
@@ -233,8 +241,8 @@
 				9605B0601E23F52000C68B5F /* Launch Screen.storyboard in Resources */,
 				96E9D5491E24E8EB00DB48F9 /* Clap.m4a in Resources */,
 				96E9D54A1E24E8ED00DB48F9 /* Drum.m4a in Resources */,
-				9623D6AC1E14C63F003588D3 /* Assets.xcassets in Resources */,
 				9623D6AA1E14C63F003588D3 /* Main.storyboard in Resources */,
+				963948641E253029007BF5C5 /* Assets.xcassets in Resources */,
 				96E9D5481E24E8E900DB48F9 /* Car.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -374,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
