@@ -235,7 +235,13 @@ extension PlaySoundsDialLayoutViewController: AVAudioPlayerDelegate {
         CircularSpinner.hide {
             let docController = UIDocumentInteractionController(url: NSURL(fileURLWithPath: self.changedAudioFile.url.absoluteString ) as URL)
             docController.delegate = self;
-            docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
+            switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                let rect = CGRect.init(x: self.view.frame.width, y: 0, width: 0, height: 0)
+                docController.presentOpenInMenu(from: rect , in: self.view, animated: true)
+            default:
+                 docController.presentOpenInMenu(from: UIScreen.main.bounds, in: self.view, animated: true)
+            }
         }
     }
     

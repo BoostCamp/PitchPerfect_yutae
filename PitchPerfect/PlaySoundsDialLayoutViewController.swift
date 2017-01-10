@@ -22,6 +22,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var dialLayout:AWCollectionViewDialLayout!
     var cell_height:CGFloat!
     var cell_width:CGFloat!
+    var fixedXOffset:CGFloat!
     
     let audioType = ["Stop", "Turtle", "Rabbit", "Chipmunk", "Vader", "Echo", "Reverb", "Organ", "Drum", "Car", "Clap"]
     let audioTypeDescription = ["STOP", "SLOW", "FAST", "LIGHT", "HEAVY", "ECHO", "REVERB", "ORGAN", "DRUM", "HORN", "APPLAUSE"]
@@ -44,24 +45,39 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Scroll 가리기
+        self.collectionView.showsVerticalScrollIndicator = false
+        self.collectionView.showsHorizontalScrollIndicator = false
+        
         // Check iPad, iPhone Set Layout
         switch UIDevice.current.userInterfaceIdiom {
             case .pad:
-                print("Current UI Device iPad - Dial Layout Resize")
-                self.angularSpacing = 50.0
+                print("Current UI Device iPad - Dial Layout")
                 self.radius = 440.0
                 self.cell_width = 200
                 self.cell_height = CGFloat((200*1.3)+10.0)
+                let currentWidth = self.view.frame.width
+                let currentHeight = self.view.frame.height
+                
+                if ((currentWidth == 768 && currentHeight == 1024) || (currentWidth == 1024 && currentHeight == 768)) {
+                    // iPad 9.7
+                    self.angularSpacing = 40.0
+                    self.fixedXOffset = 400
+                } else {
+                    // iPad 12.9
+                    self.angularSpacing = 50.0
+                    self.fixedXOffset = 540
+                }
             default:
                 if(self.view.frame.width < 370){
-                    print("Current UI Device < iPhone 6- Dial Layout Resize")
+                    print("Current UI Device < iPhone 6- Dial Layout")
                     self.angularSpacing = 40.0
                     self.radius = 220.0
                     self.cell_width = 120
                     self.cell_height = CGFloat((120*1.3)+10.0)
                 }
                 else {
-                    print("Current UI Device > iPhone 6 - Dial Layout Resize")
+                    print("Current UI Device > iPhone 6 - Dial Layout")
                     self.angularSpacing = 40.0
                     self.radius = 220.0
                     self.cell_width = 150
@@ -96,9 +112,9 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // 종료될때 Observer remove!!
+        // View 사라지고 난 후 Observer remove!!
         NotificationCenter.default.removeObserver(self)
-        // 종료될때 현재 재생중인 음악 끄기.
+        // View 사라지고 난 후 현재 재생중인 음악 끄기.
         self.stopAudio()
         
     }
@@ -139,21 +155,21 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     // DialLayout 초기화
     func configureDialLayoutUI(){
         print("Dial Layout Init")
+        let xOffset:CGFloat!
+        if self.fixedXOffset == nil {
+            xOffset = self.view.frame.width/2
+        } else {
+            xOffset = self.fixedXOffset
+        }
         
-        print(self.view.frame.width)
+        self.dialLayout = AWCollectionViewDialLayout(raduis: self.radius , angularSpacing: self.angularSpacing, cellSize: CGSize.init(width: self.cell_width, height: self.cell_height), alignment: WheelAlignmentType.center, itemHeight: cell_height, xOffset: xOffset)
         
-        self.dialLayout = AWCollectionViewDialLayout(raduis: self.radius , angularSpacing: self.angularSpacing, cellSize: CGSize.init(width: self.cell_width, height: self.cell_height), alignment: WheelAlignmentType.center, itemHeight: cell_height, xOffset: self.view.frame.width/2)
-        
-        
+        // Snap : true - Right, false - Left
         self.dialLayout.shouldSnap = true
         self.dialLayout.shouldFlip = true
-        // Scroll 가리기
-        self.collectionView.showsVerticalScrollIndicator = false
-        self.collectionView.showsHorizontalScrollIndicator = false
+        
         self.collectionView.collectionViewLayout = self.dialLayout
         self.dialLayout.scrollDirection = .horizontal
-        
-        self.collectionView.reloadData()
         
     }
     

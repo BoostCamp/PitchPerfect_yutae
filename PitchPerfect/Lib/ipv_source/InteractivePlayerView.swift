@@ -300,9 +300,11 @@ class InteractivePlayerView : UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        
-        self.addCirle(arcRadius: self.bounds.width + 10, capRadius: 2.0, color: self.progressEmptyColor,strokeStart: 0.0,strokeEnd: 1.0)
-        self.createProgressCircle()
+        // MARK : Yutae Draw Main Queue Manager
+        DispatchQueue.main.async {
+            self.addCirle(arcRadius: self.bounds.width + 10, capRadius: 2.0, color: self.progressEmptyColor,strokeStart: 0.0,strokeEnd: 1.0)
+            self.createProgressCircle()
+        }
         
     }
     
@@ -398,7 +400,7 @@ class InteractivePlayerView : UIView {
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.shadowColor = UIColor.black.cgColor
         circleLayer.strokeColor = self.progressFullColor.cgColor
-        circleLayer.lineWidth = 4.0;
+        circleLayer.lineWidth = 4.0
         circleLayer.strokeStart = 0.0
         circleLayer.shadowRadius = 0
         circleLayer.shadowOpacity = 0
