@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "011CE5B94F5CF031B9B6C03BCA239CF1"
-               BuildableName = "Pods_PitchPerfect.framework"
-               BlueprintName = "Pods-PitchPerfect"
+               BlueprintIdentifier = "B01BD07DA9D92314B5E5B30A95059D6A"
+               BuildableName = "Pods_VOVO.framework"
+               BlueprintName = "Pods-VOVO"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "011CE5B94F5CF031B9B6C03BCA239CF1"
-            BuildableName = "Pods_PitchPerfect.framework"
-            BlueprintName = "Pods-PitchPerfect"
+            BlueprintIdentifier = "B01BD07DA9D92314B5E5B30A95059D6A"
+            BuildableName = "Pods_VOVO.framework"
+            BlueprintName = "Pods-VOVO"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

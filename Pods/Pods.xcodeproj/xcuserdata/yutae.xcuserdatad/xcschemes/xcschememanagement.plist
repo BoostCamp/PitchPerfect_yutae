@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PitchPerfect.xcscheme</key>
+		<key>Pods-VOVO.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>011CE5B94F5CF031B9B6C03BCA239CF1</key>
+		<key>923C199FC8844D48B6E4D0E9B013C7C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>923C199FC8844D48B6E4D0E9B013C7C4</key>
+		<key>B01BD07DA9D92314B5E5B30A95059D6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

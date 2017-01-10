@@ -168,7 +168,7 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
         theAttributes.size = self.cellSize
         
         var scaleFactor:CGFloat
-        var deltaX:CGFloat
+//        var deltaX:CGFloat
         var translationT:CGAffineTransform
         
         
@@ -198,7 +198,7 @@ class AWCollectionViewDialLayout : UICollectionViewFlowLayout{
             translationT = CGAffineTransform(translationX: 0 , y: 0)
         }else  {
             scaleFactor = fmax(0.4, 1 - fabs( CGFloat(newIndex) * 0.50))
-            deltaX =  self.collectionView!.bounds.size.width / 2
+//            deltaX =  self.collectionView!.bounds.size.width / 2
             
             if(shouldFlip){
                 theAttributes.center = CGPoint( x: self.collectionView!.frame.size.width + self.dialRadius - self.xOffset , y: self.collectionView!.bounds.size.height/2 + self.collectionView!.contentOffset.y)

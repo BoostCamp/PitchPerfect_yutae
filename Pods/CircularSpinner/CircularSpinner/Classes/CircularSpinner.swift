@@ -353,7 +353,7 @@ extension CircularSpinner {
             
             UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseOut, animations: {
                 spinner.alpha = 1
-                }, completion: nil)
+            }, completion: nil)
         }
         
         NotificationCenter.default.addObserver(spinner, selector: #selector(updateFrame), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
@@ -372,10 +372,10 @@ extension CircularSpinner {
             
             UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseOut, animations: {
                 spinner.alpha = 0
-                }, completion: { _ in
-                    spinner.alpha = 1
-                    spinner.removeFromSuperview()
-                    completion?()
+            }, completion: { _ in
+                spinner.alpha = 1
+                spinner.removeFromSuperview()
+                completion?()
             })
         })
     }

@@ -124,8 +124,10 @@
  */
 @property(nonatomic,assign) NSInteger bitRate;
 
-@property(nonatomic,assign) AVAudioRecorder* argAudioRecorder;
-
+@property(nullable, nonatomic, strong) AVAudioRecorder* argAudioRecorder;
+/**
+ YUTAE AudioRecorder
+ */
 @end
 
 

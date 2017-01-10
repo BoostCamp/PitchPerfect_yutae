@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9623D6A01E14C63F003588D3"
-               BuildableName = "PitchPerfect.app"
-               BlueprintName = "PitchPerfect"
-               ReferencedContainer = "container:PitchPerfect.xcodeproj">
+               BuildableName = "VOVO.app"
+               BlueprintName = "VOVO"
+               ReferencedContainer = "container:VOVO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9623D6A01E14C63F003588D3"
-            BuildableName = "PitchPerfect.app"
-            BlueprintName = "PitchPerfect"
-            ReferencedContainer = "container:PitchPerfect.xcodeproj">
+            BuildableName = "VOVO.app"
+            BlueprintName = "VOVO"
+            ReferencedContainer = "container:VOVO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9623D6A01E14C63F003588D3"
-            BuildableName = "PitchPerfect.app"
-            BlueprintName = "PitchPerfect"
-            ReferencedContainer = "container:PitchPerfect.xcodeproj">
+            BuildableName = "VOVO.app"
+            BlueprintName = "VOVO"
+            ReferencedContainer = "container:VOVO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9623D6A01E14C63F003588D3"
-            BuildableName = "PitchPerfect.app"
-            BlueprintName = "PitchPerfect"
-            ReferencedContainer = "container:PitchPerfect.xcodeproj">
+            BuildableName = "VOVO.app"
+            BlueprintName = "VOVO"
+            ReferencedContainer = "container:VOVO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

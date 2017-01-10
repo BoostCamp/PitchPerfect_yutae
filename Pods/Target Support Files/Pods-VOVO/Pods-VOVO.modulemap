@@ -1,0 +1,6 @@
+framework module Pods_VOVO {
+  umbrella header "Pods-VOVO-umbrella.h"
+
+  export *
+  module * { export * }
+}
