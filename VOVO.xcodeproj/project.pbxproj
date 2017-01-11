@@ -31,18 +31,18 @@
 		9605B05F1E23F52000C68B5F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "VOVO/Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9623D6A11E14C63F003588D3 /* VOVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9623D6A41E14C63F003588D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = VOVO/AppDelegate.swift; sourceTree = "<group>"; };
-		9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordSoundsViewController.swift; path = VOVO/RecordSoundsViewController.swift; sourceTree = "<group>"; };
+		9623D6A61E14C63F003588D3 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordSoundsViewController.swift; path = VOVO/Controllers/RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		9623D6A91E14C63F003588D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9623D6B01E14C63F003588D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = VOVO/Info.plist; sourceTree = "<group>"; };
 		963948631E253029007BF5C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VOVO/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWCollectionViewDialLayout.swift; path = VOVO/Lib/AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
-		96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsDialLayoutViewController.swift; path = VOVO/PlaySoundsDialLayoutViewController.swift; sourceTree = "<group>"; };
-		96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = dialLayoutCell.swift; path = VOVO/dialLayoutCell.swift; sourceTree = "<group>"; };
-		96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsVCExtension.swift; path = VOVO/PlaySoundsVCExtension.swift; sourceTree = "<group>"; };
-		96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = VOVO/UIColorExtension.swift; sourceTree = "<group>"; };
-		96E9D53F1E24E4E800DB48F9 /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractivePlayerView.swift; path = VOVO/Lib/ipv_source/InteractivePlayerView.swift; sourceTree = SOURCE_ROOT; };
-		96E9D5401E24E4E800DB48F9 /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InteractivePlayerView.xib; path = VOVO/Lib/ipv_source/InteractivePlayerView.xib; sourceTree = SOURCE_ROOT; };
-		96E9D5431E24E55D00DB48F9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "VOVO/Bridging-Header.h"; sourceTree = "<group>"; };
+		96B5E1EB1E1CD84600B10BB7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWCollectionViewDialLayout.swift; path = VOVO/Views/Lib/AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
+		96B5E1ED1E1CDD0400B10BB7 /* PlaySoundsDialLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsDialLayoutViewController.swift; path = VOVO/Controllers/PlaySoundsDialLayoutViewController.swift; sourceTree = "<group>"; };
+		96B5E1EF1E1CE4CF00B10BB7 /* dialLayoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = dialLayoutCell.swift; path = VOVO/Views/dialLayoutCell.swift; sourceTree = "<group>"; };
+		96B5E1F11E1D14F300B10BB7 /* PlaySoundsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsVCExtension.swift; path = VOVO/Controllers/PlaySoundsVCExtension.swift; sourceTree = "<group>"; };
+		96C9EDCA1E22457A0074F638 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = VOVO/Extension/UIColorExtension.swift; sourceTree = "<group>"; };
+		96E9D53F1E24E4E800DB48F9 /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractivePlayerView.swift; path = VOVO/Views/Lib/ipv_source/InteractivePlayerView.swift; sourceTree = SOURCE_ROOT; };
+		96E9D5401E24E4E800DB48F9 /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InteractivePlayerView.xib; path = VOVO/Views/Lib/ipv_source/InteractivePlayerView.xib; sourceTree = SOURCE_ROOT; };
+		96E9D5431E24E55D00DB48F9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "VOVO/Helper/Bridging-Header.h"; sourceTree = "<group>"; };
 		96E9D5441E24E88C00DB48F9 /* Car.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Car.m4a; path = VOVO/Resources/Music/Car.m4a; sourceTree = SOURCE_ROOT; };
 		96E9D5451E24E88C00DB48F9 /* Clap.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Clap.m4a; path = VOVO/Resources/Music/Clap.m4a; sourceTree = SOURCE_ROOT; };
 		96E9D5461E24E88C00DB48F9 /* Drum.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = Drum.m4a; path = VOVO/Resources/Music/Drum.m4a; sourceTree = SOURCE_ROOT; };
@@ -70,6 +70,17 @@
 				3C1A9250C9B793D4954B6FDA /* Pods-VOVO.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		960A70A01E26280500288BB1 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				96E9D5441E24E88C00DB48F9 /* Car.m4a */,
+				96E9D5451E24E88C00DB48F9 /* Clap.m4a */,
+				96E9D5461E24E88C00DB48F9 /* Drum.m4a */,
+				96E9D5471E24E88C00DB48F9 /* Organ.m4a */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 		9623D6981E14C63F003588D3 = {
@@ -143,11 +154,8 @@
 		96AE35AF1E1FE77500D30A89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				960A70A01E26280500288BB1 /* Music */,
 				963948631E253029007BF5C5 /* Assets.xcassets */,
-				96E9D5441E24E88C00DB48F9 /* Car.m4a */,
-				96E9D5451E24E88C00DB48F9 /* Clap.m4a */,
-				96E9D5461E24E88C00DB48F9 /* Drum.m4a */,
-				96E9D5471E24E88C00DB48F9 /* Organ.m4a */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -435,7 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tistory.dev-yt.vovo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "VOVO/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "VOVO/Helper/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -453,7 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tistory.dev-yt.vovo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "VOVO/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "VOVO/Helper/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

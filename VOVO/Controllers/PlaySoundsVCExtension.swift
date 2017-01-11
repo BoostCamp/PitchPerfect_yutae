@@ -39,6 +39,7 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
         // initialize (recording) audio file
         do {
             audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
+            self.duration = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate)
         } catch {
             showAlert(Alerts.AudioFileError, message: String(describing: error))
         }
@@ -73,8 +74,13 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
         audioEngine.attach(mixedPlayerNode)
         let filePath: String = Bundle.main.path(forResource: audioName, ofType: "m4a")!
         let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
-        try! mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
+        do {
+            try mixedAudioFile = AVAudioFile.init(forReading: fileURL as URL)
+        } catch {
+            self.showAlert(Alerts.AudioFileError, message: String(describing: error))
+        }
         self.mixedBuffer = AVAudioPCMBuffer.init(pcmFormat: mixedAudioFile.processingFormat, frameCapacity: AVAudioFrameCount(mixedAudioFile.length))
+        // file 이 생성을 성공 한다면 read가 가능하기 때문에 try! 사용
         try! self.mixedAudioFile.read(into: self.mixedBuffer)
         self.mixedPlayerNode.volume = 0.1
 //        self.mixedPlayerNode.pan = 0.5
@@ -207,7 +213,7 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
                         print("Copy...")
                         print("new Audio : \(self.changedAudioFile.length)")
                     } catch {
-                        print(error)
+                        self.showAlert(Alerts.AudioFileError, message: String(describing: error))
                     }
                 })
             }
@@ -239,6 +245,7 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
     }
     
     func stopAudio() {
+        // Optional Binding 기법 사용
         if let audioPlayerNode = self.audioPlayerNode {
             audioPlayerNode.stop()
         }

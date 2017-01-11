@@ -32,7 +32,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     var audioEngine:AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
-    
+    var duration: Double!
 //    For Share
     var changedAudioFile:AVAudioFile!
     
@@ -94,7 +94,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         // Sharing Button init
         self.sharingButton.isEnabled = false
         
-        // URL 주소가 바뀔 수 있어서 WillAppear
+        // 추후에 DB 추가 한다면 URL 주소가 바뀔 수 있어서 WillAppear
         self.setupAudio()
         
         // Add Observer orientation Changed !!
@@ -109,7 +109,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -118,7 +118,10 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         NotificationCenter.default.removeObserver(self)
         // View 사라지고 난 후 현재 재생중인 음악 끄기.
         self.stopAudio()
-        
+        // Audio nodes nil 로 초기화
+        self.audioEngine = nil
+        self.audioPlayerNode = nil
+        self.mixedPlayerNode = nil
     }
     
     
@@ -154,6 +157,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         // 공유 하고 난 뒤 음성 변조 복제된 파일 삭제.
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: self.changedAudioFile.url.absoluteString){
+            // file 존재 여부를 확인해서 무조건 삭제 가능.
             try! fileManager.removeItem(atPath: self.changedAudioFile.url.absoluteString)
         }
         return self
@@ -162,10 +166,10 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     // DialLayout 초기화
     func configureDialLayoutUI(){
         let xOffset:CGFloat!
-        if self.fixedXOffset == nil {
-            xOffset = self.view.frame.width/2
+        if let x = self.fixedXOffset {
+            xOffset = x
         } else {
-            xOffset = self.fixedXOffset
+            xOffset = self.view.frame.width/2
         }
         
         self.dialLayout = AWCollectionViewDialLayout(raduis: self.radius , angularSpacing: self.angularSpacing, cellSize: CGSize.init(width: self.cell_width, height: self.cell_height), alignment: WheelAlignmentType.center, itemHeight: cell_height, xOffset: xOffset)
@@ -231,17 +235,18 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
                 
                 let cell = self.collectionView.cellForItem(at: tempIndexPath) as! dialLayoutCell
                 
-                if(selectedItem == 0){
-                    //            Stop
-                } else if (selectedItem == 1){
-                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate) / 0.5
-                } else if (selectedItem == 2){
-                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate) / 1.5
-                } else {
-                    cell.itemView.progress = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate)
+                var maxDuration: Double!
+                switch (selectedItem) {
+                case 1:
+                    maxDuration = self.duration / 0.5
+                case 2:
+                    maxDuration = self.duration / 1.5
+                default:
+                    maxDuration = self.duration
                 }
+                cell.itemView.progress = maxDuration
                 cell.itemView.start()
-                
+                // navigationItem title 를 현재 재생 중인 효과음으로 바꿔준다.
                 self.navigationItem.title = self.audioType[selectedItem].uppercased()
             }
         }
@@ -266,9 +271,8 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! dialLayoutCell
-        // Image 삽입
         let audioType = self.audioType[indexPath.item]
-        
+        // Image 삽입
         cell.itemView.coverImage = UIImage(named: audioType)
         cell.itemView.delegate = self
         cell.audioTypeDescription.text = audioTypeDescription[indexPath.item]

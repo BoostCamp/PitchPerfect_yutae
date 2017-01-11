@@ -58,21 +58,22 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 
                 try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
                 try! session.setActive(true)
-                try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: recordSettings)
+                try? self.audioRecorder = AVAudioRecorder(url: filePath!, settings: recordSettings)
                 
-                self.controller = IQAudioRecorderViewController.init()
-                self.controller.argAudioRecorder = self.audioRecorder
-                self.controller.delegate = self
-                self.controller.title = "VOVO 음성 녹음"
-                
-                // Bar Color 설정
-                UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.themeColor]
-                self.controller.normalTintColor = UIColor.themeColor
-                
-                self.controller.allowCropping = true
-                
-                self.presentBlurredAudioRecorderViewControllerAnimated(self.controller)
-                
+                // Optional Binding
+                if let audioRecorder = self.audioRecorder {
+                    self.controller = IQAudioRecorderViewController.init()
+                    self.controller.argAudioRecorder = audioRecorder
+                    self.controller.delegate = self
+                    self.controller.title = "VOVO 음성 녹음"
+                    // Bar Color 설정
+                    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.themeColor]
+                    self.controller.normalTintColor = UIColor.themeColor
+                    
+                    self.controller.allowCropping = true
+                    
+                    self.presentBlurredAudioRecorderViewControllerAnimated(self.controller)
+                }
                 /*
                 self.audioRecorder.delegate = self
                 self.audioRecorder.isMeteringEnabled = true
@@ -82,7 +83,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
 
             } else {
                 // 접근 권한 없어서 설정으로 이동.
-                let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> PitchPerfect 마이크 접근 허용", preferredStyle: .alert)
+                let alert = UIAlertController(title: "마이크 접근 권한이 필요 합니다.", message: "설정 -> VOVO 마이크 접근 허용", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "설정", style: .default, handler: { (action:UIAlertAction) -> Void in
                     let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
                     if #available(iOS 10.0, *) {
