@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D988DBBF041B0A2BECBE4085AD6832A3CF8F6639",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D988DBBF041B0A2BECBE4085AD6832A3CF8F6639" : 9223372036854775807,
+    "248224E4B2C991E1BF6BB5D989F0A2FDA18E6545" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "137FF7E7-BE39-49CD-8D76-221C3FFE3ED2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D988DBBF041B0A2BECBE4085AD6832A3CF8F6639" : "VOVO\/",
+    "248224E4B2C991E1BF6BB5D989F0A2FDA18E6545" : "VOVO\/Pods\/SDAVAssetExportSession\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VOVO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VOVO.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rs\/SDAVAssetExportSession.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "248224E4B2C991E1BF6BB5D989F0A2FDA18E6545"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/93yutaechoi\/pitchperfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D988DBBF041B0A2BECBE4085AD6832A3CF8F6639"
+    }
+  ]
+}

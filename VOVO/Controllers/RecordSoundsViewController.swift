@@ -37,7 +37,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
         session.requestRecordPermission({ (granted:Bool) in
             if granted {
                 let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-                let recordingName = "recordedVoice.aac"
+                let recordingName = "recordedVoice.m4a"
                 let pathArray = [dirPath, recordingName]
                 let filePath = URL(string: pathArray.joined(separator: "/"))
                 
@@ -117,6 +117,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
             self.recordingLabel.text = "Tab to Record"
         }
         self.controller.dismiss(animated: true) {
+            dump(filePath)
 //            self.performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
             self.performSegue(withIdentifier: "recordingCompletion", sender: filePath)
             let audioSession = AVAudioSession.sharedInstance()

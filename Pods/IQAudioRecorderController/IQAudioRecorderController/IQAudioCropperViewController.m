@@ -586,10 +586,19 @@
                             
                             if (exportSession.status == AVAssetExportSessionStatusCompleted)
                             {
-                                NSString *globallyUniqueString = [NSProcessInfo processInfo].globallyUniqueString;
-                                NSString *newFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a",globallyUniqueString]];
+                                //yutae
+//                                NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSAllDomainsMask, YES);
+                                
+//                                NSString *globallyUniqueString = [NSProcessInfo processInfo].globallyUniqueString;
+//                                NSString *newFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a",globallyUniqueString]];
+                                NSString *dirPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+//                                NSString *docsDir = [dirPath objectAtIndex:0];
+                                NSString *newFilePath = [dirPath stringByAppendingPathComponent:@"editedAudio.m4a"];
+                                
+                                NSLog(@"newFilePath : @%", newFilePath);
                                 NSURL *audioURL = [NSURL fileURLWithPath:newFilePath];
                                 
+//                                NSURL *audioURL = [NSURL fileURLWithPath:self.originalAudioFilePath];
                                 [[NSFileManager defaultManager] moveItemAtURL:exportSession.outputURL toURL:audioURL error:nil];
                                 self.currentAudioFilePath = newFilePath;
                                 
