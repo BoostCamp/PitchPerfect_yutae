@@ -117,7 +117,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
             self.recordingLabel.text = "Tab to Record"
         }
         self.controller.dismiss(animated: true) {
-            self.performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
+//            self.performSegue(withIdentifier: "recordingCompletion", sender: self.audioRecorder.url)
+            self.performSegue(withIdentifier: "recordingCompletion", sender: filePath)
             let audioSession = AVAudioSession.sharedInstance()
             try! audioSession.setActive(false)
         }
@@ -136,8 +137,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "recordingCompletion"{
             let playSoundsVC = segue.destination as! PlaySoundsDialLayoutViewController
-            let recordedAudio = sender
-            playSoundsVC.recordedAudioURL = recordedAudio as! URL!
+            let filePath = sender as! String
+            let url = URL.init(fileURLWithPath: filePath)
+//            playSoundsVC.recordedAudioURL = recordedAudio as! URL!
+            playSoundsVC.recordedAudioURL = url
             // 뒤로가기 글씨 없애기.
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         }
