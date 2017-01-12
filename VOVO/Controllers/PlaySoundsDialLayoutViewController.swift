@@ -99,17 +99,18 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         
         // Add Observer orientation Changed !!
         NotificationCenter.default.addObserver(self, selector: #selector(PlaySoundsDialLayoutViewController.orientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(PlaySoundsDialLayoutViewController.refreshViews), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    // Multitaking으로 다른 앱에서 음원 재생 후 다시 돌아 왔을때 스피커로 고정.
+    func refreshViews(notification: NSNotification) {
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
     }
     
     func orientationDidChange(notification: NSNotification) {
-        print("orientationDidChange")
         // orientation Changed 일때 UI Reset
         self.configureDialLayoutUI()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -192,7 +193,6 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     func stopAllAudioResetCircle(){
         self.stopAudio()
-        
         // UI라서 DispatQueue main 으로 관리 Sharing Button init
         DispatchQueue.main.async {
             self.sharingButton.isEnabled = false
@@ -262,11 +262,11 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         stopAllAudioResetCircle()
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Clicked IndexPath: \(self.audioType[indexPath.item])")
         stopAllAudioResetCircle()
         selectedPlayAudio(selectedItem: indexPath.item)
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
