@@ -288,12 +288,6 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
         self.navigationItem.title = "VOVO 음성 변환"
     }
     
-    func interactivePlayerViewDidStartPlaying(playerInteractive: InteractivePlayerView) {
-        
-    }
-    func interactivePlayerViewDidChangedDuration(playerInteractive: InteractivePlayerView, currentDuration: Double) {
-        
-    }
     /* Changed orientation, Will 이라서 제외.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         

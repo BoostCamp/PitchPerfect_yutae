@@ -783,6 +783,7 @@
     }
 }
 
+//yutae
 -(void)audioCropperController:(IQAudioCropperViewController *)controller didFinishWithAudioAtPath:(NSString *)filePath
 {
     _recordingFilePath = filePath;
@@ -791,6 +792,9 @@
     AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:audioFileURL options:nil];
     CMTime audioDuration = audioAsset.duration;
     self.navigationItem.title = [NSString timeStringForTimeInterval:CMTimeGetSeconds(audioDuration)];
+    
+    // 편집 이후에 스피커 유지.
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error: nil];
 }
 
 -(void)audioCropperControllerDidCancel:(IQAudioCropperViewController *)controller

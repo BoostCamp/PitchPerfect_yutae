@@ -188,6 +188,7 @@
     
     _isFirstTime = YES;
     
+    
     {
         if (self.title.length == 0)
         {
@@ -564,7 +565,6 @@
             exportAudioMix.inputParameters = [NSArray arrayWithObject:exportAudioMixInputParameters];
             
             NSString *globallyUniqueString = [NSProcessInfo processInfo].globallyUniqueString;
-            
             NSString *filePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a",globallyUniqueString]];
             
             // configure export session  output with all our parameters
@@ -587,18 +587,10 @@
                             if (exportSession.status == AVAssetExportSessionStatusCompleted)
                             {
                                 //yutae
-//                                NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSAllDomainsMask, YES);
                                 
-//                                NSString *globallyUniqueString = [NSProcessInfo processInfo].globallyUniqueString;
-//                                NSString *newFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a",globallyUniqueString]];
-                                NSString *dirPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-//                                NSString *docsDir = [dirPath objectAtIndex:0];
-                                NSString *newFilePath = [dirPath stringByAppendingPathComponent:@"editedAudio.m4a"];
-                                
-                                NSLog(@"newFilePath : @%", newFilePath);
+                                NSString *globallyUniqueString = [NSProcessInfo processInfo].globallyUniqueString;
+                                NSString *newFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m4a",globallyUniqueString]];
                                 NSURL *audioURL = [NSURL fileURLWithPath:newFilePath];
-                                
-//                                NSURL *audioURL = [NSURL fileURLWithPath:self.originalAudioFilePath];
                                 [[NSFileManager defaultManager] moveItemAtURL:exportSession.outputURL toURL:audioURL error:nil];
                                 self.currentAudioFilePath = newFilePath;
                                 
@@ -701,11 +693,11 @@
 {
     if ([self.originalAudioFilePath isEqualToString:self.currentAudioFilePath] == NO)
     {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Discard changes?" message:@"You have some unsaved changes. Audio will not be saved. Are you sure you want to discard?" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"편집을 취소하고, 원상태로 돌아가시겠습니까?" message:@"현재 편집한 내용이 저장되지 않았습니다." preferredStyle:UIAlertControllerStyleAlert];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"취소" style:UIAlertActionStyleDefault handler:nil]];
         
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Discard" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:@"되돌리기" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             
             if ([self.delegate respondsToSelector:@selector(audioCropperControllerDidCancel:)])
             {

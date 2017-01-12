@@ -10,16 +10,17 @@
 
 import UIKit
 
-protocol InteractivePlayerViewDelegate {
+// Edited By Yutae
+@objc protocol InteractivePlayerViewDelegate {
     
-    func interactivePlayerViewDidStartPlaying(playerInteractive:InteractivePlayerView)
+    @objc optional func interactivePlayerViewDidStartPlaying(playerInteractive:InteractivePlayerView)
     func interactivePlayerViewDidStopPlaying(playerInteractive:InteractivePlayerView)
     
     
     /**
        @ callbacks in every changes at the duration
      */
-    func interactivePlayerViewDidChangedDuration(playerInteractive:InteractivePlayerView , currentDuration:Double)
+    @objc optional func interactivePlayerViewDidChangedDuration(playerInteractive:InteractivePlayerView , currentDuration:Double)
 }
 
 @IBDesignable
@@ -62,7 +63,8 @@ class InteractivePlayerView : UIView {
             redrawStrokeEnd()
             
             if let theDelegate = self.delegate {
-                theDelegate.interactivePlayerViewDidChangedDuration(playerInteractive: self, currentDuration: duration)
+//                theDelegate.interactivePlayerViewDidChangedDuration(playerInteractive: self, currentDuration: duration)
+                theDelegate.interactivePlayerViewDidChangedDuration?(playerInteractive: self, currentDuration: duration)
             }
             
         }
@@ -254,7 +256,8 @@ class InteractivePlayerView : UIView {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(InteractivePlayerView.updateTime), userInfo: nil, repeats: true)
 
         if let theDelegate = self.delegate {
-            theDelegate.interactivePlayerViewDidStartPlaying(playerInteractive: self)
+//            theDelegate.interactivePlayerViewDidStartPlaying(playerInteractive: self)
+            theDelegate.interactivePlayerViewDidStartPlaying?(playerInteractive: self)
         }
     }
     
