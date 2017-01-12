@@ -46,14 +46,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                      AVSampleRateKey: 16000.0,
                      AVNumberOfChannelsKey: 1] as [String : Any]
                 
-                /* High Quality
-                let recordSettings =
-                    [AVFormatIDKey: NSNumber(value:kAudioFormatAppleLossless),
-                     AVEncoderAudioQualityKey : AVAudioQuality.low.rawValue,
-                     AVEncoderBitRateKey : 320000,
-                     AVNumberOfChannelsKey: 2,
-                     AVSampleRateKey : 44100.0] as [String : Any]
-                */
                 self.recordingLabel.text = "Recording..."
                 
                 try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
@@ -74,12 +66,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                     
                     self.presentBlurredAudioRecorderViewControllerAnimated(self.controller)
                 }
-                /*
-                self.audioRecorder.delegate = self
-                self.audioRecorder.isMeteringEnabled = true
-                self.audioRecorder.prepareToRecord()
-                self.audioRecorder.record()
-                */
 
             } else {
                 // 접근 권한 없어서 설정으로 이동.
@@ -103,7 +89,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     
     // MARK : IQAudio
     func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
-        print("Cancel Button Pressed")
         DispatchQueue.main.async {
             self.recordingLabel.text = "Tab to Record"
         }
@@ -122,16 +107,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
             try! audioSession.setActive(false)
         }
     }
-    
-    /* // IQAudioRecorderViewController 에 구현
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if flag{
-            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
-        } else {
-            print("Recording was not successful")
-        }
-    }
-    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "recordingCompletion"{
