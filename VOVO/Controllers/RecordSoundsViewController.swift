@@ -103,7 +103,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
     
     // MARK : IQAudio
     func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
-        print("Cancel Button Pressed")
+//        print("Cancel Button Pressed")
         DispatchQueue.main.async {
             self.recordingLabel.text = "Tab to Record"
         }

@@ -214,8 +214,8 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
                     (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) in
                     do {
                         try self.changedAudioFile.write(from:buffer)
-                        print("Copy...")
-                        print("new Audio : \(self.changedAudioFile.length)")
+//                        print("Copy...")
+//                        print("new Audio : \(self.changedAudioFile.length)")
                     } catch {
                         self.showAlert(Alerts.AudioFileError, message: String(describing: error))
                     }

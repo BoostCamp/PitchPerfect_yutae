@@ -52,7 +52,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         // Check iPad, iPhone Set Layout
         switch UIDevice.current.userInterfaceIdiom {
             case .pad:
-                print("Current UI Device iPad - Dial Layout")
+//                print("Current UI Device iPad - Dial Layout")
                 self.radius = 440.0
                 self.cell_width = 200
                 self.cell_height = CGFloat((200*1.3)+10.0)
@@ -70,14 +70,14 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
                 }
             default:
                 if(self.view.frame.width < 370){
-                    print("Current UI Device < iPhone 6- Dial Layout")
+//                    print("Current UI Device < iPhone 6- Dial Layout")
                     self.angularSpacing = 40.0
                     self.radius = 220.0
                     self.cell_width = 120
                     self.cell_height = CGFloat((120*1.3)+10.0)
                 }
                 else {
-                    print("Current UI Device > iPhone 6 - Dial Layout")
+//                    print("Current UI Device > iPhone 6 - Dial Layout")
                     self.angularSpacing = 40.0
                     self.radius = 220.0
                     self.cell_width = 150
@@ -102,7 +102,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     }
     
     func orientationDidChange(notification: NSNotification) {
-        print("orientationDidChange")
+//        print("orientationDidChange")
         // orientation Changed 일때 UI Reset
         self.configureDialLayoutUI()
     }
@@ -253,7 +253,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     }
     // Scroll 끝났을 때 음악 재생.
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("Selected : \(self.dialLayout.selectedItem)")
+//        print("Selected : \(self.dialLayout.selectedItem)")
         selectedPlayAudio(selectedItem: self.dialLayout.selectedItem)
     }
     
@@ -264,7 +264,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Clicked IndexPath: \(self.audioType[indexPath.item])")
+//        print("Clicked IndexPath: \(self.audioType[indexPath.item])")
         stopAllAudioResetCircle()
         selectedPlayAudio(selectedItem: indexPath.item)
     }
