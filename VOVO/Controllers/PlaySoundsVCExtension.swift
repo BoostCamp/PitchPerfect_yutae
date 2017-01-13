@@ -89,8 +89,6 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
     func playSound(share: Bool = false, rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false, mixed: String? = nil) {
         
         // 다른 앱 음원 재생하고 돌아온 뒤에도 Speaker 를 유지
-//        let session = AVAudioSession.sharedInstance()
-//        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
         
         // For Share Show Loading Spinner
         if share == true {
@@ -292,7 +290,7 @@ extension PlaySoundsDialLayoutViewController: InteractivePlayerViewDelegate {
         // Audio Stop
         self.navigationItem.title = "VOVO 음성 변환"
     }
-    
+
     /* Changed orientation, Will 이라서 제외.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         

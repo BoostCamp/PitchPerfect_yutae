@@ -40,7 +40,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate, IQA
                 let recordingName = "recordedVoice.m4a"
                 let pathArray = [dirPath, recordingName]
                 let filePath = URL(string: pathArray.joined(separator: "/"))
-                
                 let recordSettings =
                     [AVFormatIDKey: kAudioFormatMPEG4AAC,
                      AVSampleRateKey: 16000.0,

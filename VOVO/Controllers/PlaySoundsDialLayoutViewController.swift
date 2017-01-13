@@ -94,7 +94,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
         // Sharing Button init
         self.sharingButton.isEnabled = false
         
-        // 추후에 DB 추가 한다면 URL 주소가 바뀔 수 있어서 WillAppear
+        // 편집된 음원일 경우 또는 추후에 DB 추가 한다면 URL 주소가 바뀔 수 있어서 WillAppear
         self.setupAudio()
         
         // Add Observer orientation Changed !!
@@ -105,7 +105,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     // Multitaking으로 다른 앱에서 음원 재생 후 다시 돌아 왔을때 스피커로 고정.
     func refreshViews(notification: NSNotification) {
         let session = AVAudioSession.sharedInstance()
-        try? session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
+        try? session.setCategory(AVAudioSessionCategoryPlayback, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
     }
     
     func orientationDidChange(notification: NSNotification) {
@@ -261,7 +261,7 @@ class PlaySoundsDialLayoutViewController: UIViewController, UICollectionViewData
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         stopAllAudioResetCircle()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Clicked IndexPath: \(self.audioType[indexPath.item])")
         stopAllAudioResetCircle()
