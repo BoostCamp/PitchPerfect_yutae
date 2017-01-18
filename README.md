@@ -3,7 +3,7 @@
 ## VOVO - 목소리에 목소리를 더 하다.
 ## App Store : https://appsto.re/kr/fcdjhb.i
 
-![alt tag](https://cloud.githubusercontent.com/assets/14192093/21926602/d614110e-d9c5-11e6-843e-8a565d45ceb6.png)
+![alt tag](https://cloud.githubusercontent.com/assets/14192093/22065992/213d711e-ddce-11e6-87ca-07327d4c53e7.jpg)
 
 
 [![VOVO Video](https://cloud.githubusercontent.com/assets/14192093/21926578/b35cb6b6-d9c5-11e6-9aef-d29433b0b9cd.png)](https://youtu.be/rXhGd22EPY8 "VOVO Video")
